@@ -23,7 +23,7 @@ else
 
   " Themes
   source $HOME/.config/nvim/themes/syntax.vim
-  source $HOME/.config/nvim/themes/nvcode.vim
+  source $HOME/.config/nvim/themes/nord.vim
 
   " Plugin Configuration
   source $HOME/.config/nvim/keys/which-key.vim
@@ -68,6 +68,10 @@ source $HOME/.config/nvim/plug-config/quickscope.vim
 if !empty(glob("~/.config/nvim/paths.vim"))
   source $HOME/.config/nvim/paths.vim
 endif
+
+" Store vimwiki as markdown in Documetns/notes
+let g:vimwiki_list = [{ 'path': '~/Documents/notes/',
+       \ 'syntax':'markdown', 'ext': '.md' }]
 
 " Better nav for omnicomplete TODO figure out why this is being overridden
 inoremap <expr> <c-j> ("\<C-n>")
