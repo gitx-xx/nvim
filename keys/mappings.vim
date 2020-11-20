@@ -14,13 +14,12 @@ vnoremap < <gv
 vnoremap > >gv
 
 if exists('g:vscode')
-
   " Simulate same TAB behavior in VSCode
   nmap <Tab> :Tabnext<CR>
   nmap <S-Tab> :Tabprev<CR>
-
+  nnoremap J 5j
+  nnoremap K 5k
 else
-
   " Better nav for omnicomplete
   inoremap <expr> <c-j> ("\<C-n>")
   inoremap <expr> <c-k> ("\<C-p>")
@@ -29,6 +28,13 @@ else
   inoremap jk <Esc>
   inoremap kj <Esc>
   inoremap jj <Esc>
+  
+  " Faster movement
+  nnoremap J 5j
+  nnoremap K 5k
+  " Use Alt+j7k to move line in  visual mode
+  xnoremap <A-k> :move '<-2<CR>gv-gv
+  xnoremap <A-j> :move '>+1<CR>gv-gv
 
   " Easy CAPS
   " inoremap <c-u> <ESC>viwUi
