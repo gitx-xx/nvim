@@ -13,12 +13,14 @@ nnoremap <Space> <Nop>
 vnoremap < <gv
 vnoremap > >gv
 
+" Faster movement
+nnoremap J 5j
+nnoremap K 5k
+
 if exists('g:vscode')
   " Simulate same TAB behavior in VSCode
   nmap <Tab> :Tabnext<CR>
   nmap <S-Tab> :Tabprev<CR>
-  nnoremap J 5j
-  nnoremap K 5k
 else
   " Better nav for omnicomplete
   inoremap <expr> <c-j> ("\<C-n>")
@@ -29,9 +31,6 @@ else
   inoremap kj <Esc>
   inoremap jj <Esc>
   
-  " Faster movement
-  nnoremap J 5j
-  nnoremap K 5k
   " Use Alt+j7k to move line in  visual mode
   xnoremap <A-k> :move '<-2<CR>gv-gv
   xnoremap <A-j> :move '>+1<CR>gv-gv
