@@ -1,5 +1,7 @@
+" source init.vim
+nnoremap <silent> <Leader>r :source $MYVIMRC<cr>
 " Basic Key Mappings
-
+  
 imap <C-h> <C-w>h
 imap <C-j> <C-w>j
 imap <C-k> <C-w>k
