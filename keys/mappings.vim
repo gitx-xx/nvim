@@ -1,7 +1,8 @@
 " source init.vim
 nnoremap <silent> <Leader>r :source $MYVIMRC<cr>
+" comment
+noremap z :call Comment()<CR>
 " Basic Key Mappings
-  
 imap <C-h> <C-w>h
 imap <C-j> <C-w>j
 imap <C-k> <C-w>k
@@ -23,8 +24,9 @@ autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellesca
 nnoremap J 5j
 nnoremap K 5k
 
+
 if exists('g:vscode')
-  " Simulate same TAB behavior in VSCode
+  Simulate same TAB behavior in VSCode
   nmap <Tab> :Tabnext<CR>
   nmap <S-Tab> :Tabprev<CR>
 else
