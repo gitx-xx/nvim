@@ -19,6 +19,7 @@ if exists('g:vscode')
   source $HOME/.config/nvim/vscode/settings.vim
   source $HOME/.config/nvim/plug-config/easymotion.vim
   source $HOME/.config/nvim/plug-config/highlightyank.vim
+  " source $HOME/.config/nvim/plug-config/vim-commentary.vim
 else
 
   " Themes
