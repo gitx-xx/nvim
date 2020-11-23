@@ -1,4 +1,4 @@
-" let bufferline = {}
+let bufferline = {}
 let bufferline.shadow = v:true
 let bufferline.icons = v:true
 let bufferline.clickable = v:true
