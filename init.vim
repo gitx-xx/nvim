@@ -70,7 +70,7 @@ if !empty(glob("~/.config/nvim/paths.vim"))
 endif
 
 " Store vimwiki as markdown in Documetns/notes
-let g:vimwiki_list = [{ 'path': '~/Documents/notes/',
+let g:vimwiki_list = [{ 'path': '~/notes/wiki',
        \ 'syntax':'markdown', 'ext': '.md' }]
 
 " Better nav for omnicomplete TODO figure out why this is being overridden
