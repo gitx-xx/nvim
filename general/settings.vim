@@ -5,7 +5,7 @@ syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set whichwrap+=<,>,[,],h,l
-set encoding=utf-8                      " The encoding displayed
+set encoding=UTF-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
 set ruler              			            " Show the cursor position all the time
@@ -37,7 +37,8 @@ set timeoutlen=300                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set incsearch
 " set guifont=JetBrainsMono\ Nerd\ Font
-set guifont=Fira\ Code
+" set guifont=Fira\ Code
+set guifont=FiraCode\ Nerd\ Font
 
 " New stuff
 " set notimeout nottimeout
