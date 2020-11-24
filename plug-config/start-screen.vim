@@ -12,11 +12,10 @@ let g:startify_session_dir = '~/.config/nvim/session'
 
 let g:startify_lists = [
           \ { 'type': 'files',     'header': ['   Files']                        },
-          \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
           \ { 'type': 'sessions',  'header': ['   Sessions']                     },
           \ { 'type': 'bookmarks', 'header': ['   Bookmarks']                    },
           \ ]
-
+          " \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
 
 let g:startify_session_autoload = 1
 let g:startify_session_delete_buffers = 1
@@ -33,7 +32,10 @@ function! StartifyEntryFormat()
 let g:startify_bookmarks = [
             \ { 'i': '~/.config/nvim/init.vim' },
             \ { 'n': '~/.config/nvim/' },
+            \ { 't': '~/dev/todo.todo' },
+            \ { 'l': '~/linux-setup.md' },
             \ { 'z': '~/.zshrc' },
+            \ { 'a':  '~/.oh-my-zsh/custom/aliases.zsh'},
             \ '~/dev',
             \ '~/notes',
             \ ]
