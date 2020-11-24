@@ -1,8 +1,20 @@
 " source init.vim
-nnoremap <silent> <Leader>r :source $MYVIMRC<cr>
+nnoremap <A-r> :source $MYVIMRC<CR>
+
 " comment
-noremap z :call Comment()<CR>
-" Basic Key Mappings
+map <silent> <A-q> :call Comment()<CR>
+
+" zen
+map <silent> <A-w> :Goyo<CR>
+" move lines (visual)
+xnoremap <A-k> :move '<-2<CR>gv-gv
+xnoremap <A-j> :move '>+1<CR>gv-gv
+
+" basic mappings
+" faster movement
+nnoremap J 5j
+nnoremap K 5k
+" what is this?
 imap <C-h> <C-w>h
 imap <C-j> <C-w>j
 imap <C-k> <C-w>k
@@ -11,18 +23,12 @@ imap <C-l> <C-w>l
 let mapleader=" "
 " let localleader=" "
 nnoremap <Space> <Nop>
-
-" Better indenting
+" better indenting
 vnoremap < <gv
 vnoremap > >gv
-
 " python
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-
-" Faster movement
-nnoremap J 5j
-nnoremap K 5k
 
 
 if exists('g:vscode')

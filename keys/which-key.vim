@@ -329,16 +329,16 @@ let g:which_key_map.t = {
       \ ';' : [':FloatermNew --wintype=normal --height=6'        , 'terminal'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
-      \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
       \ 'n' : [':FloatermNew node'                              , 'node'],
-      \ 'N' : [':FloatermNew nnn'                               , 'nnn'],
       \ 'p' : [':FloatermNew python'                            , 'python'],
-      \ 'm' : [':FloatermNew lazynpm'                           , 'npm'],
       \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
       \ 't' : [':FloatermToggle'                                , 'toggle'],
-      \ 'y' : [':FloatermNew ytop'                              , 'ytop'],
-      \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
       \ }
+      " \ 'N' : [':FloatermNew nnn'                               , 'nnn'],
+      " \ 'm' : [':FloatermNew lazynpm'                           , 'npm'],
+      " \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
+      " \ 'y' : [':FloatermNew ytop'                              , 'ytop'],
+      " \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
 
 " w is for wiki
 " let g:which_key_map.w = {
