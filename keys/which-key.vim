@@ -341,25 +341,25 @@ let g:which_key_map.t = {
       " \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
 
 " w is for wiki
-" let g:which_key_map.w = {
-"       \ 'name' : '+wiki' ,
-"       \ 'w' : ['<Plug>VimwikiIndex'                              , 'ncdu'],
-"       \ 'n' : ['<plug>(wiki-open)'                              , 'ncdu'],
-"       \ 'j' : ['<plug>(wiki-journal)'                              , 'ncdu'],
-"       \ 'R' : ['<plug>(wiki-reload)'                              , 'ncdu'],
-"       \ 'c' : ['<plug>(wiki-code-run)'                              , 'ncdu'],
-"       \ 'b' : ['<plug>(wiki-graph-find-backlinks)'                              , 'ncdu'],
-"       \ 'g' : ['<plug>(wiki-graph-in)'                              , 'ncdu'],
-"       \ 'G' : ['<plug>(wiki-graph-out)'                              , 'ncdu'],
-"       \ 'l' : ['<plug>(wiki-link-toggle)'                              , 'ncdu'],
-"       \ 'd' : ['<plug>(wiki-page-delete)'                              , 'ncdu'],
-"       \ 'r' : ['<plug>(wiki-page-rename)'                              , 'ncdu'],
-"       \ 't' : ['<plug>(wiki-page-toc)'                              , 'ncdu'],
-"       \ 'T' : ['<plug>(wiki-page-toc-local)'                              , 'ncdu'],
-"       \ 'e' : ['<plug>(wiki-export)'                              , 'ncdu'],
-"       \ 'u' : ['<plug>(wiki-list-uniq)'                              , 'ncdu'],
-"       \ 'U' : ['<plug>(wiki-list-uniq-local)'                              , 'ncdu'],
-"       \ }
+let g:which_key_map.w = {
+      \ 'name' : '+wiki' ,
+      \ 'w' : ['<Plug>VimwikiIndex'                              , 'index'],
+      \ 'n' : ['<plug>(wiki-open)'                              , 'open'],
+      \ 'j' : ['<plug>(wiki-journal)'                              , 'journal'],
+      \ 'R' : ['<plug>(wiki-reload)'                              , 'reload'],
+      \ 'c' : ['<plug>(wiki-code-run)'                              , 'code-run'],
+      \ 'b' : ['<plug>(wiki-graph-find-backlinks)'                              , 'find-backlinks'],
+      \ 'g' : ['<plug>(wiki-graph-in)'                              , 'graph-in'],
+      \ 'G' : ['<plug>(wiki-graph-out)'                              , 'graph-out'],
+      \ 'l' : ['<plug>(wiki-link-toggle)'                              , 'link-toggle'],
+      \ 'd' : ['<plug>(wiki-page-delete)'                              , 'page-delete'],
+      \ 'r' : ['<plug>(wiki-page-rename)'                              , 'page-rename'],
+      \ 't' : ['<plug>(wiki-page-toc)'                              , 'page-toc'],
+      \ 'T' : ['<plug>(wiki-page-toc-local)'                              , 'page-toc-local'],
+      \ 'e' : ['<plug>(wiki-export)'                              , 'export'],
+      \ 'u' : ['<plug>(wiki-list-uniq)'                              , 'list-uniq'],
+      \ 'U' : ['<plug>(wiki-list-uniq-local)'                              , 'list-uniq-local'],
+      \ }
 
 " Global
 " <Plug>VimwikiIndex
@@ -370,7 +370,7 @@ let g:which_key_map.t = {
 " <Plug>VimwikiTabMakeDiaryNote
 " <Plug>VimwikiMakeYesterdayDiaryNote
 " <Plug>VimwikiMakeTomorrowDiaryNote
-"
+
 " " Local
 " <Plug>Vimwiki2HTML
 " <Plug>Vimwiki2HTMLBrowse
