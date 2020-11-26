@@ -1,10 +1,13 @@
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 set formatoptions-=cro                  " Stop newline continution of comments
 
-syntax enable                           " Enables syntax highlighing
+set nocompatible                        " Necessary for cool shit
+filetype plugin on
+syntax on                               " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set whichwrap+=<,>,[,],h,l
+set linebreak
 set encoding=UTF-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
@@ -36,8 +39,6 @@ set updatetime=300                      " Faster completion
 set timeoutlen=300                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set incsearch
-" set guifont=JetBrainsMono\ Nerd\ Font
-" set guifont=Fira\ Code
 set guifont=FiraCode\ Nerd\ Font
 
 " New stuff
@@ -53,7 +54,7 @@ set guifont=FiraCode\ Nerd\ Font
 " set autochdir                           " Your working directory will always be the same as your working directory
 " set foldcolumn=2                        " Folding abilities
 
-" au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
+au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " You can't stop me

@@ -65,14 +65,12 @@ else
 endif
 source $HOME/.config/nvim/plug-config/quickscope.vim
 
+let g:polyglot_disabled = ['markdown']
+
 " Add paths to node and python here
 if !empty(glob("~/.config/nvim/paths.vim"))
   source $HOME/.config/nvim/paths.vim
 endif
-
-" Store vimwiki as markdown in Documetns/notes
-let g:vimwiki_list = [{ 'path': '~/notes/wiki',
-       \ 'syntax':'markdown', 'ext': '.md' }]
 
 " Better nav for omnicomplete TODO figure out why this is being overridden
 inoremap <expr> <c-j> ("\<C-n>")

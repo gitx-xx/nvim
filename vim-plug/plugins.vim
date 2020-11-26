@@ -7,7 +7,6 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-
     " Better Comments
     Plug 'tpope/vim-commentary'
     " Change dates fast
@@ -29,7 +28,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ChristianChiarulli/vscode-easymotion'
     Plug 'machakann/vim-highlightedyank'
   else
-
+    " Vim Wiki
+    Plug 'vimwiki/vimwiki'
     " Easymotion
     Plug 'easymotion/vim-easymotion'
     " Surround
@@ -146,8 +146,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'mg979/vim-xtabline'
     " Files
     " Plug 'tpope/vim-eunuch'
-    " Vim Wiki
-    " Plug 'https://github.com/vimwiki/vimwiki.git'
     " Better Comments
     " Plug 'jbgutierrez/vim-better-comments'
     " Echo doc

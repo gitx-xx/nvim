@@ -14,12 +14,15 @@
     \ }
 
 " Filetypes enabled for
+let g:vimwiki_global_ext = 0
 let g:vimwiki_filetypes = ['markdown']
 
-let g:vimwiki_list = [{'path': '~/.config/nvim/wiki',
-                      \ 'syntax': 'markdown', 'ext': '.md', 'exclude_files': ['**/README.md', '**/Readme.md'] }]
+" Store vimwiki as markdown in Documetns/notes
+let g:vimwiki_list = [{ 'path': '~/notes',
+       \ 'syntax':'markdown', 'ext': '.md' }]
 
-" let g:vimwiki_auto_header = 0
+let g:vimwiki_markdown_link_ext = 0
+let g:vimwiki_auto_header = 1
 " let g:vimwiki_markdown_header_style = 1
 " let g:vimwiki_tags_header_level = 1
 " let g:vimwiki_tags_header = 'Generated Tags'
@@ -39,7 +42,6 @@ let g:vimwiki_list = [{'path': '~/.config/nvim/wiki',
 " let g:vimwiki_html_header_numbering_sym = ''
 " let g:vimwiki_html_header_numbering = 0
 " let g:vimwiki_dir_link = ''
-" let g:vimwiki_markdown_link_ext = 0
 " let g:vimwiki_create_link = 1
 " let g:vimwiki_use_calendar = 1
 " let g:vimwiki_text_ignore_newline = 1
@@ -49,9 +51,6 @@ let g:vimwiki_list = [{'path': '~/.config/nvim/wiki',
 " let g:vimwiki_listsyms = '✗○◐●✓'
 " let g:vimwiki_global_ext = 1
 " let g:vimwiki_hl_cb_checked = 0
-
-
-
 
 let g:vimwiki_diary_months = {
       \ 1: 'January', 2: 'February', 3: 'March',
