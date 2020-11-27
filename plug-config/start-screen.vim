@@ -30,14 +30,17 @@ function! StartifyEntryFormat()
     endfunction
 
 let g:startify_bookmarks = [
-            \ { 'i': '~/.config/nvim/init.vim' },
-            \ { 'n': '~/.config/nvim/' },
-            \ { 't': '~/dev/todo.todo' },
             \ { 'l': '~/linux-setup.md' },
+            \ { 'i': '~/.config/nvim/init.vim' },
+            \ { 's': '~/.config/nvim/general/settings.vim' },
+            \ { 't': '~/.config/nvim/plug-config/start-screen.vim' },
+            \ { 'k': '~/.config/nvim/keys/mappings.vim' },
+            \ { 'c': '~/.config/nvim/coc-settings.json' },
+            \ { 't': '~/dev/todo.todo' },
             \ { 'z': '~/.zshrc' },
             \ { 'a':  '~/.oh-my-zsh/custom/aliases.zsh'},
-            \ '~/dev',
-            \ '~/notes',
+            \ { 'd':  '~/dev'},
+            \ { 'n': '~/notes/' },
             \ ]
 
 let g:startify_enable_special = 0
