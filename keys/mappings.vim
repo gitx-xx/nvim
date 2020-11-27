@@ -1,38 +1,39 @@
-" source init.vim
-nnoremap <A-r> :source $MYVIMRC<CR>
+" g Leader key
+let mapleader=" "
+nnoremap <Space> <Nop>|                   " Disable space
+nnoremap <leader>sv :source $MYVIMRC<CR>| " Source init.vim
+map <silent> <A-q> :call Comment()<CR>|   " Comment block
+map <silent> <A-f> :FZF<CR>|              " Fuzzy file finder
+map <silent> <C-p> :FZF<CR>
+map <silent> <A-w> :Goyo<CR>|             " Zenmode
 
-" comment
-map <silent> <A-q> :call Comment()<CR>
 
-" zen
-map <silent> <A-w> :Goyo<CR>
-" move lines (visual)
-xnoremap <A-k> :move '<-2<CR>gv-gv
-xnoremap <A-j> :move '>+1<CR>gv-gv
+nmap <M-j> mz:m+<cr>`z|                   " Move lines around with Alt
+nmap <M-k> mz:m-2<cr>`z
+vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+nnoremap j gj|                            " Move by visual lines
+nnoremap k gk
+nnoremap J 10j|                           " Faster vertical movement
+nnoremap K 10k
+noremap B ^|                              " Goto beginning/end of the line
+noremap E $
+noremap ^ <nop>                           " Disable default alternative
+noremap $ <nop>
 
-" basic mappings
-" faster movement
-nnoremap J 5j
-nnoremap K 5k
-" what is this?
-imap <C-h> <C-w>h
+imap <C-h> <C-w>h|                        " No idea
 imap <C-j> <C-w>j
 imap <C-k> <C-w>k
 imap <C-l> <C-w>l
-" g Leader key
-let mapleader=" "
-" let localleader=" "
-nnoremap <Space> <Nop>
-" better indenting
-vnoremap < <gv
+vnoremap < <gv|                           " Better indenting
 vnoremap > >gv
+
 " python
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
-
 if exists('g:vscode')
-  Simulate same TAB behavior in VSCode
+  " Simulate same TAB behavior in VSCode
   nmap <Tab> :Tabnext<CR>
   nmap <S-Tab> :Tabprev<CR>
 else
@@ -63,7 +64,6 @@ else
   " shift + j to move down
   xnoremap K :move '<-2<CR>gv-gv
   xnoremap J :move '>+1<CR>gv-gv
-
   " Alternate way to save
   nnoremap <silent> <C-s> :w<CR>
   " Alternate way to quit
