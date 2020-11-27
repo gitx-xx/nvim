@@ -1,18 +1,19 @@
-set iskeyword+=-                      	" treat dash separated words as a word text object"
-set formatoptions-=cro                  " Stop newline continution of comments
-
 set nocompatible                        " Necessary for cool shit
 filetype plugin on
 syntax on                               " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
+set iskeyword+=-                      	" treat dash separated words as a word text object"
+set formatoptions-=cro                  " Stop newline continution of comments
 set nowrap                              " Display long lines as just one line
-set whichwrap+=<,>,[,],h,l
 set linebreak
+set whichwrap+=<,>,[,],h,l
 set encoding=UTF-8                      " The encoding displayed
-set pumheight=10                        " Makes popup menu smaller
-set fileencoding=utf-8                  " The encoding written to file
+set fileencoding=UTF-8                  " The encoding written to file
+
+set colorcolumn=80                      " Highlight column
+" set pumheight=10                        " Makes popup menu smaller
 set ruler              			            " Show the cursor position all the time
-set cmdheight=2                         " More space for displaying messages
+set cmdheight=1                         " More space for displaying messages
 set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
@@ -26,20 +27,27 @@ set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
 set laststatus=2                        " Always display the status line
 set number relativenumber               " Line numbers
-set scrolloff=999                              " Center cursor on screen
+set scrolloff=999                       " Center cursor on screen
 set cursorline                          " Enable highlighting of the current line
 set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs
+set incsearch                           " search as characters are entered
+set hlsearch                            " highlight search result
+set smartcase                           " smartcase when search
+set showmatch                           " show matching brackets
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set shortmess+=c                        " Don't pass messages to |ins-completion-menu|.
 set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
 set updatetime=300                      " Faster completion
-set timeoutlen=300                      " By default timeoutlen is 1000 ms
+set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
-set incsearch
 set guifont=FiraCode\ Nerd\ Font
+set foldenable                          " Enable folding
+set foldlevelstart=10                   " Open most folds by default
+set foldmethod=indent
+set autoread                            " auto reload
 
 " New stuff
 " set notimeout nottimeout
@@ -54,8 +62,11 @@ set guifont=FiraCode\ Nerd\ Font
 " set autochdir                           " Your working directory will always be the same as your working directory
 " set foldcolumn=2                        " Folding abilities
 
+au FocusGained,BufEnter * checktime     " auto reload
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
+autocmd BufEnter *.md setlocal syntax=markdown
+" Return to last edit position when opening files (You want this!)
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 " You can't stop me
 cmap w!! w !sudo tee %
