@@ -46,7 +46,6 @@ else
   source $HOME/.config/nvim/plug-config/git-messenger.vim
   source $HOME/.config/nvim/plug-config/closetags.vim
   source $HOME/.config/nvim/plug-config/floaterm.vim
-  source $HOME/.config/nvim/plug-config/barbar.vim
   source $HOME/.config/nvim/plug-config/far.vim
   source $HOME/.config/nvim/plug-config/tagalong.vim
   source $HOME/.config/nvim/plug-config/bracey.vim
@@ -56,6 +55,7 @@ else
   source $HOME/.config/nvim/plug-config/neovide.vim
   luafile $HOME/.config/nvim/lua/plug-colorizer.lua
   source $HOME/.config/nvim/plug-config/vimspector.vim
+  " source $HOME/.config/nvim/plug-config/barbar.vim
   " source $HOME/.config/nvim/plug-config/sneak.vim
   " source $HOME/.config/nvim/plug-config/rainbow.vim
   " source $HOME/.config/nvim/plug-config/illuminate.vim
