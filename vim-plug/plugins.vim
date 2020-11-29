@@ -41,7 +41,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ChristianChiarulli/far.vim' " Find and replace
     Plug 'AndrewRadev/tagalong.vim' " Auto change html tags
     Plug 'turbio/bracey.vim' " live server
-    Plug 'skywind3000/asynctasks.vim' " " async tasks
+    Plug 'skywind3000/asynctasks.vim' " async tasks
     Plug 'skywind3000/asyncrun.vim'
     Plug 'wesQ3/vim-windowswap' " Swap windows
     Plug 'puremourning/vimspector' " Debugging
