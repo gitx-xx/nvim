@@ -39,12 +39,9 @@ else
   source $HOME/.config/nvim/plug-config/sneak.vim
   " 
   source $HOME/.config/nvim/plug-config/rnvimr.vim
-  luafile $HOME/.config/nvim/lua/nvcodeline.lua
-  luafile $HOME/.config/nvim/lua/treesitter.lua
   source $HOME/.config/nvim/plug-config/goyo.vim
   source $HOME/.config/nvim/plug-config/vim-rooter.vim
   source $HOME/.config/nvim/plug-config/gitgutter.vim
-  source $HOME/.config/nvim/plug-config/git-messenger.vim
   source $HOME/.config/nvim/plug-config/closetags.vim
   source $HOME/.config/nvim/plug-config/far.vim
   source $HOME/.config/nvim/plug-config/tagalong.vim
@@ -52,6 +49,8 @@ else
   source $HOME/.config/nvim/plug-config/asynctask.vim
   source $HOME/.config/nvim/plug-config/window-swap.vim
   source $HOME/.config/nvim/plug-config/neovide.vim
+  luafile $HOME/.config/nvim/lua/nvcodeline.lua
+  luafile $HOME/.config/nvim/lua/treesitter.lua
   luafile $HOME/.config/nvim/lua/plug-colorizer.lua
   source $HOME/.config/nvim/plug-config/vimspector.vim
 

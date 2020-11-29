@@ -34,10 +34,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Evalute these:
     Plug 'kevinhwang91/rnvimr' " Ranger in a floating window 
-    Plug 'junegunn/goyo.vim' " Zen mode
-    Plug 'airblade/vim-rooter' " Have the file system follow you around
+    Plug 'junegunn/goyo.vim' " Distraction-free writing
+    Plug 'airblade/vim-rooter' " Auto-change project root
     Plug 'airblade/vim-gitgutter' " Git
-    Plug 'rhysd/git-messenger.vim'
     Plug 'alvan/vim-closetag' " Closetags
     Plug 'ChristianChiarulli/far.vim' " Find and replace
     Plug 'AndrewRadev/tagalong.vim' " Auto change html tags
