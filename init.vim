@@ -46,11 +46,10 @@ else
   source $HOME/.config/nvim/plug-config/tagalong.vim
   source $HOME/.config/nvim/plug-config/bracey.vim
   " source $HOME/.config/nvim/plug-config/asynctask.vim
-  source $HOME/.config/nvim/plug-config/neovide.vim
+  " source $HOME/.config/nvim/plug-config/vimspector.vim
   luafile $HOME/.config/nvim/lua/nvcodeline.lua
   luafile $HOME/.config/nvim/lua/treesitter.lua
   luafile $HOME/.config/nvim/lua/plug-colorizer.lua
-  source $HOME/.config/nvim/plug-config/vimspector.vim
 
   " source $HOME/.config/nvim/plug-config/barbar.vim
   " source $HOME/.config/nvim/plug-config/rainbow.vim
