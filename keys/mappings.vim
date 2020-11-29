@@ -1,17 +1,18 @@
-" g Leader key
 let mapleader=" "
 nnoremap <Space> <Nop>|                   " Disable space
 nnoremap <leader>sv :source $MYVIMRC<CR>| " Source init.vim
+nnoremap <leader>ba :call CloseAllBuffersButCurrent()<CR> " Close all other buffers
 map <silent> <A-q> :call Comment()<CR>|   " Comment block
 map <silent> <A-f> :FZF<CR>|              " Fuzzy file finder
 map <silent> <C-p> :FZF<CR>
 map <silent> <A-w> :Goyo<CR>|             " Zenmode
-
-
+map <A-h> :bprevious<CR>
+map <A-l> :bnext<CR>
 nmap <M-j> mz:m+<cr>`z|                   " Move lines around with Alt
 nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
 nnoremap j gj|                            " Move by visual lines
 nnoremap k gk
 nnoremap J 10j|                           " Faster vertical movement
@@ -20,11 +21,10 @@ noremap B ^|                              " Goto beginning/end of the line
 noremap E $
 noremap ^ <nop>                           " Disable default alternative
 noremap $ <nop>
-
-imap <C-h> <C-w>h|                        " No idea
-imap <C-j> <C-w>j
-imap <C-k> <C-w>k
-imap <C-l> <C-w>l
+" imap <C-h> <C-w>h|                        " Window movement
+" imap <C-j> <C-w>j
+" imap <C-k> <C-w>k
+" imap <C-l> <C-w>l
 vnoremap < <gv|                           " Better indenting
 vnoremap > >gv
 
@@ -65,6 +65,8 @@ else
   xnoremap J :move '>+1<CR>gv-gv
   " Alternate way to save
   nnoremap <silent> <C-s> :w<CR>
+  inoremap <silent> <C-s> <Esc>
+
   " Alternate way to quit
   nnoremap <silent> <C-Q> :wq!<CR>
   " Use control-c instead of escape
@@ -87,7 +89,7 @@ else
   inoremap <C-j> <C-\><C-N><C-w>j
   inoremap <C-k> <C-\><C-N><C-w>k
   inoremap <C-l> <C-\><C-N><C-w>l
-  tnoremap <Esc> <C-\><C-n>
+  " tnoremap <Esc> <C-\><C-n>
 
   " Use alt + hjkl to resize windows
   " nnoremap <silent> <M-j>    :resize -2<CR>
