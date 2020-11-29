@@ -43,7 +43,7 @@ let g:which_key_map['.'] = [ ':e $MYVIMRC'                                     ,
 let g:which_key_map[';'] = [ ':Commands'                                       , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                                          , 'balance windows' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'explorer' ]
-let g:which_key_map['h'] = [ ':Startify'                                       , 'startify']
+" let g:which_key_map['h'] = [ ':Startify'                                       , 'startify']
 let g:which_key_map['n'] = [ ':let @/ = ""'                                    , 'no highlight' ]
 let g:which_key_map['o'] = [ ':RnvimrToggle'                                   , 'open' ]
 let g:which_key_map['p'] = [ ':Files'                                          , 'search files' ]
@@ -120,9 +120,7 @@ let g:which_key_map.d = {
 
 " f is for find and replace
 let g:which_key_map.f = {
-      \ 'name' : '+find & replace' ,
-      \ 'f' : [':Farr --source=vimgrep'    , 'file'],
-      \ 'p' : [':Farr --source=rgnvim'     , 'project'],
+      \ 'name' : '**FREE**' ,
       \ }
 
 " k is for task
