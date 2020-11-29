@@ -43,7 +43,6 @@ else
 
   " I hate escape more than anything else
   inoremap jk <Esc>
-  inoremap kj <Esc>
   inoremap jj <Esc>
   
   " Use Alt+j7k to move line in  visual mode
