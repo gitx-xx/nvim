@@ -75,3 +75,10 @@ endif
 " Better nav for omnicomplete TODO figure out why this is being overridden
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
+
+" enable zsh aliases in command mode (broken)
+" autocmd vimenter * let &shell='/bin/zsh -i'
+
+" command for clearing the registers
+command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
+
