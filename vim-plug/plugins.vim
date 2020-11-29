@@ -7,112 +7,69 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-    " Better Comments
-    Plug 'tpope/vim-commentary'
-    " Change dates fast
-    Plug 'tpope/vim-speeddating'
-    " Convert binary, hex, etc..
-    Plug 'glts/vim-radical'
-    " Repeat stuff
-    Plug 'tpope/vim-repeat'
-    " Text Navigation
-    Plug 'unblevable/quick-scope'
-    " Useful for React Commenting 
-    Plug 'suy/vim-context-commentstring'
-    " highlight all matches under cursor
-    " Plug 'RRethy/vim-illuminate'
+    Plug 'tpope/vim-commentary' " Better Comments
+    Plug 'tpope/vim-speeddating' " Change dates fast
+    Plug 'glts/vim-radical' " Convert binary, hex, etc..
+    Plug 'tpope/vim-repeat' " Repeat stuff
+    Plug 'unblevable/quick-scope' " Text Navigation
+    Plug 'suy/vim-context-commentstring' " Useful for React Commenting 
+    " Plug 'RRethy/vim-illuminate' " highlight all matches under cursor
 
   if exists('g:vscode')
-    " Easy motion for VSCode
-    " Plug 'asvetliakov/vim-easymotion'
-    Plug 'ChristianChiarulli/vscode-easymotion'
+    " Plug 'asvetliakov/vim-easymotion' " Easy motion for VSCode
+    Plug 'ChristianChiarulli/vscode-easymotion' " Custom version for VSCode
     Plug 'machakann/vim-highlightedyank'
   else
-    " Vim Wiki
-    Plug 'vimwiki/vimwiki'
-    " Easymotion
-    Plug 'easymotion/vim-easymotion'
-    " Surround
-    Plug 'tpope/vim-surround'
-    " Have the file system follow you around
-    Plug 'airblade/vim-rooter'
-    " auto set indent settings
-    Plug 'tpope/vim-sleuth'
-    " Better Syntax Support
-    Plug 'sheerun/vim-polyglot'
-    " Treesitter
-    Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'vimwiki/vimwiki' " Vim Wiki
+    Plug 'easymotion/vim-easymotion' " Easymotion
+    Plug 'tpope/vim-surround' " Surround
+    Plug 'airblade/vim-rooter' " Have the file system follow you around
+    Plug 'tpope/vim-sleuth' " auto set indent settings
+    Plug 'sheerun/vim-polyglot' " Better Syntax Support
+    Plug 'nvim-treesitter/nvim-treesitter' " Treesitter
     Plug 'nvim-treesitter/playground'
-    " Cool Icons
-    Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'kyazdani42/nvim-web-devicons' " Cool Icons
     Plug 'ryanoasis/vim-devicons'
-    " Auto pairs for '(' '[' '{'
-    Plug 'jiangmiao/auto-pairs'
-    " Closetags
-    Plug 'alvan/vim-closetag'
-    " Themes
-    Plug 'christianchiarulli/nvcode-color-schemes.vim'
-    " Intellisense
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    " Status Line
-    Plug 'glepnir/galaxyline.nvim'
+    Plug 'jiangmiao/auto-pairs' " Auto pairs for '(' '[' '{'
+    Plug 'alvan/vim-closetag' " Closetags
+    Plug 'christianchiarulli/nvcode-color-schemes.vim' " Themes
+    Plug 'neoclide/coc.nvim', {'branch': 'release'} " Intellisense
+    Plug 'glepnir/galaxyline.nvim' " Status Line
     Plug 'kevinhwang91/rnvimr'
-    " FZF
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " FZF
     Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
     Plug 'junegunn/fzf.vim'
-    " Git
-    Plug 'airblade/vim-gitgutter'
+    Plug 'airblade/vim-gitgutter' " Git
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
     Plug 'junegunn/gv.vim'
     Plug 'rhysd/git-messenger.vim'
-    " Terminal
-    Plug 'voldikss/vim-floaterm'
-    " Start Screen
-    Plug 'mhinz/vim-startify'
-    " Vista
-    Plug 'liuchengxu/vista.vim'
-    " See what keys do like in emacs
-    Plug 'liuchengxu/vim-which-key'
-    " Zen mode
-    Plug 'junegunn/goyo.vim'
-    " Snippets
-    Plug 'honza/vim-snippets'
-    Plug 'mattn/emmet-vim'
-    " Interactive code
-    Plug 'metakirby5/codi.vim'
-    " Better tabline
-    Plug 'romgrk/barbar.nvim'
-    " undo time travel
-    Plug 'mbbill/undotree'
-    " Find and replace
-    Plug 'ChristianChiarulli/far.vim'
-    " Auto change html tags
-    Plug 'AndrewRadev/tagalong.vim'
-    " live server
-    Plug 'turbio/bracey.vim'
-    " Smooth scroll
-    Plug 'psliwka/vim-smoothie'
-    " " async tasks
-    Plug 'skywind3000/asynctasks.vim'
+    Plug 'voldikss/vim-floaterm' " Terminal
+    Plug 'mhinz/vim-startify' " Start Screen
+    Plug 'liuchengxu/vista.vim' " Vista
+    Plug 'liuchengxu/vim-which-key' " See what keys do like in emacs
+    Plug 'junegunn/goyo.vim' " Zen mode
+    Plug 'honza/vim-snippets' " Snippets
+    Plug 'mattn/emmet-vim' 
+    Plug 'metakirby5/codi.vim' " Interactive code
+    Plug 'romgrk/barbar.nvim' " Better tabline
+    Plug 'mbbill/undotree' " undo time travel
+    Plug 'ChristianChiarulli/far.vim' " Find and replace
+    Plug 'AndrewRadev/tagalong.vim' " Auto change html tags
+    Plug 'turbio/bracey.vim' " live server
+    Plug 'psliwka/vim-smoothie' " Smooth scroll
+    Plug 'skywind3000/asynctasks.vim' " " async tasks
     Plug 'skywind3000/asyncrun.vim'
-    " Swap windows
-    Plug 'wesQ3/vim-windowswap'
-    " Markdown Preview
-    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
-    " Easily Create Gists
-    Plug 'mattn/vim-gist'
+    Plug 'wesQ3/vim-windowswap' " Swap windows
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  } " Markdown Preview
+    Plug 'mattn/vim-gist' " Easily Create Gists
     Plug 'mattn/webapi-vim'
-    " Colorizer
-    Plug 'norcalli/nvim-colorizer.lua'
-    " Intuitive buffer closing
-    Plug 'moll/vim-bbye'
-    " Debugging
-    Plug 'puremourning/vimspector'
+    Plug 'norcalli/nvim-colorizer.lua' " Colorizer
+    Plug 'moll/vim-bbye' " Intuitive buffer closing
+    Plug 'puremourning/vimspector' " Debugging
     Plug 'szw/vim-maximizer'
-    " Rainbow brackets
-    " Plug 'luochen1990/rainbow'
+
+    " Plug 'luochen1990/rainbow' " Rainbow brackets
     " Async Linting Engine
     " TODO make sure to add ale config before plugin
     " Plug 'dense-analysis/ale'

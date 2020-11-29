@@ -21,10 +21,6 @@ noremap B ^|                              " Goto beginning/end of the line
 noremap E $
 noremap ^ <nop>                           " Disable default alternative
 noremap $ <nop>
-" imap <C-h> <C-w>h|                        " Window movement
-" imap <C-j> <C-w>j
-" imap <C-k> <C-w>k
-" imap <C-l> <C-w>l
 vnoremap < <gv|                           " Better indenting
 vnoremap > >gv
 
@@ -43,11 +39,10 @@ else
 
   " I hate escape more than anything else
   inoremap jk <Esc>
-  inoremap jj <Esc>
   
-  " Use Alt+j7k to move line in  visual mode
-  xnoremap <A-k> :move '<-2<CR>gv-gv
-  xnoremap <A-j> :move '>+1<CR>gv-gv
+  " Use Alt+j/k to move line in  visual mode
+  " xnoremap <A-k> :move '<-2<CR>gv-gv
+  " xnoremap <A-j> :move '>+1<CR>gv-gv
 
   " Easy CAPS
   " inoremap <c-u> <ESC>viwUi
@@ -74,6 +69,10 @@ else
   " <TAB>: completion.
   inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
+  imap <C-h> <C-w>h|                        " Window movement
+  imap <C-j> <C-w>j
+  imap <C-k> <C-w>k
+  imap <C-l> <C-w>l
   " Better window navigation
   nnoremap <C-h> <C-w>h
   nnoremap <C-j> <C-w>j
@@ -85,6 +84,7 @@ else
   tnoremap <C-j> <C-\><C-N><C-w>j
   tnoremap <C-k> <C-\><C-N><C-w>k
   tnoremap <C-l> <C-\><C-N><C-w>l
+
   inoremap <C-h> <C-\><C-N><C-w>h
   inoremap <C-j> <C-\><C-N><C-w>j
   inoremap <C-k> <C-\><C-N><C-w>k
