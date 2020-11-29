@@ -42,7 +42,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'turbio/bracey.vim' " live server
     " Plug 'skywind3000/asynctasks.vim' " async tasks
     " Plug 'skywind3000/asyncrun.vim'
-    Plug 'puremourning/vimspector' " Debugging
+    " Plug 'puremourning/vimspector' " Debugging
 
     Plug 'tpope/vim-surround' " Surround
     Plug 'kyazdani42/nvim-web-devicons' " Cool Icons
