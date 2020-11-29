@@ -38,7 +38,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'airblade/vim-rooter' " Auto-change project root
     Plug 'airblade/vim-gitgutter' " Git
     Plug 'alvan/vim-closetag' " Auto close html tags
-    Plug 'ChristianChiarulli/far.vim' " Find and replace
     Plug 'AndrewRadev/tagalong.vim' " Auto change html tags
     Plug 'turbio/bracey.vim' " live server
     Plug 'skywind3000/asynctasks.vim' " async tasks
