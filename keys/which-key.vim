@@ -43,7 +43,7 @@ let g:which_key_map['.'] = [ ':e $MYVIMRC'                                     ,
 let g:which_key_map[';'] = [ ':Commands'                                       , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                                          , 'balance windows' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'explorer' ]
-let g:which_key_map['h'] = [ '<C-W>s'                                          , 'split below']
+let g:which_key_map['h'] = [ ':Startify'                                       , 'startify']
 let g:which_key_map['n'] = [ ':let @/ = ""'                                    , 'no highlight' ]
 let g:which_key_map['o'] = [ ':RnvimrToggle'                                   , 'open' ]
 let g:which_key_map['p'] = [ ':Files'                                          , 'search files' ]
@@ -253,7 +253,7 @@ let g:which_key_map.g = {
       \ 'i' : [':Gist -b'                          , 'post gist'],
       \ 'j' : ['<Plug>(GitGutterNextHunk)'         , 'next hunk'],
       \ 'k' : ['<Plug>(GitGutterPrevHunk)'         , 'prev hunk'],
-      \ 'l' : [':Git log'                          , 'log'],
+      \ 'l' : [':FloatermNew lazygit'              , 'lazygit'],
       \ 'm' : ['<Plug>(git-messenger)'             , 'message'],
       \ 'p' : [':Git push'                         , 'push'],
       \ 'P' : [':Git pull'                         , 'pull'],
