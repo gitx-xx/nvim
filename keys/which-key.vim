@@ -92,13 +92,12 @@ let g:which_key_map.b = {
       \ '0' : [':BufferGoto 0'          , 'buffer 0'],
       \ 'b' : [':BufferPick'            , 'pick buffer'],
       \ 'd' : [':Bdelete'               , 'delete-buffer'],
-      \ 'D' : [':BufferOrderByDirectory', 'order by directory'],
-      \ 'f' : ['bfirst'                 , 'first-buffer'],
-      \ 'l' : ['blast'                  , 'last buffer'],
-      \ 'L' : [':BufferOrderByLanguage' , 'order by language'],
+      \ 'D' : [':Bdelete!'              , 'delete-buffer!'],
+      \ 'o' : [':BufferOrderByLanguage' , 'order by language'],
+      \ 'O' : [':BufferOrderByDirectory', 'order by directory'],
       \ 'n' : ['bnext'                  , 'next-buffer'],
       \ 'p' : ['bprevious'              , 'previous-buffer'],
-      \ '?' : ['Buffers'                , 'fzf-buffer'],
+      \ '/' : ['Buffers'                , 'fzf-buffer'],
       \ }
 
 " d is for debug
