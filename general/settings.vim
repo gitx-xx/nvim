@@ -48,6 +48,7 @@ set foldenable                          " Enable folding
 set foldlevelstart=10                   " Open most folds by default
 set foldmethod=indent
 set autoread                            " auto reload
+set inccommand=split                    " realtime search and replace command
 
 " New stuff
 " set notimeout nottimeout
