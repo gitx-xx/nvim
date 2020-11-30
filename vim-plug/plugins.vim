@@ -13,7 +13,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-repeat' " Repeat stuff
     Plug 'unblevable/quick-scope' " Text Navigation
     Plug 'suy/vim-context-commentstring' " Useful for React Commenting 
-    " Plug 'RRethy/vim-illuminate' " highlight all matches under cursor
 
   if exists('g:vscode')
     " Plug 'asvetliakov/vim-easymotion' " Easy motion for VSCode
@@ -53,22 +52,18 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'jiangmiao/auto-pairs' " Auto pairs for '(' '[' '{'
     Plug 'glepnir/galaxyline.nvim' " Status Line / nvcodeline.lua
     Plug 'tpope/vim-fugitive' " Git plugin
-
     Plug 'tpope/vim-rhubarb' " GitHub plugin (remove)
     Plug 'junegunn/gv.vim'  " Git commit browser (remove)
-    Plug 'liuchengxu/vista.vim' " Vista (remove)
     Plug 'honza/vim-snippets' " Snippets
     Plug 'mattn/emmet-vim' " html expanding abbreviations 
     Plug 'romgrk/barbar.nvim' " Better tabline
-    Plug 'mbbill/undotree' " undo time travel
-    Plug 'psliwka/vim-smoothie' " Smooth scroll
-    Plug 'mattn/vim-gist' " Easily Create Gists
-    Plug 'mattn/webapi-vim'
-    Plug 'norcalli/nvim-colorizer.lua' " Colorizer
+    Plug 'psliwka/vim-smoothie' " Smooth scroll (remove)
+    " Plug 'mattn/vim-gist' " Easily Create Gists
+    " Plug 'mattn/webapi-vim' (remove)
+    Plug 'norcalli/nvim-colorizer.lua' " Colorizer #f8660d
     Plug 'moll/vim-bbye' " Intuitive buffer closing
-    Plug 'szw/vim-maximizer'
+    " Plug 'szw/vim-maximizer'  " Maximize window (remove)
 
-    " Plug 'luochen1990/rainbow' " Rainbow brackets
     " Async Linting Engine
     " TODO make sure to add ale config before plugin
     " Plug 'dense-analysis/ale'
@@ -88,28 +83,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'nvim-treesitter/nvim-treesitter-refactor'
     " Plug 'nvim-treesitter/nvim-treesitter-textobjects'
     " Plug 'romgrk/nvim-treesitter-context'
-    " Minimap
-    " Plug 'wfxr/minimap.vim'
     " jsx syntax support
     " Typescript syntax
     " Plug 'HerringtonDarkholme/yats.vim'
     " Multiple Cursors
     " Plug 'terryma/vim-multiple-cursors'
-    " Plug 'kaicataldo/material.vim'
-    " Plug 'tomasiser/vim-code-dark'
-    " Plug 'mg979/vim-xtabline'
-    " Files
-    " Plug 'tpope/vim-eunuch'
-    " Better Comments
-    " Plug 'jbgutierrez/vim-better-comments'
-    " Echo doc
-    " Plug 'Shougo/echodoc.vim'
-    " Plug 'hardcoreplayers/spaceline.vim'
-    " Plug 'vim-airline/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
-    " Ranger
-    " Plug 'francoiscabrol/ranger.vim'
-    " Plug 'rbgrouleff/bclose.vim'
+    " Plug 'tpope/vim-eunuch' " Sugar for unix file shell commands
+    Plug 'francoiscabrol/ranger.vim' " Ranger integration with Vim
+    Plug 'rbgrouleff/bclose.vim' " ranger.vim dependency
     " Making stuff
     " Plug 'neomake/neomake'
     " Plug 'mhinz/vim-signify'

@@ -108,7 +108,6 @@ let g:which_key_map.d = {
       \ 'c' : ['<Plug>VimspectorRunToCursor'                   , 'run to cursor'],
       \ 'd' : ['<Plug>VimspectorContinue'                      , 'continue'],
       \ 'f' : ['<Plug>VimspectorAddFunctionBreakpoint'         , 'function breakpoint'],
-      \ 'm' : [':MaximizerToggle'                              , 'maximize window'],
       \ 'o' : ['<Plug>VimspectorStepOver'                      , 'step over'],
       \ 'O' : ['<Plug>VimspectorStepOut'                       , 'step out'],
       \ 'i' : ['<Plug>VimspectorStepInto'                      , 'step into'],
@@ -219,6 +218,7 @@ let g:which_key_map.S = {
       \ 'l' : [':SLoad'           , 'Load Session']     ,
       \ 's' : [':Startify'        , 'Start Page']     ,
       \ 'S' : [':SSave'           , 'Save Session']   ,
+      \ 'm' : [':MaximizerToggle'                     , 'maximize window'],
       \ }
 
 " g is for git
