@@ -52,10 +52,8 @@ else
   " source $HOME/.config/nvim/plug-config/vimspector.vim
   source $HOME/.config/nvim/plug-config/auto-pairs.vim
   source $HOME/.config/nvim/plug-config/barbar.vim " tabs
+  source $HOME/.config/nvim/plug-config/ranger.vim " tabs
 
-  " source $HOME/.config/nvim/plug-config/rainbow.vim
-  " source $HOME/.config/nvim/plug-config/illuminate.vim
-  " source $HOME/.config/nvim/plug-config/vista.vim
   " source $HOME/.config/nvim/plug-config/xtabline.vim
   " source $HOME/.config/nvim/plug-config/ale.vim
   luafile $HOME/.config/nvim/lua/nvcodeline.lua
