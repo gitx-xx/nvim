@@ -1,12 +1,14 @@
-let bufferline = {}
-let bufferline.shadow = v:true
-let bufferline.icons = v:true
-let bufferline.clickable = v:true
+" https://github.com/romgrk/barbar.nvim#options
 
+" disabled due to crash 
+" let bufferline = {}
+" let bufferline.shadow = v:true
+" let bufferline.icons = v:true
+" let bufferline.clickable = v:true
 " use buffer name when using buffer picker <leader>bb
-let bufferline.semantic_letters = v:true
-let bufferline.letters = 
-  \ 'asdfjkl;ghnmxcbziowerutyqpASDFJKLGHNMXCBZIOWERUTYQP'
+" let bufferline.semantic_letters = v:true
+" let bufferline.letters = 
+  " \ 'asdfjkl;ghnmxcbziowerutyqpASDFJKLGHNMXCBZIOWERUTYQP'
 
 let bg_current = get(nvim_get_hl_by_name('Normal',     1), 'background', '#000000')
 let bg_visible = get(nvim_get_hl_by_name('TabLineSel', 1), 'background', '#000000')
@@ -32,7 +34,6 @@ hi default link BufferInactive     TabLine
 hi default link BufferInactiveMod  TabLine
 hi default link BufferInactiveSign TabLine
 exe 'hi default BufferInactiveTarget   guifg=red gui=bold guibg=' . bg_inactive
-
 
 " For the shadow in buffer-picking mode
 hi default BufferShadow guifg=#000000 guibg=#000000

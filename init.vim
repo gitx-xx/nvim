@@ -24,6 +24,7 @@ if exists('g:vscode')
   " source $HOME/.config/nvim/plug-config/vim-commentary.vim
 else
   " Themes
+
   source $HOME/.config/nvim/themes/syntax.vim
   source $HOME/.config/nvim/themes/nord.vim
 
@@ -50,9 +51,8 @@ else
   " source $HOME/.config/nvim/plug-config/asynctask.vim
   " source $HOME/.config/nvim/plug-config/vimspector.vim
   source $HOME/.config/nvim/plug-config/auto-pairs.vim
+  source $HOME/.config/nvim/plug-config/barbar.vim " tabs
 
-
-  " source $HOME/.config/nvim/plug-config/barbar.vim
   " source $HOME/.config/nvim/plug-config/rainbow.vim
   " source $HOME/.config/nvim/plug-config/illuminate.vim
   " source $HOME/.config/nvim/plug-config/vista.vim
