@@ -43,13 +43,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'skywind3000/asynctasks.vim' " async tasks
     " Plug 'skywind3000/asyncrun.vim'
     " Plug 'puremourning/vimspector' " Debugging
-
     Plug 'tpope/vim-surround' " Surround
     Plug 'kyazdani42/nvim-web-devicons' " Cool Icons
-    Plug 'ryanoasis/vim-devicons'
+    Plug 'ryanoasis/vim-devicons' " Cool Icons
     Plug 'christianchiarulli/nvcode-color-schemes.vim' " Themes
     Plug 'tpope/vim-sleuth' " auto set indent settings
-    Plug 'sheerun/vim-polyglot' " Better Syntax Support
+    Plug 'sheerun/vim-polyglot' " Language pack
+
     Plug 'nvim-treesitter/nvim-treesitter' " Treesitter
     Plug 'nvim-treesitter/playground'
     Plug 'jiangmiao/auto-pairs' " Auto pairs for '(' '[' '{'

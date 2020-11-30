@@ -5,10 +5,12 @@
 "/___/_/ /_/_/\__(_)___/_/_/ /_/ /_/
 
 
-" General Settings
 if !exists('g:vscode')
   source $HOME/.config/nvim/plug-config/polyglot.vim
+  let g:polyglot_disabled = ['markdown'] " Language pack
 endif
+
+" General Settings
 source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/general/functions.vim
@@ -47,9 +49,6 @@ else
   source $HOME/.config/nvim/plug-config/bracey.vim
   " source $HOME/.config/nvim/plug-config/asynctask.vim
   " source $HOME/.config/nvim/plug-config/vimspector.vim
-  luafile $HOME/.config/nvim/lua/nvcodeline.lua
-  luafile $HOME/.config/nvim/lua/treesitter.lua
-  luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 
   " source $HOME/.config/nvim/plug-config/barbar.vim
   " source $HOME/.config/nvim/plug-config/rainbow.vim
@@ -57,10 +56,11 @@ else
   " source $HOME/.config/nvim/plug-config/vista.vim
   " source $HOME/.config/nvim/plug-config/xtabline.vim
   " source $HOME/.config/nvim/plug-config/ale.vim
+  luafile $HOME/.config/nvim/lua/nvcodeline.lua
+  luafile $HOME/.config/nvim/lua/treesitter.lua
+  luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 endif
 source $HOME/.config/nvim/plug-config/quickscope.vim
-
-let g:polyglot_disabled = ['markdown']
 
 " Add paths to node and python here
 if !empty(glob("~/.config/nvim/paths.vim"))
