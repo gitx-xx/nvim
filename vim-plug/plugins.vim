@@ -63,6 +63,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'norcalli/nvim-colorizer.lua' " Colorizer #f8660d
     Plug 'moll/vim-bbye' " Intuitive buffer closing
     " Plug 'szw/vim-maximizer'  " Maximize window (remove)
+    Plug 'francoiscabrol/ranger.vim' " Ranger integration with Vim
+    Plug 'rbgrouleff/bclose.vim' " ranger.vim dependency
 
     " Async Linting Engine
     " TODO make sure to add ale config before plugin
@@ -89,8 +91,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Multiple Cursors
     " Plug 'terryma/vim-multiple-cursors'
     " Plug 'tpope/vim-eunuch' " Sugar for unix file shell commands
-    Plug 'francoiscabrol/ranger.vim' " Ranger integration with Vim
-    Plug 'rbgrouleff/bclose.vim' " ranger.vim dependency
     " Making stuff
     " Plug 'neomake/neomake'
     " Plug 'mhinz/vim-signify'
