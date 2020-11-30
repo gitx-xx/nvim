@@ -49,17 +49,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'christianchiarulli/nvcode-color-schemes.vim' " Themes
     Plug 'tpope/vim-sleuth' " auto set indent settings
     Plug 'sheerun/vim-polyglot' " Language pack
-
-    Plug 'nvim-treesitter/nvim-treesitter' " Treesitter
-    Plug 'nvim-treesitter/playground'
+    Plug 'nvim-treesitter/nvim-treesitter' " Better highlighting?
     Plug 'jiangmiao/auto-pairs' " Auto pairs for '(' '[' '{'
-    Plug 'glepnir/galaxyline.nvim' " Status Line
-    Plug 'tpope/vim-fugitive'
-    Plug 'tpope/vim-rhubarb'
-    Plug 'junegunn/gv.vim'
-    Plug 'liuchengxu/vista.vim' " Vista
+    Plug 'glepnir/galaxyline.nvim' " Status Line / nvcodeline.lua
+    Plug 'tpope/vim-fugitive' " Git plugin
+
+    Plug 'tpope/vim-rhubarb' " GitHub plugin (remove)
+    Plug 'junegunn/gv.vim'  " Git commit browser (remove)
+    Plug 'liuchengxu/vista.vim' " Vista (remove)
     Plug 'honza/vim-snippets' " Snippets
-    Plug 'mattn/emmet-vim' 
+    Plug 'mattn/emmet-vim' " html expanding abbreviations 
     Plug 'romgrk/barbar.nvim' " Better tabline
     Plug 'mbbill/undotree' " undo time travel
     Plug 'psliwka/vim-smoothie' " Smooth scroll
