@@ -81,26 +81,26 @@ else
   " <TAB>: completion.
   inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
-  imap <C-h> <C-w>h|                        " Window movement
-  imap <C-j> <C-w>j
-  imap <C-k> <C-w>k
-  imap <C-l> <C-w>l
+  imap <A-h> <C-w>h|                        " Window movement
+  imap <A-j> <C-w>j
+  imap <A-k> <C-w>k
+  imap <A-l> <C-w>l
   " Better window navigation
-  nnoremap <C-h> <C-w>h
-  nnoremap <C-j> <C-w>j
-  nnoremap <C-k> <C-w>k
-  nnoremap <C-l> <C-w>l
+  nnoremap <A-h> <C-w>h
+  nnoremap <A-j> <C-w>j
+  nnoremap <A-k> <C-w>k
+  nnoremap <A-l> <C-w>l
 
-  " Terminal window navigation
-  tnoremap <C-h> <C-\><C-N><C-w>h
-  tnoremap <C-j> <C-\><C-N><C-w>j
-  tnoremap <C-k> <C-\><C-N><C-w>k
-  tnoremap <C-l> <C-\><C-N><C-w>l
+ " Terminal window navigation (bugged with floating windows)
+  tnoremap <A-h> <C-\><C-N><C-w>h
+  tnoremap <A-k> <C-\><C-N><C-w>k
+  tnoremap <A-j> <C-\><C-N><C-w>j
+  tnoremap <A-l> <C-\><C-N><C-w>l
 
-  inoremap <C-h> <C-\><C-N><C-w>h
-  inoremap <C-j> <C-\><C-N><C-w>j
-  inoremap <C-k> <C-\><C-N><C-w>k
-  inoremap <C-l> <C-\><C-N><C-w>l
+  inoremap <A-h> <C-\><C-N><C-w>h
+  inoremap <A-j> <C-\><C-N><C-w>j
+  inoremap <A-k> <C-\><C-N><C-w>k
+  inoremap <A-l> <C-\><C-N><C-w>l
   " tnoremap <Esc> <C-\><C-n>
 
   " Use alt + hjkl to resize windows
