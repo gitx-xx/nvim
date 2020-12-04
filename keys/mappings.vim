@@ -1,7 +1,6 @@
 let mapleader=" "
 nnoremap <Space> <Nop>|                   " Disable space
 nnoremap <leader>sv :source $MYVIMRC<CR>| " Source init.vim
-nnoremap <leader>ba :call CloseAllBuffersButCurrent()<CR> " Close all other buffers
 map <silent> <A-q> :call Comment()<CR>|   " Comment block
 map <silent> <A-f> :FZF<CR>|              " Fuzzy file finder
 map <silent> <C-p> :FZF<CR>
