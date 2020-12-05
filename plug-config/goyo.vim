@@ -1,6 +1,5 @@
 " Distraction-free writing in Vim.
 " nmap <silent> <leader>z :Goyo<CR>
-<<<<<<< HEAD
 " autocmd User GoyoEnter set laststatus=0 
 " autocmd User GoyoLeave set laststatus=2
 " function! s:goyo_enter()
@@ -28,9 +27,3 @@
 
 " autocmd! User GoyoEnter lua require('galaxyline').disable_galaxyline()
 " autocmd! User GoyoLeave lua require('galaxyline').galaxyline_augroup()
-=======
-let g:goyo_width = 120
-let g:goyo_height = 100
-let g:goyo_linenr = 1
-
->>>>>>> 783174e... update goyo
