@@ -67,6 +67,11 @@ autocmd FocusGained,BufEnter * checktime     " auto reload
 autocmd! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd BufEnter *.md setlocal syntax=markdown
+" full stack
+autocmd BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
 " pep8
 autocmd BufNewFile,BufRead *.py
     \ set tabstop=4
