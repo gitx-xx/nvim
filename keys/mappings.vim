@@ -5,8 +5,8 @@ map <silent> <A-q> :call Comment()<CR>|   " Comment block
 map <silent> <A-f> :FZF<CR>|              " Fuzzy file finder
 map <silent> <C-p> :FZF<CR>
 map <silent> <A-w> :Goyo<CR>|             " Zenmode
-map <A-h> :bprevious<CR>
-map <A-l> :bnext<CR>
+map <C-h> :bprevious<CR>|                 " Does not work
+map <C-l> :bnext<CR>
 nmap <M-j> mz:m+<cr>`z|                   " Move lines around with Alt
 nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
@@ -14,15 +14,6 @@ vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 map <leader>r :Ranger<CR>
 
-nnoremap <silent>    <A-1> :BufferGoto 1<CR>
-nnoremap <silent>    <A-2> :BufferGoto 2<CR>
-nnoremap <silent>    <A-3> :BufferGoto 3<CR>
-nnoremap <silent>    <A-4> :BufferGoto 4<CR>
-nnoremap <silent>    <A-5> :BufferGoto 5<CR>
-nnoremap <silent>    <A-6> :BufferGoto 6<CR>
-nnoremap <silent>    <A-7> :BufferGoto 7<CR>
-nnoremap <silent>    <A-8> :BufferGoto 8<CR>
-nnoremap <silent>    <A-9> :BufferGoto 9<CR>
 
 nnoremap j gj|                            " Move by visual lines
 nnoremap k gk
@@ -80,26 +71,26 @@ else
   " <TAB>: completion.
   inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
-  imap <A-h> <C-w>h|                        " Window movement
-  imap <A-j> <C-w>j
-  imap <A-k> <C-w>k
-  imap <A-l> <C-w>l
+  imap <C-h> <C-w>h|                        " Window movement
+  imap <C-j> <C-w>j
+  imap <C-k> <C-w>k
+  imap <C-l> <C-w>l
   " Better window navigation
-  nnoremap <A-h> <C-w>h
-  nnoremap <A-j> <C-w>j
-  nnoremap <A-k> <C-w>k
-  nnoremap <A-l> <C-w>l
+  nnoremap <C-h> <C-w>h
+  nnoremap <C-j> <C-w>j
+  nnoremap <C-k> <C-w>k
+  nnoremap <C-l> <C-w>l
 
  " Terminal window navigation (bugged with floating windows)
-  tnoremap <A-h> <C-\><C-N><C-w>h
-  tnoremap <A-k> <C-\><C-N><C-w>k
-  tnoremap <A-j> <C-\><C-N><C-w>j
-  tnoremap <A-l> <C-\><C-N><C-w>l
+  " tnoremap <C-h> <C-\><C-N><C-w>h
+  " tnoremap <C-k> <C-\><C-N><C-w>k
+  " tnoremap <C-j> <C-\><C-N><C-w>j
+  " tnoremap <C-l> <C-\><C-N><C-w>l
 
-  inoremap <A-h> <C-\><C-N><C-w>h
-  inoremap <A-j> <C-\><C-N><C-w>j
-  inoremap <A-k> <C-\><C-N><C-w>k
-  inoremap <A-l> <C-\><C-N><C-w>l
+  inoremap <C-h> <C-\><C-N><C-w>h
+  inoremap <C-j> <C-\><C-N><C-w>j
+  inoremap <C-k> <C-\><C-N><C-w>k
+  inoremap <C-l> <C-\><C-N><C-w>l
   " tnoremap <Esc> <C-\><C-n>
 
   " Use alt + hjkl to resize windows
@@ -112,6 +103,16 @@ else
   nnoremap <silent> <C-Down>  :resize +2<CR>
   nnoremap <silent> <C-Left>  :vertical resize -2<CR>
   nnoremap <silent> <C-Right> :vertical resize +2<CR>
+
+  nnoremap <silent>    <A-1> :BufferGoto 1<CR>
+  nnoremap <silent>    <A-2> :BufferGoto 2<CR>
+  nnoremap <silent>    <A-3> :BufferGoto 3<CR>
+  nnoremap <silent>    <A-4> :BufferGoto 4<CR>
+  nnoremap <silent>    <A-5> :BufferGoto 5<CR>
+  nnoremap <silent>    <A-6> :BufferGoto 6<CR>
+  nnoremap <silent>    <A-7> :BufferGoto 7<CR>
+  nnoremap <silent>    <A-8> :BufferGoto 8<CR>
+  nnoremap <silent>    <A-9> :BufferGoto 9<CR>
 
   let g:elite_mode=0                      " Disable arrows"
   " Disable arrow movement, resize splits instead.

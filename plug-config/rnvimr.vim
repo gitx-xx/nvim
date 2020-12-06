@@ -10,7 +10,7 @@ let g:rnvimr_pick_enable = 1
 let g:rnvimr_bw_enable = 1
 
 nmap <leader>r :RnvimrToggle<CR>
-nmap <leader>e :RnvimrToggle<CR>
+" nmap <leader>e :RnvimrToggle<CR>
 
 let g:rnvimr_ranger_cmd = 'ranger --cmd="set column_ratios 1,1"'
             " \ --cmd="set draw_borders separators"'
