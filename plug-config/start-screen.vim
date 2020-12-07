@@ -36,7 +36,7 @@ let g:startify_bookmarks = [
             \ { 't': '~/.config/nvim/plug-config/start-screen.vim' },
             \ { 'k': '~/.config/nvim/keys/mappings.vim' },
             \ { 'c': '~/.config/nvim/coc-settings.json' },
-            \ { 't': '~/dev/todo.todo' },
+            \ { 't': '~/notes/todo.todo' },
             \ { 'z': '~/.zshrc' },
             \ { 'a':  '~/.oh-my-zsh/custom/aliases.zsh'},
             \ { 'd':  '~/dev'},
