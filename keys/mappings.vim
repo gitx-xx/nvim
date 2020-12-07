@@ -5,8 +5,6 @@ map <silent> <A-q> :call Comment()<CR>|   " Comment block
 map <silent> <A-f> :FZF<CR>|              " Fuzzy file finder
 map <silent> <C-p> :FZF<CR>
 map <silent> <A-w> :Goyo<CR>|             " Zenmode
-map <C-h> :bprevious<CR>|                 " Does not work
-map <C-l> :bnext<CR>
 nmap <M-j> mz:m+<cr>`z|                   " Move lines around with Alt
 nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
@@ -19,6 +17,8 @@ nnoremap j gj|                            " Move by visual lines
 nnoremap k gk
 nnoremap J 10j|                           " Faster vertical movement
 nnoremap K 10k
+vnoremap K 10k
+vnoremap J 10j
 noremap B ^|                              " Goto beginning/end of the line
 noremap E $
 noremap ^ <nop>                           " Disable default alternative
@@ -26,7 +26,7 @@ noremap $ <nop>
 vnoremap < <gv|                           " Better indenting
 vnoremap > >gv
 
-" python
+" python (replace with nice)
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
@@ -42,24 +42,11 @@ else
   " I hate escape more than anything else
   inoremap jk <Esc>
   
-  " Use Alt+j/k to move line in  visual mode
-  " xnoremap <A-k> :move '<-2<CR>gv-gv
-  " xnoremap <A-j> :move '>+1<CR>gv-gv
-
-  " Easy CAPS
-  " inoremap <c-u> <ESC>viwUi
-  " nnoremap <c-u> viwU<Esc>
-
   " TAB in general mode will move to text buffer
   nnoremap <silent> <TAB> :bnext<CR>
   " SHIFT-TAB will go back
   nnoremap <silent> <S-TAB> :bprevious<CR>
 
-  " Move selected line / block of text in visual mode
-  " shift + k to move up
-  " shift + j to move down
-  xnoremap K :move '<-2<CR>gv-gv
-  xnoremap J :move '>+1<CR>gv-gv
   " Alternate way to save
   nnoremap <silent> <C-s> :w<CR>
   inoremap <silent> <C-s> <Esc>
