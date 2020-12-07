@@ -24,6 +24,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
     Plug 'junegunn/fzf.vim'
     Plug 'vimwiki/vimwiki' " Vim Wiki
+    Plug 'tools-life/taskwiki' 
+    
     Plug 'neoclide/coc.nvim', {'branch': 'release'} " Intellisense
     Plug 'mhinz/vim-startify' " Start Screen
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  } " Markdown Preview
