@@ -72,6 +72,8 @@ autocmd BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2
     \ set softtabstop=2
     \ set shiftwidth=2
+autocmd BufNewFile,BufRead *.jsx
+    \ set filetype=javascript
 " pep8
 autocmd BufNewFile,BufRead *.py
     \ set tabstop=4
