@@ -30,13 +30,13 @@ function! StartifyEntryFormat()
     endfunction
 
 let g:startify_bookmarks = [
-            \ { 'l': '~/linux-setup.md' },
+            \ { 'l': '~/notes/linux-setup.md' },
             \ { 'i': '~/.config/nvim/init.vim' },
             \ { 's': '~/.config/nvim/general/settings.vim' },
-            \ { 't': '~/.config/nvim/plug-config/start-screen.vim' },
+            \ { 'r': '~/.config/nvim/plug-config/start-screen.vim' },
             \ { 'k': '~/.config/nvim/keys/mappings.vim' },
             \ { 'c': '~/.config/nvim/coc-settings.json' },
-            \ { 't': '~/notes/todo.todo' },
+            \ { 't': '~/notes/todo.md' },
             \ { 'z': '~/.zshrc' },
             \ { 'a':  '~/.oh-my-zsh/custom/aliases.zsh'},
             \ { 'd':  '~/dev'},
