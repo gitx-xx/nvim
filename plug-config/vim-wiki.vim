@@ -8,7 +8,7 @@
     \   'table_format': 1,
     \   'table_mappings': 1,
     \   'lists': 1,
-    \   'links': 1,
+    \   'links': 0,
     \   'html': 1,
     \   'mouse': 1,
     \ }
