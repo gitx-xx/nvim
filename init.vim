@@ -33,6 +33,7 @@ else
   source $HOME/.config/nvim/plug-config/vim-commentary.vim
   source $HOME/.config/nvim/plug-config/fzf.vim
   source $HOME/.config/nvim/plug-config/vim-wiki.vim
+  source $HOME/.config/nvim/plug-config/taskwiki.vim " taskwiki
   source $HOME/.config/nvim/plug-config/coc/coc.vim
   source $HOME/.config/nvim/plug-config/coc/coc-extensions.vim
   source $HOME/.config/nvim/plug-config/start-screen.vim
@@ -53,7 +54,6 @@ else
   source $HOME/.config/nvim/plug-config/auto-pairs.vim
   source $HOME/.config/nvim/plug-config/barbar.vim " tabs
   source $HOME/.config/nvim/plug-config/ranger.vim " tabs
-  source $HOME/.config/nvim/plug-config/taskwiki.vim " taskwiki
 
   " source $HOME/.config/nvim/plug-config/xtabline.vim
   " source $HOME/.config/nvim/plug-config/ale.vim
