@@ -21,8 +21,10 @@ let g:vimwiki_filetypes = ['markdown']
 let g:vimwiki_list = [{ 'path': '~/notes',
        \ 'syntax':'markdown', 'ext': '.md' }]
 
-let g:vimwiki_markdown_link_ext = 0
+let g:vimwiki_markdown_link_ext = 1
 let g:vimwiki_auto_header = 1
+
+
 " let g:vimwiki_markdown_header_style = 1
 " let g:vimwiki_tags_header_level = 1
 " let g:vimwiki_tags_header = 'Generated Tags'
