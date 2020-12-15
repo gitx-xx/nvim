@@ -6,4 +6,5 @@
 " 'status+,end+,due+,priority-,project+'
 
 " custom sort orders  
-let g:taskwiki_sort_orders={"T": "status+, urgency-, priority-"}
+let g:taskwiki_sort_orders={"T": "status+, urgency-, priority-", "C": "end-"}
+
