@@ -49,6 +49,7 @@ set foldlevelstart=10                   " Open most folds by default
 set foldmethod=indent
 set autoread                            " auto reload
 set inccommand=split                    " realtime search and replace command
+set undofile                            " persistent undo"
 
 " New stuff
 " set notimeout nottimeout
