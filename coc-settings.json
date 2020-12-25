@@ -38,9 +38,7 @@
     "jsx",
     "yaml",
     "json",
-    "python",
-    "vimwiki",
-    "vimwiki.markdown"
+    "python"
   ],
   "coc.preferences.hoverTarget": "float",
 
