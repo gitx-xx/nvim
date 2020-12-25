@@ -21,7 +21,7 @@ let g:mkdp_command_for_global = 0
 " set to 1, preview server available to others in your network
 " by default, the server listens on localhost (127.0.0.1)
 " default: 0
-let g:mkdp_open_to_the_world = 1
+let g:mkdp_open_to_the_world = 0
 
 " use custom IP to open preview page
 " useful when you work in remote vim and preview on local browser
@@ -61,16 +61,16 @@ let g:mkdp_preview_options = {
     \ 'uml': {},
     \ 'maid': {},
     \ 'disable_sync_scroll': 0,
-    \ 'sync_scroll_type': 'middle',
+    \ 'sync_scroll_type': 'relative',
     \ 'hide_yaml_meta': 1,
     \ 'sequence_diagrams': {},
     \ 'flowchart_diagrams': {},
-    \ 'content_editable': v:false
+    \ 'content_editable': v:false,
     \ }
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
-let g:mkdp_markdown_css = '/home/user/.config/nvim/plug-config/markdown-preview.css'
+let g:mkdp_markdown_css = '/home/user/.config/nvim/plug-config/markdown-preview-css-gfm.css'
 
 " use a custom highlight style must absolute path
 " like '/Users/username/highlight.css' or expand('~/highlight.css')
