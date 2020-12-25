@@ -9,7 +9,7 @@ set linebreak
 set whichwrap+=<,>,[,],h,l
 set encoding=UTF-8                      " The encoding displayed
 set fileencoding=UTF-8                  " The encoding written to file
-
+set visualbell                          " Nop?
 set colorcolumn=80                      " Highlight column
 " set pumheight=10                        " Makes popup menu smaller
 set ruler              			            " Show the cursor position all the time
