@@ -37,11 +37,12 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
 
-
 " Single mappings
 let g:which_key_map['c'] = [ ':Commands'                                       , 'commands' ]
 let g:which_key_map['C'] = [ ':CocList commands'                               , 'commands ...' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'explorer' ]
+let g:which_key_map['d'] = [ ':CocList diagnostics'   , 'diagnostics' ]
+let g:which_key_map['o'] = [ ':CocList outline'   , 'outline' ]
 let g:which_key_map['r'] = [ ':RnvimrToggle'                                   , 'open' ]
 let g:which_key_map['p'] = [ ':Files'                                          , 'search files' ]
 let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
