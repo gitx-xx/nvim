@@ -24,5 +24,5 @@
 " autocmd! User GoyoEnter nested call <SID>goyo_enter()
 " autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
-autocmd! User GoyoEnter lua require('galaxyline').disable_galaxyline()
-autocmd! User GoyoLeave lua require('galaxyline').galaxyline_augroup()
+" autocmd! User GoyoEnter lua require('galaxyline').disable_galaxyline()
+" autocmd! User GoyoLeave lua require('galaxyline').galaxyline_augroup()
