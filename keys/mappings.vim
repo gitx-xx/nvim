@@ -1,6 +1,14 @@
 let mapleader=" "
 nnoremap <Space> <Nop>|                   " Disable space
 nnoremap <leader>sv :source $MYVIMRC<CR>| " Source init.vim
+
+nnoremap h <Nop>|                         " disabled temporary
+nnoremap l <Nop>|                         " disabled temporary
+nnoremap <Left> <Nop>|                    " disabled temporary
+nnoremap <Right> <Nop>|                   " disabled temporary
+nnoremap <Up> <Nop>|                      " disabled temporary
+nnoremap <Down> <Nop>|                    " disabled temporary
+
 map <silent> <A-q> :call Comment()<CR>|   " Comment block
 map <silent> <A-f> :FZF<CR>|              " Fuzzy file finder
 map <silent> <C-p> :FZF<CR>
@@ -11,7 +19,6 @@ vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 map <leader>r :Ranger<CR>
-
 
 nnoremap j gj|                            " Move by visual lines
 nnoremap k gk
@@ -41,7 +48,7 @@ else
 
   " I hate escape more than anything else
   inoremap jk <Esc>
-  
+
   " TAB in general mode will move to text buffer
   nnoremap <silent> <TAB> :bnext<CR>
   " SHIFT-TAB will go back
@@ -68,7 +75,7 @@ else
   nnoremap <C-k> <C-w>k
   nnoremap <C-l> <C-w>l
 
- " Terminal window navigation (bugged with floating windows)
+  " Terminal window navigation (bugged with floating windows)
   " tnoremap <C-h> <C-\><C-N><C-w>h
   " tnoremap <C-k> <C-\><C-N><C-w>k
   " tnoremap <C-j> <C-\><C-N><C-w>j
@@ -104,10 +111,10 @@ else
   let g:elite_mode=0                      " Disable arrows"
   " Disable arrow movement, resize splits instead.
   if get(g:, 'elite_mode')
-      nnoremap <C-Up>    :resize -2<CR>
-      nnoremap <C-Down>  :resize +2<CR>
-      nnoremap <C-Left>  :vertical resize -2<CR>
-      nnoremap <C-Right> :vertical resize +2<CR>
+    nnoremap <C-Up>    :resize -2<CR>
+    nnoremap <C-Down>  :resize +2<CR>
+    nnoremap <C-Left>  :vertical resize -2<CR>
+    nnoremap <C-Right> :vertical resize +2<CR>
   endif
 
 endif
