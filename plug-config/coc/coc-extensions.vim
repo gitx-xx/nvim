@@ -8,10 +8,10 @@ let g:coc_global_extensions = [
   \ 'coc-explorer',
   \ 'coc-floaterm',
   \ 'coc-fzf-preview',
+  \ 'coc-highlight',
   \ 'coc-html',
   \ 'coc-json',
   \ 'coc-lists',
-  \ 'coc-markdownlint',
   \ 'coc-marketplace',
   \ 'coc-pairs',
   \ 'coc-prettier',
@@ -19,7 +19,6 @@ let g:coc_global_extensions = [
   \ 'coc-sh',
   \ 'coc-snippets',
   \ 'coc-stylelintplus',
-  \ 'coc-svg',
   \ 'coc-tasks',
   \ 'coc-tsserver',
   \ 'coc-vimlsp',
@@ -28,5 +27,4 @@ let g:coc_global_extensions = [
   \ 'coc-yank',
   \ ]
   " \ 'coc-tabnine',
-  " \ 'coc-highlight',
 
