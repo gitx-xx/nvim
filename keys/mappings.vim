@@ -2,6 +2,7 @@ let mapleader=" "
 nnoremap <Space> <Nop>|                   " Disable space
 nnoremap <leader>sv :source $MYVIMRC<CR>| " Source init.vim
 
+
 nnoremap h <Nop>|                         " disabled temporary
 nnoremap l <Nop>|                         " disabled temporary
 nnoremap <Left> <Nop>|                    " disabled temporary
@@ -32,6 +33,7 @@ noremap ^ <nop>                           " Disable default alternative
 noremap $ <nop>
 vnoremap < <gv|                           " Better indenting
 vnoremap > >gv
+nnoremap Q @q|                            " replay macro on register q
 
 " python (replace with nice)
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
