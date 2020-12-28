@@ -1,10 +1,7 @@
 " Leader Key Maps
 
 let @s = 'veS"'
-
-" Timeout
-let g:which_key_timeout = 100
-
+let g:which_key_timeout = 100 " Timeout
 let g:which_key_display_names = {'<CR>': '↵', '<TAB>': '⇆'}
 
 " Map leader to which_key
@@ -13,23 +10,14 @@ vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 
 " Create map to add keys to
 let g:which_key_map =  {}
-" Define a separator
 let g:which_key_sep = '→'
-" set timeoutlen=100
 
-" Coc Search & refactor
-nnoremap <leader>? CocSearch <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>? :CocSearch <C-R>=expand("<cword>")<CR><CR>
 let g:which_key_map['?'] = 'search word'
 
 " Not a fan of floating windows for this
 let g:which_key_use_floating_win = 0
 let g:which_key_max_size = 0
-
-" let g:which_key_position = 'botright'
-" let g:which_key_position = 'topleft'
-" let g:which_key_vertical = 1
-
-" Change the colors if you want
 
 " Hide status line
 autocmd! FileType which_key
@@ -74,9 +62,7 @@ let g:which_key_map.b = {
       \ 'n' : ['bnext'                  , 'next-buffer'],
       \ 'p' : ['bprevious'              , 'previous-buffer'],
       \ 'b' : ['Buffers'                , 'fzf-buffer'],
-      \ 'B' : ['Buffers'                , 'fzf-buffer'],
       \ }
-      " \ 'b' : [':BufferPick'            , 'pick buffer'],
 
 " d is for debug
 " let g:which_key_map.d = {
@@ -94,11 +80,6 @@ let g:which_key_map.b = {
       " \ 's' : ['<Plug>VimspectorStop'                          , 'stop'],
       " \ }
 
-" f is for find and replace
-let g:which_key_map.f = {
-      \ 'name' : '**FREE**' ,
-      \ }
-
 " m is for mark
 let g:which_key_map.m = {
       \ 'name' : '+mark' ,
@@ -110,17 +91,14 @@ let g:which_key_map.m = {
       \ }
 
 " " z is for spell
-" todo: add word
-" todo: add suggestions
-" todo: next/prev error
 let g:which_key_map.z = {
       \ 'name': '+zpell',
       \ 't': [':set spell!', 'toggle'],
       \ 's': ['z=', 'suggestions'],
       \ 'a': ['zg', 'add'],
       \ 'u': ['zug', 'undo add'],
-      \ 'n': [']z', 'next problem'],
-      \ 'N': ['[z', 'prev problem'],
+      \ 'n': [']z', 'next problem (N/A)'],
+      \ 'N': ['[z', 'prev problem (N/A)'],
       \ }
 
 
@@ -176,7 +154,8 @@ let g:which_key_map.S = {
 " g is for git
 let g:which_key_map.g = {
       \ 'name' : '+git' ,
-      \ 'a' : [':Git add .'                        , 'add all'],
+      \ 'a' : [':Git add %'                        , 'add'],
+      \ 'A' : [':Git add .'                        , 'add all'],
       \ 'c' : [':Git commit'                       , 'commit'],
       \ 'd' : [':Gdiffsplit'                       , 'diff split'],
       \ 'g' : [':GGrep'                            , 'git grep'],
@@ -192,7 +171,6 @@ let g:which_key_map.g = {
       \ 'u' : ['<Plug>(GitGutterUndoHunk)'         , 'undo hunk'],
       \ 'S' : [':CocCommand fzf-preview.GitStatus' , 'status'],
       \ }
-      " \ 'A' : [':Git add %'                        , 'add current'],
       " \ 'S' : [':!git status'                      , 'status'],
 
 " let g:which_key_map.G = {
@@ -233,32 +211,6 @@ let g:which_key_map.w = {
       \ 'name' : '+wiki' ,
       \ 'w' : ['<Plug>VimwikiIndex'                              , 'index'],
       \ }
-
-" Global
-" <Plug>VimwikiIndex
-" <Plug>VimwikiTabIndex
-" <Plug>VimwikiUISelect
-" <Plug>VimwikiDiaryIndex
-" <Plug>VimwikiMakeDiaryNote
-" <Plug>VimwikiTabMakeDiaryNote
-" <Plug>VimwikiMakeYesterdayDiaryNote
-" <Plug>VimwikiMakeTomorrowDiaryNote
-
-" " Local
-" <Plug>Vimwiki2HTML
-" <Plug>Vimwiki2HTMLBrowse
-" <Plug>VimwikiDiaryGenerateLinks
-" <Plug>VimwikiFollowLink
-" <Plug>VimwikiSplitLink
-" <Plug>VimwikiVSplitLink
-" <Plug>VimwikiTabnewLink
-" <Plug>VimwikiGoBackLink
-" <Plug>VimwikiNextLink
-" <Plug>VimwikiPrevLink
-" <Plug>VimwikiGoto
-" <Plug>VimwikiDeleteLink
-" <Plug>VimwikiRenameLink
-" <Plug>VimwikiAddHeaderLevel
 
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")
