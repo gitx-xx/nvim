@@ -2,7 +2,6 @@ let mapleader=" "
 nnoremap <Space> <Nop>|                   " Disable space
 nnoremap <leader>sv :source $MYVIMRC<CR>| " Source init.vim
 
-
 nnoremap h <Nop>|                         " disabled temporary
 nnoremap l <Nop>|                         " disabled temporary
 nnoremap <Left> <Nop>|                    " disabled temporary
@@ -99,16 +98,6 @@ else
   nnoremap <silent> <C-Down>  :resize +2<CR>
   nnoremap <silent> <C-Left>  :vertical resize -2<CR>
   nnoremap <silent> <C-Right> :vertical resize +2<CR>
-
-  nnoremap <silent>    <A-1> :BufferGoto 1<CR>
-  nnoremap <silent>    <A-2> :BufferGoto 2<CR>
-  nnoremap <silent>    <A-3> :BufferGoto 3<CR>
-  nnoremap <silent>    <A-4> :BufferGoto 4<CR>
-  nnoremap <silent>    <A-5> :BufferGoto 5<CR>
-  nnoremap <silent>    <A-6> :BufferGoto 6<CR>
-  nnoremap <silent>    <A-7> :BufferGoto 7<CR>
-  nnoremap <silent>    <A-8> :BufferGoto 8<CR>
-  nnoremap <silent>    <A-9> :BufferGoto 9<CR>
 
   let g:elite_mode=0                      " Disable arrows"
   " Disable arrow movement, resize splits instead.
