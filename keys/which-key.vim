@@ -47,7 +47,7 @@ let g:which_key_map['r'] = [ ':RnvimrToggle'                                   ,
 let g:which_key_map['p'] = [ ':Files'                                          , 'search files' ]
 let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
 let g:which_key_map['W'] = [ ':call WindowSwap#EasyWindowSwap()'               , 'move window' ]
-let g:which_key_map['z'] = [ 'Goyo'                                            , 'zen' ]
+" let g:which_key_map['z'] = [ 'Goyo'                                            , 'zen' ]
 let g:which_key_map['h'] = [ ':Startify'                                       , 'startify']
 " Group mappings
 
@@ -118,24 +118,39 @@ let g:which_key_map.m = {
       \ 't' : [':CocCommand bookmark.toggle', 'toggle bookmark'],
       \ }
 
+" " z is for spell
+" todo: add word
+" todo: add suggestions
+" todo: next/prev error
+let g:which_key_map.z = {
+      \ 'name': '+zpell',
+      \ 't': [':set spell!', 'toggle'],
+      \ 's': ['z=', 'suggestions'],
+      \ 'a': ['zg', 'add'],
+      \ 'u': ['zug', 'undo add'],
+      \ 'n': [']z', 'next problem'],
+      \ 'N': ['[z', 'prev problem'],
+      \ }
+
+
 " " s is for search
 let g:which_key_map.s = {
       \ 'name' : '+search' ,
       \ '/' : [':History/'              , 'history'],
       \ ';' : [':Commands'              , 'commands'],
-      \ 'l' : [':CocCommand fzf-preview.BufferLines'                , 'current buffer'],
-      \ 'b' : [':CocCommand fzf-preview.Buffers'               , 'open buffers'],
-      \ 'f' : [':CocCommand fzf-preview.ProjectFiles'                 , 'files'],
-      \ 'g' : [':CocCommand fzf-preview.GitFiles'                , 'git files'],
-      \ 'd' : [':CocCommand fzf-preview.DirectoryFiles'              , 'directories'],
-      \ 'm' : [':CocCommand fzf-preview.Bookmarks', 'list bookmarks'],
+      \ 'L' : [':CocCommand fzf-preview.BufferLines'                , 'current buffer'],
+      \ 'B' : [':CocCommand fzf-preview.Buffers'               , 'open buffers'],
+      \ 'F' : [':CocCommand fzf-preview.ProjectFiles'                 , 'files'],
+      \ 'G' : [':CocCommand fzf-preview.GitFiles'                , 'git files'],
+      \ 'D' : [':CocCommand fzf-preview.DirectoryFiles'              , 'directories'],
+      \ 'M' : [':CocCommand fzf-preview.Bookmarks', 'list bookmarks'],
       \ 'a' : [':Ag'                    , 'text Ag'],
       \ 'r' : [':Rg'                    , 'text Rg'],
-      \ 'L' : [':BLines'                , 'current buffer'],
-      \ 'B' : [':Buffers'               , 'open buffers'],
+      \ 'l' : [':BLines'                , 'current buffer'],
+      \ 'b' : [':Buffers'               , 'open buffers'],
       \ 'z' : [':FZF'                   , 'FZF'],
-      \ 'F' : [':Files'                 , 'files'],
-      \ 'M' : [':Marks'                 , 'marks'] ,
+      \ 'f' : [':Files'                 , 'files'],
+      \ 'm' : [':Marks'                 , 'marks'] ,
       \ 't' : [':Tags'                  , 'project tags'],
       \ 'T' : [':BTags'                 , 'buffer tags'],
       \ 's' : [':CocList snippets'      , 'snippets'],

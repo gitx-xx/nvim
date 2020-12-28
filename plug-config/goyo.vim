@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 " Distraction-free writing in Vim.
 " nmap <silent> <leader>z :Goyo<CR>
+=======
+ " nmap <silent> <leader>z :Goyo<CR>
+>>>>>>> b94e4ff... update
 " autocmd User GoyoEnter set laststatus=0 
 " autocmd User GoyoLeave set laststatus=2
 " function! s:goyo_enter()
