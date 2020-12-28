@@ -1,6 +1,7 @@
 let mapleader=" "
 nnoremap <Space> <Nop>|                   " Disable space
 nnoremap <leader>sv :source $MYVIMRC<CR>| " Source init.vim
+map <leader>r :Ranger<CR>
 
 nnoremap h <Nop>|                         " disabled temporary
 nnoremap l <Nop>|                         " disabled temporary
@@ -18,7 +19,6 @@ nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
-map <leader>r :Ranger<CR>
 
 nnoremap j gj|                            " Move by visual lines
 nnoremap k gk

@@ -65,7 +65,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'norcalli/nvim-colorizer.lua' " Colorizer #f8660d
     Plug 'moll/vim-bbye' " Intuitive buffer closing
     " Plug 'szw/vim-maximizer'  " Maximize window (remove)
-    Plug 'francoiscabrol/ranger.vim' " Ranger integration with Vim
     Plug 'rbgrouleff/bclose.vim' " ranger.vim dependency
 
     " Async Linting Engine

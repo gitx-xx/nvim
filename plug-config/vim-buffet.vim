@@ -1,7 +1,7 @@
 " vim-buffet
 " https://github.com/bagrat/vim-buffet
 
-let g:buffet_always_show_tabline=1
+let g:buffet_always_show_tabline=0
 let g:buffet_powerline_separators=0
 let g:buffet_use_devicons=1
 let g:buffet_tab_icon = "\uf00a"
