@@ -34,6 +34,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'justinmk/vim-sneak' " Sneak
 
     " Evalute these:
+    Plug 'bagrat/vim-buffet' " better tabs
     Plug 'kevinhwang91/rnvimr' " Ranger in a floating window 
     Plug 'junegunn/goyo.vim' " Distraction-free writing
     Plug 'airblade/vim-rooter' " Auto-change project root
@@ -58,7 +59,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/gv.vim'  " Git commit browser (remove)
     Plug 'honza/vim-snippets' " Snippets
     Plug 'mattn/emmet-vim' " html expanding abbreviations 
-    Plug 'romgrk/barbar.nvim' " Better tabline
     Plug 'psliwka/vim-smoothie' " Smooth scroll (remove)
     " Plug 'mattn/vim-gist' " Easily Create Gists
     " Plug 'mattn/webapi-vim' (remove)
