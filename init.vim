@@ -42,6 +42,7 @@ else
   source $HOME/.config/nvim/plug-config/floaterm.vim
   source $HOME/.config/nvim/plug-config/easymotion.vim
   source $HOME/.config/nvim/plug-config/sneak.vim
+  source $HOME/.config/nvim/plug-config/vim-buffet.vim
   " 
   source $HOME/.config/nvim/plug-config/rnvimr.vim
   source $HOME/.config/nvim/plug-config/goyo.vim
@@ -53,7 +54,6 @@ else
   " source $HOME/.config/nvim/plug-config/asynctask.vim
   " source $HOME/.config/nvim/plug-config/vimspector.vim
   source $HOME/.config/nvim/plug-config/auto-pairs.vim
-  source $HOME/.config/nvim/plug-config/barbar.vim " tabs
 
   " source $HOME/.config/nvim/plug-config/xtabline.vim
   " source $HOME/.config/nvim/plug-config/ale.vim
