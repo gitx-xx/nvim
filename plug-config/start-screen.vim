@@ -33,6 +33,7 @@ let g:startify_bookmarks = [
             \ { 'l': '~/notes/linux-setup.md' },
             \ { 'i': '~/.config/nvim/init.vim' },
             \ { 's': '~/.config/nvim/general/settings.vim' },
+            \ { 'p': '~/.config/nvim/vim-plug/plugins.vim' },
             \ { 'r': '~/.config/nvim/plug-config/start-screen.vim' },
             \ { 'k': '~/.config/nvim/keys/mappings.vim' },
             \ { 'w': '~/.config/nvim/keys/which-key.vim' },
