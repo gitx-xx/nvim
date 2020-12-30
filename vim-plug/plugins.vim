@@ -52,7 +52,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-sleuth' " auto set indent settings
     Plug 'sheerun/vim-polyglot' " Language pack
     Plug 'nvim-treesitter/nvim-treesitter' " Better highlighting?
-    Plug 'jiangmiao/auto-pairs' " Auto pairs for '(' '[' '{'
+    Plug 'townk/vim-autoclose' " Auto pairs for '(' '[' '{'
     Plug 'glepnir/galaxyline.nvim' " Status Line / nvcodeline.lua
     Plug 'tpope/vim-fugitive' " Git plugin
     Plug 'tpope/vim-rhubarb' " GitHub plugin (remove)
