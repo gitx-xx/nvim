@@ -25,7 +25,6 @@ if exists('g:vscode')
   " source $HOME/.config/nvim/plug-config/vim-commentary.vim
 else
   " Themes
-
   source $HOME/.config/nvim/themes/syntax.vim
   source $HOME/.config/nvim/themes/nord.vim
 
@@ -71,9 +70,8 @@ endif
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
-" enable zsh aliases in command mode (broken)
-" autocmd vimenter * let &shell='/bin/zsh -i'
-
 " command for clearing the registers
 command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
 
+" enable zsh aliases in command mode (currently broken)
+" autocmd vimenter * let &shell='/bin/zsh -i'
