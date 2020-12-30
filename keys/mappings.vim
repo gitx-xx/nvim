@@ -3,13 +3,6 @@ nnoremap <Space> <Nop>|                   " Disable space
 nnoremap <leader>sv :source $MYVIMRC<CR>| " Source init.vim
 map <leader>r :Ranger<CR>
 
-nnoremap h <Nop>|                         " disabled temporary
-nnoremap l <Nop>|                         " disabled temporary
-nnoremap <Left> <Nop>|                    " disabled temporary
-nnoremap <Right> <Nop>|                   " disabled temporary
-nnoremap <Up> <Nop>|                      " disabled temporary
-nnoremap <Down> <Nop>|                    " disabled temporary
-
 map <silent> <A-q> :call Comment()<CR>|   " Comment block
 map <silent> <A-f> :FZF<CR>|              " Fuzzy file finder
 map <silent> <C-p> :FZF<CR>

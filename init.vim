@@ -50,6 +50,8 @@ else
   source $HOME/.config/nvim/plug-config/closetags.vim
   source $HOME/.config/nvim/plug-config/tagalong.vim
   source $HOME/.config/nvim/plug-config/bracey.vim
+  source $HOME/.config/nvim/plug-config/vim-hardtime.vim
+
   " source $HOME/.config/nvim/plug-config/asynctask.vim
   " source $HOME/.config/nvim/plug-config/vimspector.vim
   " source $HOME/.config/nvim/plug-config/xtabline.vim

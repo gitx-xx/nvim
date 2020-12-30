@@ -52,6 +52,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-fugitive' " Git plugin
     Plug 'christianchiarulli/nvcode-color-schemes.vim' " Themes
     " Evalute these:
+    Plug 'takac/vim-hardtime' " Timeout for character motions
     Plug 'airblade/vim-gitgutter' " Git
     Plug 'turbio/bracey.vim' " live server
     Plug 'tpope/vim-sleuth' " auto set indent settings
