@@ -19,13 +19,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ChristianChiarulli/vscode-easymotion' " Custom version for VSCode
     Plug 'machakann/vim-highlightedyank'
   else
+    " Enable these plugins before running PlugClean
+    " Plug 'ChristianChiarulli/vscode-easymotion' " Custom version for VSCode
+    " Plug 'machakann/vim-highlightedyank'
+
+    " Default plugins
     Plug 'liuchengxu/vim-which-key' " See what keys do like in emacs
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " FZF
     Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
     Plug 'junegunn/fzf.vim'
     Plug 'vimwiki/vimwiki' " Vim Wiki
     Plug 'tools-life/taskwiki' " Taskwiki
-    
     Plug 'neoclide/coc.nvim', {'branch': 'release'} " Intellisense
     Plug 'mhinz/vim-startify' " Start Screen
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  } " Markdown Preview
@@ -34,38 +38,31 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'justinmk/vim-sneak' " Sneak
     Plug 'bagrat/vim-buffet' " better tabs
     Plug 'kevinhwang91/rnvimr' " Ranger in a floating window 
+    Plug 'rbgrouleff/bclose.vim' " ranger.vim dependency
     Plug 'junegunn/goyo.vim' " Distraction-free writing
     Plug 'airblade/vim-rooter' " Auto-change project root
     Plug 'alvan/vim-closetag' " Auto close html tags
     Plug 'AndrewRadev/tagalong.vim' " Auto rename html tags
-
-    " Evalute these:
-    Plug 'airblade/vim-gitgutter' " Git
-    Plug 'turbio/bracey.vim' " live server
-    " Plug 'skywind3000/asynctasks.vim' " async tasks
-    " Plug 'skywind3000/asyncrun.vim'
-    " Plug 'puremourning/vimspector' " Debugging
+    Plug 'norcalli/nvim-colorizer.lua' " Colorizer #f8660d
     Plug 'tpope/vim-surround' " Surround
     Plug 'kyazdani42/nvim-web-devicons' " Cool Icons
     Plug 'ryanoasis/vim-devicons' " Cool Icons
-    Plug 'christianchiarulli/nvcode-color-schemes.vim' " Themes
-    Plug 'tpope/vim-sleuth' " auto set indent settings
-    Plug 'sheerun/vim-polyglot' " Language pack
     Plug 'nvim-treesitter/nvim-treesitter' " Better highlighting?
     Plug 'townk/vim-autoclose' " Auto pairs for '(' '[' '{'
-    Plug 'glepnir/galaxyline.nvim' " Status Line / nvcodeline.lua
     Plug 'tpope/vim-fugitive' " Git plugin
-    Plug 'tpope/vim-rhubarb' " GitHub plugin (remove)
-    Plug 'junegunn/gv.vim'  " Git commit browser (remove)
+    Plug 'christianchiarulli/nvcode-color-schemes.vim' " Themes
+    " Evalute these:
+    Plug 'airblade/vim-gitgutter' " Git
+    Plug 'turbio/bracey.vim' " live server
+    Plug 'tpope/vim-sleuth' " auto set indent settings
+    Plug 'sheerun/vim-polyglot' " Language pack
+    Plug 'glepnir/galaxyline.nvim' " Status Line / nvcodeline.lua
     Plug 'honza/vim-snippets' " Snippets
     Plug 'mattn/emmet-vim' " html expanding abbreviations 
-    Plug 'psliwka/vim-smoothie' " Smooth scroll (remove)
-    " Plug 'mattn/vim-gist' " Easily Create Gists
-    " Plug 'mattn/webapi-vim' (remove)
-    Plug 'norcalli/nvim-colorizer.lua' " Colorizer #f8660d
+    " Plug 'skywind3000/asynctasks.vim' " async tasks
+    " Plug 'skywind3000/asyncrun.vim'
+    " Plug 'puremourning/vimspector' " Debugging
     Plug 'moll/vim-bbye' " Intuitive buffer closing
-    " Plug 'szw/vim-maximizer'  " Maximize window (remove)
-    Plug 'rbgrouleff/bclose.vim' " ranger.vim dependency
 
     " Plug 'yuezk/vim-js'
     " Plug 'maxmellon/vim-jsx-pretty'

@@ -52,8 +52,6 @@ else
   source $HOME/.config/nvim/plug-config/bracey.vim
   " source $HOME/.config/nvim/plug-config/asynctask.vim
   " source $HOME/.config/nvim/plug-config/vimspector.vim
-  source $HOME/.config/nvim/plug-config/auto-pairs.vim
-
   " source $HOME/.config/nvim/plug-config/xtabline.vim
   " source $HOME/.config/nvim/plug-config/ale.vim
   luafile $HOME/.config/nvim/lua/nvcodeline.lua
