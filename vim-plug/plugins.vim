@@ -11,7 +11,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'tpope/vim-speeddating' " Change dates fast
     " Plug 'glts/vim-radical' " Convert binary, hex, etc..
     Plug 'tpope/vim-repeat' " Repeat stuff
-    Plug 'unblevable/quick-scope' " Text Navigation
+    Plug 'unblevable/quick-scope' " Highlights unique characters
     Plug 'suy/vim-context-commentstring' " Useful for React Commenting 
 
   if exists('g:vscode')
@@ -24,7 +24,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
     Plug 'junegunn/fzf.vim'
     Plug 'vimwiki/vimwiki' " Vim Wiki
-    Plug 'tools-life/taskwiki' 
+    Plug 'tools-life/taskwiki' " Taskwiki
     
     Plug 'neoclide/coc.nvim', {'branch': 'release'} " Intellisense
     Plug 'mhinz/vim-startify' " Start Screen
@@ -32,15 +32,15 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'voldikss/vim-floaterm' " Terminal
     Plug 'easymotion/vim-easymotion' " Easymotion
     Plug 'justinmk/vim-sneak' " Sneak
-
-    " Evalute these:
     Plug 'bagrat/vim-buffet' " better tabs
     Plug 'kevinhwang91/rnvimr' " Ranger in a floating window 
     Plug 'junegunn/goyo.vim' " Distraction-free writing
     Plug 'airblade/vim-rooter' " Auto-change project root
-    Plug 'airblade/vim-gitgutter' " Git
     Plug 'alvan/vim-closetag' " Auto close html tags
     Plug 'AndrewRadev/tagalong.vim' " Auto rename html tags
+
+    " Evalute these:
+    Plug 'airblade/vim-gitgutter' " Git
     Plug 'turbio/bracey.vim' " live server
     " Plug 'skywind3000/asynctasks.vim' " async tasks
     " Plug 'skywind3000/asyncrun.vim'
@@ -67,6 +67,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'szw/vim-maximizer'  " Maximize window (remove)
     Plug 'rbgrouleff/bclose.vim' " ranger.vim dependency
 
+    " Plug 'yuezk/vim-js'
+    " Plug 'maxmellon/vim-jsx-pretty'
+    " Plug 'jelera/vim-javascript-syntax'
+
     " Async Linting Engine
     " TODO make sure to add ale config before plugin
     " Plug 'dense-analysis/ale'
@@ -74,9 +78,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Multiple Cursors
     " TODO add this back in change from C-n
     " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-    " Plug 'yuezk/vim-js'
-    " Plug 'maxmellon/vim-jsx-pretty'
-    " Plug 'jelera/vim-javascript-syntax'
     " Plugin Graveyard
 
     " Debug
@@ -86,12 +87,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'nvim-treesitter/nvim-treesitter-refactor'
     " Plug 'nvim-treesitter/nvim-treesitter-textobjects'
     " Plug 'romgrk/nvim-treesitter-context'
-    " jsx syntax support
+
     " Typescript syntax
     " Plug 'HerringtonDarkholme/yats.vim'
+
     " Multiple Cursors
     " Plug 'terryma/vim-multiple-cursors'
     " Plug 'tpope/vim-eunuch' " Sugar for unix file shell commands
+
     " Making stuff
     " Plug 'neomake/neomake'
     " Plug 'mhinz/vim-signify'
