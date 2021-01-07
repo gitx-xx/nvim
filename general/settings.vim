@@ -76,7 +76,16 @@ autocmd BufNewFile,BufRead *.js, *.html, *.css
 
 autocmd BufNewFile,BufRead *.jsx
     \ set filetype=javascript
+
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" force sync syntax highlight
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
+
 " You can't stop me
 cmap w!! w !sudo tee %
+
+
