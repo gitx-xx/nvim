@@ -1,12 +1,19 @@
 {
-  // "suggest.echodocSupport": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "suggest.echodocSupport": true,
   "suggest.completionItemKindLabels": {
     "text": "t",
     "method": "m",
     "function": ""
   },
   "snippets.priority": 1,
-  //"yank.priority": 1,
+  "yank.priority": 1,
   "suggest.languageSourcePriority": 99,
   "coc.source.file.priority": 2,
   "coc.source.around.priority": 3,
@@ -15,8 +22,7 @@
   "diagnostic.warningSign": " ",
   "diagnostic.infoSign": "",
   "diagnostic.hintSign": " ",
-  // "diagnostic.displayByAle": true,
-  // "diagnostic.virtualText": true, // this won't work with codelens when error on same line
+  "diagnostic.virtualText": true,
   "codeLens.enable": true,
   "list.indicator": ">",
   "list.selectedSignText": " ",
@@ -31,6 +37,7 @@
     "python"
   ],
   "coc.preferences.hoverTarget": "float",
+  "prettier.disableSuccessMessage": true,
   "python.analysis.autoImportCompletions": true,
   "python.analysis.autoSearchPaths": true,
   "python.analysis.diagnosticMode": "openFilesOnly",
