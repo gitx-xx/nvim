@@ -59,17 +59,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-sleuth' " auto set indent settings
     Plug 'sheerun/vim-polyglot' " Language pack
     Plug 'glepnir/galaxyline.nvim' " Status Line / nvcodeline.lua
-    Plug 'honza/vim-snippets' " Snippets
+    Plug 'honza/vim-snippets' " Default snippets
     Plug 'mattn/emmet-vim' " html expanding abbreviations 
     " Plug 'skywind3000/asynctasks.vim' " async tasks
     " Plug 'skywind3000/asyncrun.vim'
     " Plug 'puremourning/vimspector' " Debugging
     Plug 'moll/vim-bbye' " Intuitive buffer closing
 
-    " Plug 'yuezk/vim-js'
+    " Plug 'yuezk/vim-js' " already included in vim-polyglot
     " Plug 'maxmellon/vim-jsx-pretty'  " already included in vim-polyglot
-
-    " Plug 'jelera/vim-javascript-syntax'
+    " Plug 'jelera/vim-javascript-syntax' " already included in vim-polyglot
 
     " Async Linting Engine
     " TODO make sure to add ale config before plugin
@@ -94,8 +93,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Multiple Cursors
     " Plug 'terryma/vim-multiple-cursors'
     " Plug 'tpope/vim-eunuch' " Sugar for unix file shell commands
-
-    " Making stuff
     " Plug 'neomake/neomake'
     " Plug 'mhinz/vim-signify'
     " Plug 'preservim/nerdcommenter'
@@ -103,7 +100,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'atishay/far.vim'
     " Plug 'romgrk/lib.kom'
     " Plug 'brooth/far.vim'
-    " Debugging
   endif
 
 call plug#end()
