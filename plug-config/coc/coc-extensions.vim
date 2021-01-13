@@ -5,6 +5,7 @@ let g:coc_global_extensions = [
   \ 'coc-cssmodules',
   \ 'coc-emmet',
   \ 'coc-emoji',
+  \ 'coc-eslint',
   \ 'coc-explorer',
   \ 'coc-floaterm',
   \ 'coc-fzf-preview',
@@ -26,5 +27,9 @@ let g:coc_global_extensions = [
   \ 'coc-yaml',
   \ 'coc-yank',
   \ ]
+
+
+
+
   " \ 'coc-tabnine',
 
