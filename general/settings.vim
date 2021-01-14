@@ -45,7 +45,7 @@ set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set guifont=FiraCode\ Nerd\ Font
 set foldenable                          " Enable folding
-set foldlevelstart=10                   " Open most folds by default
+set foldlevelstart=99                   " Open most folds by default
 set foldmethod=indent
 set autoread                            " auto reload
 set inccommand=split                    " realtime search and replace command
