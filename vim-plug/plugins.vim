@@ -51,8 +51,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'townk/vim-autoclose' " Auto pairs for '(' '[' '{'
     Plug 'tpope/vim-fugitive' " Git plugin
     Plug 'christianchiarulli/nvcode-color-schemes.vim' " Themes
-
-    " Evalute these:
     Plug 'takac/vim-hardtime' " Timeout for character motions
     Plug 'airblade/vim-gitgutter' " Git
     Plug 'turbio/bracey.vim' " live server
@@ -61,10 +59,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'glepnir/galaxyline.nvim' " Status Line / nvcodeline.lua
     Plug 'honza/vim-snippets' " Default snippets
     Plug 'mattn/emmet-vim' " html expanding abbreviations 
+    Plug 'moll/vim-bbye' " Intuitive buffer closing
+
+    " Evalute these:
+    Plug 'dyng/ctrlsf.vim'
+
     " Plug 'skywind3000/asynctasks.vim' " async tasks
     " Plug 'skywind3000/asyncrun.vim'
     " Plug 'puremourning/vimspector' " Debugging
-    Plug 'moll/vim-bbye' " Intuitive buffer closing
 
     " Plug 'yuezk/vim-js' " already included in vim-polyglot
     " Plug 'maxmellon/vim-jsx-pretty'  " already included in vim-polyglot
