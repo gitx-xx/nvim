@@ -3,7 +3,7 @@ nnoremap <Space> <Nop>|                   " Disable space
 nnoremap <leader>sv :source $MYVIMRC<CR>| " Source init.vim
 map <leader>r :Ranger<CR>
 
-map <silent> <A-q> :call Comment()<CR>|   " Comment block
+map <silent> <A-q> :Commentary<CR>|       " Nerd commentery block
 map <silent> <A-f> :FZF<CR>|              " Fuzzy file finder
 map <silent> <C-p> :FZF<CR>
 map <silent> <A-w> :Goyo<CR>|             " Zenmode
