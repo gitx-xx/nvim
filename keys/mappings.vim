@@ -4,7 +4,7 @@ nnoremap <leader>sv :source $MYVIMRC<CR>| " Source init.vim
 map <leader>r :Ranger<CR>
 
 map <silent> <A-q> :Commentary<CR>|       " Nerd commentery block
-map <silent> <A-f> :FZF<CR>|              " Fuzzy file finder
+nnoremap <C-F> :CtrlSF<CR>                " Search references
 map <silent> <C-p> :FZF<CR>
 map <silent> <A-w> :Goyo<CR>|             " Zenmode
 nmap <M-j> mz:m+<cr>`z|                   " Move lines around with Alt

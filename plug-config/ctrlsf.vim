@@ -1,9 +1,6 @@
 " ctrlsf.vim
 " https://awesomeopensource.com/project/dyng/ctrlsf.vim
 
-nnoremap <C-F> :CtrlSF<CR>
-
-
 let g:ctrlsf_auto_focus = {
     \ "at": "done",
     \ "duration_less_than": 1000
