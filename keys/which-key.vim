@@ -83,11 +83,12 @@ let g:which_key_map.b = {
 " m is for mark
 let g:which_key_map.m = {
       \ 'name' : '+mark' ,
-      \ 'c' : [':CocCommand bookmark.clearForCurrentFile', 'clear file'],
-      \ 'C' : [':CocCommand bookmark.clearForAllFiles', 'clear project'],
+      \ 'c' : [':CocCommand bookmark.clear.curfile', 'clear file'],
+      \ 'C' : [':CocCommand bookmark.clear.all', 'clear project'],
       \ 'j' : [':CocCommand bookmark.next', 'next bookmark'],
       \ 'k' : [':CocCommand bookmark.prev', 'prev bookmark'],
-      \ 't' : [':CocCommand bookmark.toggle', 'toggle bookmark'],
+      \ 'm' : [':CocCommand bookmark.toggle', 'toggle bookmark'],
+      \ 'l' : [':CocList bookmarkAll', 'list bookmarks'],
       \ }
 
 " " z is for spell
@@ -172,19 +173,6 @@ let g:which_key_map.g = {
       \ 'S' : [':CocCommand fzf-preview.GitStatus' , 'status'],
       \ }
       " \ 'S' : [':!git status'                      , 'status'],
-
-" let g:which_key_map.G = {
-      " \ 'name' : '+gist' ,
-      " \ 'a' : [':Gist -a'                          , 'post gist anon'],
-      " \ 'b' : [':Gist -b'                          , 'post gist browser'],
-      " \ 'd' : [':Gist -d'                          , 'delete gist'],
-      " \ 'e' : [':Gist -e'                          , 'edit gist'],
-      " \ 'l' : [':Gist -l'                          , 'list public gists'],
-      " \ 's' : [':Gist -ls'                         , 'list starred gists'],
-      " \ 'm' : [':Gist -m'                          , 'post gist all buffers'],
-      " \ 'p' : [':Gist -P'                          , 'post public gist '],
-      " \ 'P' : [':Gist -p'                          , 'post private gist '],
-      " \ }
 
 " l is for language server protocol
 let g:which_key_map.l = {
