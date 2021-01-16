@@ -1,10 +1,10 @@
 let mapleader=" "
 nnoremap <Space> <Nop>|                   " Disable space
 nnoremap <leader>sv :source $MYVIMRC<CR>| " Source init.vim
-map <leader>r :Ranger<CR>
+map <leader>r :Ranger<CR>|                " Ranger
 map <silent> <A-q> :Commentary<CR>|       " Nerd commentery block
-nnoremap <C-F> :CtrlSF<CR>                " Search references
-map <silent> <C-p> :FZF<CR>               " Fuzzy find files
+nnoremap <C-F> :CtrlSF<CR>|               " Search references
+map <silent> <C-p> :FZF<CR>|              " Fuzzy find files
 map <silent> <A-w> :Goyo<CR>|             " Zenmode
 nmap <M-j> mz:m+<cr>`z|                   " Move lines around with Alt
 nmap <M-k> mz:m-2<cr>`z
@@ -12,7 +12,7 @@ vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " Use "q<leader>q to edit a macro on register q.
-nnoremap <leader>q  :<c-u><c-r><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
+" nnoremap <leader>q  :<c-u><c-r><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
 
 nnoremap j gj|                            " Move by visual lines
 nnoremap k gk
