@@ -148,9 +148,11 @@ let g:which_key_map.S = {
       \ 'name' : '+Session' ,
       \ 'c' : [':SClose'          , 'Close Session']  ,
       \ 'd' : [':SDelete'         , 'Delete Session'] ,
-      \ 'l' : [':SLoad'           , 'Load Session']     ,
+      \ 'l' : [':SLoad default'           , 'Load Default']     ,
+      \ 'L' : [':SLoad'           , 'Load Session']     ,
+      \ 's' : [':SSave default'           , 'Save Default']   ,
       \ 'S' : [':SSave'           , 'Save Session']   ,
-      \ 's' : [':Startify'        , 'Start Page']     ,
+      \ 'H' : [':Startify'        , 'Start Page']     ,
       \ }
       " \ 'm' : [':MaximizerToggle'                     , 'maximize window'],
 
