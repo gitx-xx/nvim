@@ -8,8 +8,8 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-commentary' " Better Comments
-    " Plug 'tpope/vim-speeddating' " Change dates fast
-    " Plug 'glts/vim-radical' " Convert binary, hex, etc..
+    Plug 'tpope/vim-speeddating' " Change dates fast
+    Plug 'glts/vim-radical' " Convert binary, hex, etc..
     Plug 'tpope/vim-repeat' " Repeat stuff
     Plug 'unblevable/quick-scope' " Highlights unique characters
     Plug 'suy/vim-context-commentstring' " Useful for React Commenting 
@@ -20,8 +20,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'machakann/vim-highlightedyank'
   else
     " Enable these plugins before running PlugClean
-    " Plug 'ChristianChiarulli/vscode-easymotion' " Custom version for VSCode
-    " Plug 'machakann/vim-highlightedyank'
+    Plug 'ChristianChiarulli/vscode-easymotion' " Custom version for VSCode
+    Plug 'machakann/vim-highlightedyank'
 
     " Default plugins
     Plug 'liuchengxu/vim-which-key' " See what keys do like in emacs
@@ -57,10 +57,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-sleuth' " auto set indent settings
     Plug 'sheerun/vim-polyglot' " Language pack
     Plug 'glepnir/galaxyline.nvim' " Status Line / nvcodeline.lua
-    Plug 'honza/vim-snippets' " Default snippets
     Plug 'mattn/emmet-vim' " html expanding abbreviations 
     Plug 'moll/vim-bbye' " Intuitive buffer closing
 
+    " Plug 'honza/vim-snippets' " Default snippets  " Already copied
+    " Plug 'sirver/ultisnips' " use coc-snippets instead
     " Evalute these:
     Plug 'dyng/ctrlsf.vim'
 
