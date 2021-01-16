@@ -1,0 +1,81 @@
+# Import
+snippet imr "import React"
+import React from 'react';
+endsnippet
+snippet imrc "import React and Component"
+import React, { Component } from 'react';
+endsnippet
+snippet imrh "import React hooks"
+import { use$1 } from 'react';
+endsnippet
+snippet imrp "import PropTypes"
+import PropTypes from 'prop-types';
+endsnippet
+snippet imrc "import chakra" b
+import {${0}} from '@chakra-ui/core'
+endsnippet
+
+# Component
+
+
+snippet comp "chakra component" b
+import React, { useEffect, useState } from 'react';
+import { Box } from '@chakra-ui/react';
+
+const ${1:componentName} = (${2:props}) => {
+  const [properties, setProperties] = useState([]);
+
+  useEffect(() => {}, []);
+
+  return (
+    <Box d="flex" m="8">
+			$1${0}
+    </Box>
+  );
+};
+
+export default $1;
+endsnippet
+
+snippet fetch "fetch" b
+fetch('${1:url}')
+	.then(res => res.json())
+	.then(data => ${2:console.log(data));}
+endsnippet
+
+
+snippet comp "simple component"
+const ${1:ComponentName} = (${2:props}) => {
+	${3:state}
+
+	return (
+		<>
+			${4}
+		</>
+	);
+};
+
+export default ${1}
+endsnippet
+
+# Hooks
+snippet uses "useState"
+const [${1:state}, set${2}] = useState(${3:initialState});
+endsnippet
+snippet usee "useEffect"
+useEffect(() => {
+	${1}
+});
+endsnippet
+
+# Props
+snippet pt "propTypes"
+${1}.propTypes = {
+	${2}: PropTypes.${2}
+};
+endsnippet
+snippet dp "defaultProps"
+${1}.defaultProps = {
+	${2}: ${3}
+};
+endsnippet

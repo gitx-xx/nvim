@@ -1,6 +1,22 @@
 {
+  "cSpell.language": "en,sv",
+  "cSpellExt.enableDictionaries": [
+    "swedish",
+    "medical-terms"
+  ],
+  "cSpell.numSuggestions": 5,
+  "cSpell.minWordLength": 4,
+  "cSpell.enabledLanguageIds": [
+        "javascript",
+        "javascriptreact",
+        "markdown",
+        "plaintext",
+        "typescript",
+        "typescriptreact",
+        "yml"
+    ],
   "eslint.autoFixOnSave": true,
-  "eslint.filetypes": [
+  "eslint.validate": [
     "javascript",
     "javascriptreact",
     "typescript",
@@ -12,9 +28,12 @@
     "method": "m",
     "function": ""
   },
-  "snippets.priority": 1,
+  "suggest.autoTrigger": "always",
+  "suggest.triggerAfterInsertEnter": true,
+  "suggest.noselect": false,
+  "snippets.priority": 99,
   "yank.priority": 1,
-  "suggest.languageSourcePriority": 99,
+  "suggest.languageSourcePriority": 50,
   "coc.source.file.priority": 2,
   "coc.source.around.priority": 3,
   "coc.source.buffer.priority": 4,
@@ -67,8 +86,13 @@
   "pyright.disableCompletion": false,
   "pyright.disableLanguageServices": false,
   "pyright.disableOrganizeImports": false,
-  "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snips"],
-  //"snippets.userSnippetsDirectory": "~/.config/nvim/snips",
+
+  /* "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snips"], */
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
+  "snippets.extends" : {
+    "javascript":["javascriptreact"]
+  },
+  "snippets.loadFromExtensions": false,
   "emmet.includeLanguages": {
     "vue-html": "html",
     "javascript": "javascriptreact"
@@ -94,6 +118,16 @@
       "trace.server": "verbose"
     }
   },
-  "bookmark.sign": "",
-  "coc.source.emoji.filetypes": ["markdown"]
+  "coc.source.emoji.filetypes": [
+    "markdown"
+  ],
+  "cSpell.userWords": [
+    "Entrypoint",
+    "Entrypoints",
+    "Rnvimr",
+    "appsscript",
+    "eventname",
+    "svgr",
+    "Ängsbacka"
+  ]
 }

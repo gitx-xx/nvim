@@ -35,12 +35,14 @@ let g:which_key_map['r'] = [ ':RnvimrToggle'                                   ,
 let g:which_key_map['p'] = [ ':Files'                                          , 'search files' ]
 let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
 let g:which_key_map['W'] = [ ':call WindowSwap#EasyWindowSwap()'               , 'move window' ]
+let g:which_key_map['a'] = [ '<Plug>(coc-codeaction-selected)', 'actions' ]
+" nmap <leader>s <Plug>(coc-codeaction-selected)
 " let g:which_key_map['z'] = [ 'Goyo'                                            , 'zen' ]
 let g:which_key_map['h'] = [ ':Startify'                                       , 'startify']
 " Group mappings
 
 " a is for actions
-let g:which_key_map.a = {
+let g:which_key_map.A = {
       \ 'name' : '+actions' ,
       \ 'l' : [':Bracey'                 , 'start live server'],
       \ 'L' : [':BraceyStop'             , 'stop live server'],
@@ -91,7 +93,7 @@ let g:which_key_map.m = {
       \ 'l' : [':CocList bookmarkAll', 'list bookmarks'],
       \ }
 
-" " z is for spell
+" " z is for spell (REMOVE) 
 let g:which_key_map.z = {
       \ 'name': '+zpell',
       \ 't': [':set spell!', 'toggle'],
@@ -103,9 +105,9 @@ let g:which_key_map.z = {
       \ }
 
 
-" " s is for search
-let g:which_key_map.s = {
-      \ 'name' : '+search' ,
+" " f is for find
+let g:which_key_map.f = {
+      \ 'name' : '+find' ,
       \ '/' : [':History/'              , 'history'],
       \ ';' : [':Commands'              , 'commands'],
       \ 'L' : [':CocCommand fzf-preview.BufferLines'                , 'current buffer'],

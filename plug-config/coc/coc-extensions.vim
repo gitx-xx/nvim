@@ -1,8 +1,9 @@
 let g:coc_global_extensions = [
   \ 'coc-actions',
-  \ 'coc-bookmark',
   \ 'coc-css',
   \ 'coc-cssmodules',
+  \ 'coc-spell-checker',
+  \ 'coc-cspell-dicts',
   \ 'coc-emmet',
   \ 'coc-emoji',
   \ 'coc-eslint',

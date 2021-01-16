@@ -1,0 +1,48 @@
+snippet #!
+#!/usr/bin/env python3
+endsnippet
+
+snippet import "import ..." Ab
+import ${0:module}
+endsnippet
+
+snippet from "from ... import ..." Ab
+from ${1:package} import ${0:module}
+endsnippet
+
+snippet with "with" Ab
+with ${1:expr} as ${2:var}:
+	${0:${VISUAL}}
+endsnippet
+
+snippet main "Main function boilerplate" b
+def main():
+  $0
+
+if __name__ == "__main__":
+  main()
+endsnippet
+
+snippet class "class" Ab
+class ${1:ClassName}(${2:object}):
+	"""${3:docstring for $1}"""
+	def __init__(self, ${4:arg}):
+		${5:super($1, self).__init__()}
+		self.$4 = $4
+		${0}
+endsnippet
+
+snippet def "def" Ab
+def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
+	"""${3:docstring for $1}"""
+	${0}
+endsnippet
+
+snippet try "try/except" Ab
+	try:
+		${1:${VISUAL}}
+	except ${2:Exception} as ${3:e}:
+		${0:raise $3}
+endsnippet
+
+
