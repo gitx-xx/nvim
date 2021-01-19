@@ -1,29 +1,28 @@
 " VimWiki
-  let g:vimwiki_key_mappings =
-    \ {
-    \   'all_maps': 1,
-    \   'global': 1,
-    \   'headers': 1,
-    \   'text_objs': 1,
-    \   'table_format': 1,
-    \   'table_mappings': 1,
-    \   'lists': 1,
-    \   'links': 0,
-    \   'html': 1,
-    \   'mouse': 1,
-    \ }
+let g:vimwiki_key_mappings =
+		\ {
+		\ 'all_maps': 1,
+		\ 'global': 1,
+		\ 'headers': 1,
+		\ 'text_objs': 1,
+		\ 'table_format': 1,
+		\ 'table_mappings': 1,
+		\ 'lists': 1,
+		\ 'links': 0,
+		\ 'html': 1,
+		\ 'mouse': 1,
+		\ }
 
 " Filetypes enabled for
-let g:vimwiki_global_ext = 0
+let g:vimwiki_global_ext = 1
 let g:vimwiki_filetypes = ['markdown']
 
 " Store vimwiki as markdown in Documetns/notes
 let g:vimwiki_list = [{ 'path': '~/notes',
-       \ 'syntax':'markdown', 'ext': '.md' }]
+\ 'syntax':'markdown', 'ext': '.md' }]
 
 let g:vimwiki_markdown_link_ext = 1
 let g:vimwiki_auto_header = 1
-
 
 " let g:vimwiki_markdown_header_style = 1
 " let g:vimwiki_tags_header_level = 1
@@ -55,8 +54,8 @@ let g:vimwiki_auto_header = 1
 " let g:vimwiki_hl_cb_checked = 0
 
 let g:vimwiki_diary_months = {
-      \ 1: 'January', 2: 'February', 3: 'March',
-      \ 4: 'April', 5: 'May', 6: 'June',
-      \ 7: 'July', 8: 'August', 9: 'September',
-      \ 10: 'October', 11: 'November', 12: 'December'
-      \ }
+\ 1: 'January', 2: 'February', 3: 'March',
+\ 4: 'April', 5: 'May', 6: 'June',
+\ 7: 'July', 8: 'August', 9: 'September',
+\ 10: 'October', 11: 'November', 12: 'December'
+\ }

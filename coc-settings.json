@@ -10,6 +10,7 @@
         "javascript",
         "javascriptreact",
         "markdown",
+        "vimwiki.markdown",
         "plaintext",
         "typescript",
         "typescriptreact",
@@ -128,6 +129,7 @@
     "appsscript",
     "eventname",
     "svgr",
+    "taskwarrior",
     "Ängsbacka"
   ]
 }
