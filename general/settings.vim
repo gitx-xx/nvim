@@ -1,4 +1,5 @@
 set nocompatible                        " Necessary for cool shit
+set nospell                             " Disable built-in spellchecker"
 filetype plugin on
 syntax on                               " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
