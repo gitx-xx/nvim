@@ -82,6 +82,14 @@ let g:which_key_map.b = {
       " \ 's' : ['<Plug>VimspectorStop'                          , 'stop'],
       " \ }
 
+" u is for update
+let g:which_key_map.u = {
+      \ 'name': '+update',
+      \ 't' : [':TSUpdate', 'treesitter'],
+      \ 'c' : [':CocUpdate', 'coc'],
+      \ 'p' : [':PlugUpdate', 'plug'],
+      \ }
+
 " m is for mark
 let g:which_key_map.m = {
       \ 'name' : '+mark' ,
