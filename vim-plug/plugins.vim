@@ -60,18 +60,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mattn/emmet-vim' " html expanding abbreviations 
     Plug 'moll/vim-bbye' " Intuitive buffer closing
 
-    " Plug 'honza/vim-snippets' " Default snippets  " Already copied
-    " Plug 'sirver/ultisnips' " use coc-snippets instead
     " Evalute these:
-    Plug 'dyng/ctrlsf.vim'
+    Plug 'dyng/ctrlsf.vim'  " ack/ag/pt/rg powered code search <C+S-f>
 
     " Plug 'skywind3000/asynctasks.vim' " async tasks
     " Plug 'skywind3000/asyncrun.vim'
     " Plug 'puremourning/vimspector' " Debugging
-
-    " Plug 'yuezk/vim-js' " already included in vim-polyglot
-    " Plug 'maxmellon/vim-jsx-pretty'  " already included in vim-polyglot
-    " Plug 'jelera/vim-javascript-syntax' " already included in vim-polyglot
 
     " Async Linting Engine
     " TODO make sure to add ale config before plugin
