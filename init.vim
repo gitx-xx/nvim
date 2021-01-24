@@ -78,4 +78,4 @@ command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | 
 " autocmd vimenter * let &shell='/bin/zsh -i'
 
 " set default filetype to markdown
-autocmd BufEnter * if &filetype == "" | setlocal ft=markdown | endif
+autocmd BufEnter * if &filetype == "" | setlocal ft=vimwiki.markdown | endif
