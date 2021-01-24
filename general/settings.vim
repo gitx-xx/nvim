@@ -2,8 +2,6 @@ set nocompatible                        " Necessary for cool shit
 set nospell                             " Disable built-in spellchecker"
 filetype plugin on
 syntax on                               " Enables syntax highlighing
-set hidden                              " Required to keep multiple buffers open multiple buffers
-set iskeyword+=-                      	" treat dash separated words as a word text object"
 set formatoptions-=cro                  " Stop newline continution of comments
 set nowrap                              " Display long lines as just one line
 set linebreak
@@ -30,7 +28,6 @@ set laststatus=2                        " Always display the status line
 set number relativenumber               " Line numbers
 set scrolloff=999                       " Center cursor on screen
 set cursorline                          " Enable highlighting of the current line
-set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs
 set incsearch                           " search as characters are entered
 set hlsearch                            " highlight search result
@@ -39,7 +36,7 @@ set showmatch                           " show matching brackets
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
-set shortmess+=c                        " Don't pass messages to |ins-completion-menu|.
+set shortmess+=c                        " Don't pass messages to ins-completion-menu.
 set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
 set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
@@ -49,8 +46,12 @@ set foldenable                          " Enable folding
 set foldlevelstart=99                   " Open most folds by default
 set foldmethod=indent
 set autoread                            " auto reload
-set inccommand=split                    " realtime search and replace command
 set undofile                            " persistent undo"
+set background=dark                     " tell vim what the background color looks like
+
+" inccommand=split might cause issue with treesitter
+" https://github.com/neovim/neovim/issues/12967
+set inccommand=split                    " realtime search and replace command
 
 " New stuff
 " set notimeout nottimeout

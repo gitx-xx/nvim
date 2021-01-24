@@ -12,9 +12,6 @@ vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 let g:which_key_map =  {}
 let g:which_key_sep = '→'
 
-nnoremap <leader>? :CocSearch <C-R>=expand("<cword>")<CR><CR>
-let g:which_key_map['?'] = 'search word'
-
 " Not a fan of floating windows for this
 let g:which_key_use_floating_win = 0
 let g:which_key_max_size = 0
@@ -29,6 +26,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 let g:which_key_map['c'] = [ ':Commands'                                       , 'commands' ]
 let g:which_key_map['C'] = [ ':CocList commands'                               , 'commands ...' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'explorer' ]
+let g:which_key_map['h'] = [ ':Startify'                                       , 'startify']
 let g:which_key_map['d'] = [ ':CocList diagnostics'   , 'diagnostics' ]
 let g:which_key_map['o'] = [ ':CocList outline'   , 'outline' ]
 let g:which_key_map['r'] = [ ':RnvimrToggle'                                   , 'open' ]
@@ -36,9 +34,7 @@ let g:which_key_map['p'] = [ ':Files'                                          ,
 let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
 let g:which_key_map['W'] = [ ':call WindowSwap#EasyWindowSwap()'               , 'move window' ]
 let g:which_key_map['a'] = [ '<Plug>(coc-codeaction-selected)', 'actions' ]
-" nmap <leader>s <Plug>(coc-codeaction-selected)
-" let g:which_key_map['z'] = [ 'Goyo'                                            , 'zen' ]
-let g:which_key_map['h'] = [ ':Startify'                                       , 'startify']
+
 " Group mappings
 
 " a is for actions
@@ -90,28 +86,9 @@ let g:which_key_map.u = {
       \ 'p' : [':PlugUpdate', 'plug'],
       \ }
 
-" m is for mark
-let g:which_key_map.m = {
-      \ 'name' : '+mark' ,
-      \ 'c' : [':CocCommand bookmark.clear.curfile', 'clear file'],
-      \ 'C' : [':CocCommand bookmark.clear.all', 'clear project'],
-      \ 'j' : [':CocCommand bookmark.next', 'next bookmark'],
-      \ 'k' : [':CocCommand bookmark.prev', 'prev bookmark'],
-      \ 'm' : [':CocCommand bookmark.toggle', 'toggle bookmark'],
-      \ 'l' : [':CocList bookmarkAll', 'list bookmarks'],
-      \ }
 
-" " z is for spell (REMOVE) 
-let g:which_key_map.z = {
-      \ 'name': '+zpell',
-      \ 't': [':set spell!', 'toggle'],
-      \ 's': ['z=', 'suggestions'],
-      \ 'a': ['zg', 'add'],
-      \ 'u': ['zug', 'undo add'],
-      \ 'n': [']z', 'next problem (N/A)'],
-      \ 'N': ['[z', 'prev problem (N/A)'],
-      \ }
-
+nnoremap <leader>fw :CocSearch <C-R>=expand("<cword>")<CR><CR>
+" let g:which_key_map['?'] = 'search word'
 
 " " f is for find
 let g:which_key_map.f = {
