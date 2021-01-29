@@ -51,7 +51,7 @@ else
 
   " Alternate way to save
   nnoremap <silent> <C-s> :w<CR>
-  inoremap <silent> <C-s> <Esc>
+  inoremap <silent> <C-s> <Esc>:w<CR>
 
   " Alternate way to quit
   nnoremap <silent> <C-Q> :wq!<CR>
