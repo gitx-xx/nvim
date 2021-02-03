@@ -1,6 +1,9 @@
-" does not work
-" autocmd FileType vimwiki nmap <CR> :VimwikiFollowLink<CR>
-" autocmd FileType vimwiki nmap <S-CR> :VimwikiTabnewLink<CR>
-" autocmd FileType vimwiki nmap <Backspace> :VimwikiGoBackLink<CR>
-" autocmd FileType vimwiki nmap <M-h> :VimwikiPrevLink<CR>
-" autocmd FileType vimwiki nmap <M-l> :VimwikiNextLink<CR>
+" Vimwiki
+" More bindings in which-key.vim
+
+nmap <buffer> <C-l> :VimwikiFollowLink<CR>
+nmap <buffer> <C-h> :VimwikiGoBackLink<CR>
+nmap <buffer> <C-k> :VimwikiPrevLink<CR>
+nmap <buffer> <C-j> :VimwikiNextLink<CR>
+
+
