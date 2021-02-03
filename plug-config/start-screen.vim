@@ -46,4 +46,4 @@ let g:startify_bookmarks = [
             \ { 'n': '~/notes/' },
             \ ]
 
-let g:startify_enable_special = 0
+let g:startify_enable_special = 0  " hide option for empty buffer and quit
