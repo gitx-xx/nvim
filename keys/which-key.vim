@@ -186,7 +186,9 @@ let g:which_key_map.l = {
 " w is for wiki
 let g:which_key_map.w = {
       \ 'name' : '+wiki' ,
-      \ 'w' : ['<Plug>VimwikiIndex'                              , 'index'],
+      \ 'w' : ['<Plug>VimwikiIndex'                   , 'index'],
+      \ 'r' : ['<Plug>VimwikiRenameFile'              , 'rename'],
+      \ 'd' : ['<Plug>VimwikiDeleteFile'              , 'delete'],
       \ }
 
 " Register which key map
