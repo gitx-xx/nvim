@@ -3,7 +3,7 @@ set nospell                             " Disable built-in spellchecker"
 filetype plugin on
 syntax on                               " Enables syntax highlighing
 set formatoptions-=cro                  " Stop newline continution of comments
-set nowrap                              " Display long lines as just one line
+set nowrap                                " Display long lines as just one line
 set linebreak
 set whichwrap+=<,>,[,],h,l
 set encoding=UTF-8                      " The encoding displayed
@@ -82,12 +82,13 @@ autocmd BufNewFile,BufRead *.jsx
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+" set default filetype to markdown
+" autocmd BufEnter * if &filetype == "" | setlocal ft=vimwiki.markdown | endif
+
 " force sync syntax highlight
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
-
 " You can't stop me
 cmap w!! w !sudo tee %
-
 
