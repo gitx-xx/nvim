@@ -62,6 +62,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Evalute these:
     Plug 'dyng/ctrlsf.vim'  " ack/ag/pt/rg powered code search <C+S-f>
+    Plug 'rhysd/clever-f.vim'  " better find
 
     " Plug 'skywind3000/asynctasks.vim' " async tasks
     " Plug 'skywind3000/asyncrun.vim'

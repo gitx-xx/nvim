@@ -51,6 +51,7 @@ else
   source $HOME/.config/nvim/plug-config/bracey.vim
   source $HOME/.config/nvim/plug-config/vim-hardtime.vim
   source $HOME/.config/nvim/plug-config/ctrlsf.vim
+  source $HOME/.config/nvim/plug-config/clever-f.vim
 
   " source $HOME/.config/nvim/plug-config/asynctask.vim
   " source $HOME/.config/nvim/plug-config/vimspector.vim
@@ -77,5 +78,3 @@ command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | 
 " enable zsh aliases in command mode (currently broken)
 " autocmd vimenter * let &shell='/bin/zsh -i'
 
-" set default filetype to markdown
-autocmd BufEnter * if &filetype == "" | setlocal ft=vimwiki.markdown | endif
