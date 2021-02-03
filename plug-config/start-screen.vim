@@ -26,7 +26,7 @@ let g:webdevicons_enable_startify = 1
 
 function! StartifyEntryFormat()
         return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
-    endfunction
+endfunction
 
 let g:startify_bookmarks = [
             \ { 'l': '~/notes/linux-setup.md' },
@@ -46,4 +46,5 @@ let g:startify_bookmarks = [
             \ { 'n': '~/notes/' },
             \ ]
 
-let g:startify_enable_special = 0  " hide option for empty buffer and quit
+" hide option for empty buffer and quit
+let g:startify_enable_special = 0  
