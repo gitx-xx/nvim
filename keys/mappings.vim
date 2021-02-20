@@ -1,10 +1,12 @@
 let mapleader=" "
 nnoremap <Space> <Nop>|                   " Disable space
-map <leader>r :Ranger<CR>|                " Ranger
+nmap <leader>r :RnvimrToggle<CR>|         " Ranger
 map <silent> <A-q> :Commentary<CR>|       " Nerd commentery block
 nnoremap <C-F> :CtrlSF<CR>|               " Search references
 map <silent> <C-p> :FZF<CR>|              " Fuzzy find files
 map <silent> <A-w> :Goyo<CR>|             " Zenmode
+
+
 nmap <M-j> mz:m+<cr>`z|                   " Move lines around with Alt
 nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z

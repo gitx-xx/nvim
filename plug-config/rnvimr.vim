@@ -1,4 +1,5 @@
-nmap <leader>r :RnvimrToggle<CR>
+" Ranger
+" https://github.com/kevinhwang91/rnvimr
 
 " Make Ranger replace netrw and be the file explorer
 let g:rnvimr_ex_enable = 1
