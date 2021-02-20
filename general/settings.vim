@@ -48,6 +48,8 @@ set foldmethod=indent
 set autoread                            " auto reload
 set undofile                            " persistent undo"
 set background=dark                     " tell vim what the background color looks like
+set hidden                              " enable unsaved changes
+
 " inccommand=split might cause issue with treesitter
 " https://github.com/neovim/neovim/issues/12967
 set inccommand=split                    " realtime search and replace command
