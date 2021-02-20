@@ -1,5 +1,4 @@
 " Leader Key Maps
-
 let @s = 'veS"'
 let g:which_key_timeout = 100 " Timeout
 let g:which_key_display_names = {'<CR>': '↵', '<TAB>': '⇆'}
@@ -55,8 +54,7 @@ let g:which_key_map.b = {
       \ '<' : [':BufferMovePrevious'    , 'move prev'],
       \ 'd' : [':Bdelete'               , 'delete-buffer'],
       \ 'D' : [':Bdelete!'              , 'delete-buffer!'],
-      \ 'o' : [':BufferOrderByLanguage' , 'order by language'],
-      \ 'O' : [':BufferOrderByDirectory', 'order by directory'],
+      \ 'o' : [':Bonly'                 , 'delete-other'],
       \ 'n' : ['bnext'                  , 'next-buffer'],
       \ 'N' : [':enew'                  , 'new-buffer'],
       \ 'p' : ['bprevious'              , 'previous-buffer'],
@@ -80,16 +78,14 @@ let g:which_key_map.b = {
       " \ }
 
 " u is for update
+
 let g:which_key_map.u = {
       \ 'name': '+update',
+      \ 's' : [':source $MYVIMRC', 'source init.vim'],
       \ 't' : [':TSUpdate', 'treesitter'],
       \ 'c' : [':CocUpdate', 'coc'],
       \ 'p' : [':PlugUpdate', 'plug'],
       \ }
-
-
-nnoremap <leader>fw :CocSearch <C-R>=expand("<cword>")<CR><CR>
-" let g:which_key_map['?'] = 'search word'
 
 " " f is for find
 let g:which_key_map.f = {
@@ -102,6 +98,7 @@ let g:which_key_map.f = {
       \ 'G' : [':CocCommand fzf-preview.GitFiles'                , 'git files'],
       \ 'D' : [':CocCommand fzf-preview.DirectoryFiles'              , 'directories'],
       \ 'M' : [':CocCommand fzf-preview.Bookmarks', 'list bookmarks'],
+      \ 'w' : [':CocSearch <C-R>=expand("<cword>")<CR><CR>', 'CoCSearch Word'],
       \ 'a' : [':Ag'                    , 'text Ag'],
       \ 'r' : [':Rg'                    , 'text Rg'],
       \ 'l' : [':BLines'                , 'current buffer'],
@@ -130,17 +127,17 @@ let g:which_key_map.f = {
 " :CocCommand fzf-preview.CocCurrentDiagnostics
 " :CocCommand fzf-preview.CocTypeDefinitions
 
+" S is for Session
 let g:which_key_map.S = {
       \ 'name' : '+Session' ,
       \ 'c' : [':SClose'          , 'Close Session']  ,
       \ 'd' : [':SDelete'         , 'Delete Session'] ,
       \ 'l' : [':SLoad default'           , 'Load Default']     ,
       \ 'L' : [':SLoad'           , 'Load Session']     ,
-      \ 's' : [':SSave default'           , 'Save Default']   ,
+      \ 's' : [':SSave! default'           , 'Save Default']   ,
       \ 'S' : [':SSave'           , 'Save Session']   ,
       \ 'H' : [':Startify'        , 'Start Page']     ,
       \ }
-      " \ 'm' : [':MaximizerToggle'                     , 'maximize window'],
 
 " t is for toggle
 let g:which_key_map.t = {

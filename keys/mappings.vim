@@ -1,6 +1,5 @@
 let mapleader=" "
 nnoremap <Space> <Nop>|                   " Disable space
-nnoremap <leader>sv :source $MYVIMRC<CR>| " Source init.vim
 map <leader>r :Ranger<CR>|                " Ranger
 map <silent> <A-q> :Commentary<CR>|       " Nerd commentery block
 nnoremap <C-F> :CtrlSF<CR>|               " Search references
@@ -32,10 +31,6 @@ vnoremap < <gv|                           " Better indenting
 vnoremap > >gv
 nnoremap Q @q|                            " replay macro on register q
 inoremap <C-b> <C-w>| " delete word backwards in INSERT
-
-" python (replace with nice)
-autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
 if exists('g:vscode')
   " Simulate same TAB behavior in VSCode

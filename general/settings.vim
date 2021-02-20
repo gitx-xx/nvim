@@ -10,14 +10,14 @@ set encoding=UTF-8                      " The encoding displayed
 set fileencoding=UTF-8                  " The encoding written to file
 set visualbell                          " Nop?
 set colorcolumn=80                      " Highlight column
-" set pumheight=10                        " Makes popup menu smaller
+set pumheight=10                        " Makes popup menu smaller
 set ruler              			            " Show the cursor position all the time
 set cmdheight=1                         " More space for displaying messages
 set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
 set t_Co=256                            " Support 256 colors
-" set conceallevel=0                    " So that I can see `` in markdown files
+set conceallevel=2                      " So that I can see `` in markdown files
 set tabstop=2                           " Insert 2 spaces for a tab
 set shiftwidth=2                        " Change the number of space characters inserted for indentation
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
@@ -48,33 +48,17 @@ set foldmethod=indent
 set autoread                            " auto reload
 set undofile                            " persistent undo"
 set background=dark                     " tell vim what the background color looks like
-
 " inccommand=split might cause issue with treesitter
 " https://github.com/neovim/neovim/issues/12967
 set inccommand=split                    " realtime search and replace command
 
-" New stuff
-" set notimeout nottimeout
-" set scrolloff=1
-" set sidescroll=1
-" set sidescrolloff=1
-" set display+=lastline
-" set backspace=eol,start,indent
-" set nostartofline
-" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-" set mmp=1300
-" set autochdir                           " Your working directory will always be the same as your working directory
-" set foldcolumn=2                        " Folding abilities
-
 autocmd FocusGained,BufEnter * checktime     " auto reload
 autocmd! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-autocmd BufEnter *.md setlocal syntax=vimwiki
+autocmd BufEnter *.{md} setlocal syntax=vimwiki
 " full stack
-autocmd BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2
-    \ set softtabstop=2
-    \ set shiftwidth=2
+autocmd BufNewFile,BufRead *.{js,jsx,html,css}
+    \ set tabstop=2 softtabstop=2 shiftwidth=2
 
 autocmd BufNewFile,BufRead *.jsx
     \ set filetype=javascript
@@ -82,7 +66,7 @@ autocmd BufNewFile,BufRead *.jsx
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" set default filetype to markdown
+" set default filetype to markdown (disabled for now)
 " autocmd BufEnter * if &filetype == "" | setlocal ft=vimwiki.markdown | endif
 
 " force sync syntax highlight

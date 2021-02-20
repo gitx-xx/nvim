@@ -64,8 +64,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'dyng/ctrlsf.vim'  " ack/ag/pt/rg powered code search <C+S-f>
     Plug 'rhysd/clever-f.vim'  " better find
 
-    " Plug 'skywind3000/asynctasks.vim' " async tasks
-    " Plug 'skywind3000/asyncrun.vim'
+    Plug 'skywind3000/asynctasks.vim' " async tasks
+    Plug 'skywind3000/asyncrun.vim'
     " Plug 'puremourning/vimspector' " Debugging
 
     " Async Linting Engine
@@ -74,6 +74,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     
     " Multiple Cursors
     " TODO add this back in change from C-n
+
     " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
     " Plugin Graveyard
 
