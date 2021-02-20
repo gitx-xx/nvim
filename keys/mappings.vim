@@ -20,6 +20,10 @@ nnoremap J 10j|                           " Faster vertical movement
 nnoremap K 10k
 vnoremap K 10k
 vnoremap J 10j
+noremap <M-l> zo|                         " open fold
+noremap <M-h> zc|                         " close fold
+noremap H b|                              " Goto previous word
+noremap L e|                              " Goto next word
 noremap B ^|                              " Goto beginning/end of the line
 noremap E $
 noremap ^ <nop>                           " Disable default alternative
@@ -27,6 +31,7 @@ noremap $ <nop>
 vnoremap < <gv|                           " Better indenting
 vnoremap > >gv
 nnoremap Q @q|                            " replay macro on register q
+inoremap <C-b> <C-w>| " delete word backwards in INSERT
 
 " python (replace with nice)
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>

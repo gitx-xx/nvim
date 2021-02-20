@@ -1,42 +1,26 @@
-" let g:EasyMotion_do_mapping = 0 " Disable default mappings
-" " Turn on case-insensitive feature
-let g:EasyMotion_smartcase = 1
+" EasyMotion
+" Vim motions on speed
+" https://github.com/easymotion/vim-easymotion
+
+let g:EasyMotion_do_mapping = 1 " enable default mappings
+let g:EasyMotion_smartcase = 1 " ignore case if lowercase
 let g:EasyMotion_verbose = 0
-let g:EasyMotion_do_shade = 0
+let g:EasyMotion_do_shade = 0 " what is this?
+let g:EasyMotion_prompt = '>' " replace with icon 
+let g:EasyMotion_keys='asdghklqwertyuiopzxcvbnmfj;' " default keys
+let g:EasyMotion_space_jump_first = 1 " space jumps to first match
 
-" " JK motions: Line motions
-" map <Leader>j <Plug>(easymotion-j)
-" map <Leader>k <Plug>(easymotion-k)
-
-" nmap s <Plug>(easymotion-s2)
-" nmap t <Plug>(easymotion-t2)
-
-" TODO add separate section for vscode
-
-" map  <Leader>f <Plug>(easymotion-bd-f)
-" nmap <Leader>f <Plug>(easymotion-overwin-f)
-
-" s{char}{char} to move to {char}{char}
+" default easymotion leader
+map <Leader><Leader> <Plug>(easymotion-prefix)
+" easymotion with 2 character
 nmap <silent> s <Plug>(easymotion-s2)
-nmap <silent> S <Plug>(easymotion-overwin-f2)
-" map  n <Plug>(easymotion-next)
-" map  N <Plug>(easymotion-prev)
-" nmap S <Plug>(easymotion-overwin-t)
+" same but multiple characters
+nmap <silent> S <Plug>(easymotion-sn)
 
-" Move to line
-" map <Leader>l <Plug>(easymotion-bd-jk)
-" nmap <Leader>l <Plug>(easymotion-overwin-line)
+" jump to line
+map <silent> <Leader>j <Plug>(easymotion-j)
+map <silent> <Leader>k <Plug>(easymotion-k)
 
-" " Move to word
-" map  <Leader>w <Plug>(easymotion-bd-w)
-" nmap <Leader>w <Plug>(easymotion-overwin-w)
-
-" hi link EasyMotionTarget ErrorMsg
-" hi link EasyMotionShade  Comment
-let g:EasyMotion_prompt = '🔎 '
-
-" hi link EasyMotionMoveHL Search
-" hi link EasyMotionIncSearch Search
-
-"Lower case finds upper & lower case but upper case only finds upper case
-" let g:EasyMotion_smartcase = 1
+" in case the linter outputs syntax errors enable these
+" autocmd User EasyMotionPromptBegin silent! CocDisable
+" autocmd User EasyMotionPromptEnd   silent! CocEnable

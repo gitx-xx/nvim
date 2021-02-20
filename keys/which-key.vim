@@ -58,6 +58,7 @@ let g:which_key_map.b = {
       \ 'o' : [':BufferOrderByLanguage' , 'order by language'],
       \ 'O' : [':BufferOrderByDirectory', 'order by directory'],
       \ 'n' : ['bnext'                  , 'next-buffer'],
+      \ 'N' : [':enew'                  , 'new-buffer'],
       \ 'p' : ['bprevious'              , 'previous-buffer'],
       \ 'b' : ['Buffers'                , 'fzf-buffer'],
       \ }
@@ -141,6 +142,14 @@ let g:which_key_map.S = {
       \ }
       " \ 'm' : [':MaximizerToggle'                     , 'maximize window'],
 
+" t is for toggle
+let g:which_key_map.t = {
+      \ 'name' : '+toggle' ,
+      \ 'w' : [':set nowrap!'                 , 'word wrap'],
+      \ 'g' : [':Goyo'                        , 'Goyo'],
+      \ 's' : [':CocCommand cSpell.toggleEnableSpellChecker' , 'cSpell'],
+      \ }
+
 " g is for git
 let g:which_key_map.g = {
       \ 'name' : '+git' ,
@@ -186,9 +195,16 @@ let g:which_key_map.l = {
 " w is for wiki
 let g:which_key_map.w = {
       \ 'name' : '+wiki' ,
-      \ 'w' : ['<Plug>VimwikiIndex'                   , 'index'],
-      \ 'r' : ['<Plug>VimwikiRenameFile'              , 'rename'],
-      \ 'd' : ['<Plug>VimwikiDeleteFile'              , 'delete'],
+      \ 'w' : ['<Plug>VimwikiIndex'                   , 'index wiki'],
+      \ 'r' : ['<Plug>VimwikiRenameFile'              , 'rename wiki'],
+      \ 'a' : [':TaskWikiAnnotate'              , 'annotate task'],
+      \ 'd' : [':TaskWikiDone'              , 'done task'],
+      \ 'e' : [':TaskWikiEdit'              , 'edit task'],
+      \ 'D' : [':TaskWikiDelete'              , 'delete task'],
+      \ 'l' : [':TaskWikiLink'              , 'link task'],
+      \ 'm' : [':TaskWikiMod'              , 'mod task'],
+      \ 's' : [':TaskWikiStart'              , 'start task'],
+      \ 'S' : [':TaskWikiStop'              , 'stop task'],
       \ }
 
 " Register which key map

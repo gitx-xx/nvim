@@ -1,4 +1,11 @@
 " VimWiki
+
+" Bindings (disabled due to conflict with window navigation)
+" nmap <buffer> <C-l> :VimwikiFollowLink<CR>
+" nmap <buffer> <C-h> :VimwikiGoBackLink<CR>
+" nmap <buffer> <C-k> :VimwikiPrevLink<CR>
+" nmap <buffer> <C-j> :VimwikiNextLink<CR>
+
 let g:vimwiki_key_mappings =
 		\ {
 		\ 'all_maps': 1,

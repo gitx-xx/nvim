@@ -19,9 +19,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ChristianChiarulli/vscode-easymotion' " Custom version for VSCode
     Plug 'machakann/vim-highlightedyank'
   else
-    " Enable these plugins before running PlugClean
-    Plug 'ChristianChiarulli/vscode-easymotion' " Custom version for VSCode
-    Plug 'machakann/vim-highlightedyank'
+    " Enable these plugins before running PlugClean, disable otherwise
+    " Plug 'ChristianChiarulli/vscode-easymotion' " Custom version for VSCode
+    " Plug 'machakann/vim-highlightedyank'
 
     " Default plugins
     Plug 'liuchengxu/vim-which-key' " See what keys do like in emacs
@@ -35,7 +35,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  } " Markdown Preview
     Plug 'voldikss/vim-floaterm' " Terminal
     Plug 'easymotion/vim-easymotion' " Easymotion
-    Plug 'justinmk/vim-sneak' " Sneak
     Plug 'bagrat/vim-buffet' " better tabs
     Plug 'kevinhwang91/rnvimr' " Ranger in a floating window 
     Plug 'rbgrouleff/bclose.vim' " ranger.vim dependency
@@ -48,6 +47,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kyazdani42/nvim-web-devicons' " Cool Icons
     Plug 'ryanoasis/vim-devicons' " Cool Icons
     Plug 'nvim-treesitter/nvim-treesitter' " Better highlighting?
+    Plug 'nvim-treesitter/playground' " Playground
     Plug 'townk/vim-autoclose' " Auto pairs for '(' '[' '{'
     Plug 'tpope/vim-fugitive' " Git plugin
     Plug 'christianchiarulli/nvcode-color-schemes.vim' " Themes

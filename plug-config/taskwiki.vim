@@ -5,7 +5,7 @@
 " let taskwiki_disable = 'yes'
 
 " supress default bindings
-" let g:taskwiki_suppress_mappings="yes"
+let g:taskwiki_suppress_mappings="yes"
 
 " default sort order
 " 'status+,end+,due+,priority-,project+'
