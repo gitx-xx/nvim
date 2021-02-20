@@ -23,6 +23,7 @@ if exists('g:vscode')
   source $HOME/.config/nvim/plug-config/easymotion.vim
   source $HOME/.config/nvim/plug-config/highlightyank.vim
   " source $HOME/.config/nvim/plug-config/vim-commentary.vim
+  source $HOME/.config/nvim/plug-config/quickscope.vim
 else
   " Themes
   source $HOME/.config/nvim/themes/syntax.vim
@@ -62,7 +63,6 @@ else
   luafile $HOME/.config/nvim/lua/treesitter.lua
   luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 endif
-source $HOME/.config/nvim/plug-config/quickscope.vim
 
 " Add paths to node and python here
 if !empty(glob("~/.config/nvim/paths.vim"))
@@ -74,6 +74,7 @@ inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
 " command for clearing the registers
+" TODO move this to fuunctions instead
 command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
 
 " enable zsh aliases in command mode (currently broken)
