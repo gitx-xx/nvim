@@ -1,3 +1,6 @@
+" treat vimwiki as markdown for linter to work
+let g:coc_filetype_map = { 'vimwiki.markdown': 'markdown' }
+
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
