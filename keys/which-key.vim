@@ -197,11 +197,12 @@ let g:which_key_map.w = {
       \ 'a' : [':TaskWikiAnnotate'              , 'annotate task'],
       \ 'd' : [':TaskWikiDone'              , 'done task'],
       \ 'e' : [':TaskWikiEdit'              , 'edit task'],
-      \ 'D' : [':TaskWikiDelete'              , 'delete task'],
+      \ 'x' : [':TaskWikiDelete'              , 'delete task'],
       \ 'l' : [':TaskWikiLink'              , 'link task'],
       \ 'm' : [':TaskWikiMod'              , 'mod task'],
       \ 's' : [':TaskWikiStart'              , 'start task'],
       \ 'S' : [':TaskWikiStop'              , 'stop task'],
+      \ 'p' : [':TaskWikiChooseProject'              , 'change project'],
       \ }
 
 " Register which key map

@@ -23,7 +23,6 @@ if exists('g:vscode')
   source $HOME/.config/nvim/plug-config/easymotion.vim
   source $HOME/.config/nvim/plug-config/highlightyank.vim
   " source $HOME/.config/nvim/plug-config/vim-commentary.vim
-  source $HOME/.config/nvim/plug-config/quickscope.vim
 else
   " Themes
   source $HOME/.config/nvim/themes/syntax.vim
@@ -63,6 +62,7 @@ else
   luafile $HOME/.config/nvim/lua/treesitter.lua
   luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 endif
+source $HOME/.config/nvim/plug-config/quickscope.vim
 
 " Add paths to node and python here
 if !empty(glob("~/.config/nvim/paths.vim"))
