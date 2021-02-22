@@ -146,6 +146,7 @@ let g:which_key_map.t = {
       \ 't' : [':CocCommand cSpell.toggleEnableSpellChecker' , 'cSpell'],
       \ 'b' : [':call ToggleBackground()' , 'background'],
       \ 's' : [':call ToggleStatusline()' , 'statusline'],
+      \ 'c' : [':call ConcealLevel()' , 'statusline'],
       \ }
 
 " g is for git

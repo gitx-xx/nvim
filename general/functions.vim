@@ -16,3 +16,8 @@ endfunction
 function! ToggleStatusline()
 	let &laststatus = ( &laststatus == 2 ? 0 : 2 )
 endfunction
+
+function! ToggleConcealLevel()
+	let &conceallevel = ( &conceallevel == 2 ? 0 : 2 )
+endfunction
+
