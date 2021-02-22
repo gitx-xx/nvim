@@ -26,8 +26,10 @@ if exists('g:vscode')
 else
   " Themes
   source $HOME/.config/nvim/themes/syntax.vim
-  source $HOME/.config/nvim/themes/nord.vim
-
+  " source $HOME/.config/nvim/themes/nord.vim
+  source $HOME/.config/nvim/plug-config/vim-lightline.vim
+  source $HOME/.config/nvim/plug-config/lightline-bufferline.vim
+  source $HOME/.config/nvim/themes/theme-switcher.vim
   " Plugin Configuration
   source $HOME/.config/nvim/keys/which-key.vim
   source $HOME/.config/nvim/plug-config/vim-commentary.vim
@@ -54,11 +56,12 @@ else
   source $HOME/.config/nvim/plug-config/emmet-vim.vim
 
 
+
   " source $HOME/.config/nvim/plug-config/asynctask.vim
   " source $HOME/.config/nvim/plug-config/vimspector.vim
   " source $HOME/.config/nvim/plug-config/xtabline.vim
   " source $HOME/.config/nvim/plug-config/ale.vim
-  luafile $HOME/.config/nvim/lua/nvcodeline.lua
+  " luafile $HOME/.config/nvim/lua/nvcodeline.lua
   luafile $HOME/.config/nvim/lua/treesitter.lua
   luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 endif

@@ -35,7 +35,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  } " Markdown Preview
     Plug 'voldikss/vim-floaterm' " Terminal
     Plug 'easymotion/vim-easymotion' " Easymotion
-    Plug 'bagrat/vim-buffet' " better tabs
+    " Plug 'bagrat/vim-buffet' " better tabs
     Plug 'kevinhwang91/rnvimr' " Ranger in a floating window 
     Plug 'rbgrouleff/bclose.vim' " ranger.vim dependency
     Plug 'junegunn/goyo.vim' " Distraction-free writing
@@ -50,13 +50,15 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-treesitter/playground' " Playground
     Plug 'townk/vim-autoclose' " Auto pairs for '(' '[' '{'
     Plug 'tpope/vim-fugitive' " Git plugin
-    Plug 'christianchiarulli/nvcode-color-schemes.vim' " Themes
+    " Plug 'christianchiarulli/nvcode-color-schemes.vim' " Themes
     Plug 'takac/vim-hardtime' " Timeout for character motions
     Plug 'airblade/vim-gitgutter' " Git
     Plug 'turbio/bracey.vim' " live server
     Plug 'tpope/vim-sleuth' " auto set indent settings
     Plug 'sheerun/vim-polyglot' " Language pack
-    Plug 'glepnir/galaxyline.nvim' " Status Line / nvcodeline.lua
+    " Plug 'glepnir/galaxyline.nvim' " Status Line / nvcodeline.lua
+    Plug 'itchyny/lightline.vim' " Status line
+    Plug 'mengelbrecht/lightline-bufferline' " Bufferline
     Plug 'mattn/emmet-vim' " html expanding abbreviations 
     Plug 'moll/vim-bbye' " Intuitive buffer closing
 
