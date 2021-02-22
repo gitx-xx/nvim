@@ -60,6 +60,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'moll/vim-bbye' " Intuitive buffer closing
 
     " Evalute these:
+    Plug 'schickling/vim-bufonly' " Delete other buffers
     Plug 'dyng/ctrlsf.vim'  " ack/ag/pt/rg powered code search <C+S-f>
     Plug 'rhysd/clever-f.vim'  " better find
 
