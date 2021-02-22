@@ -13,8 +13,21 @@ function! ToggleBackground()
 	let &background = ( &background == "dark"? "light" : "dark" )
 endfunction
 
-function! ToggleStatusline()
-	let &laststatus = ( &laststatus == 2 ? 0 : 2 )
+let s:hidden = 0
+function! ToggleClutter()
+	if s:hidden == 0
+		let s:hidden = 1
+    set laststatus=0
+    set noshowmode
+		set noshowcmd
+    set shortmess+=F
+	else
+		let s:hidden = 0
+		set laststatus=2
+    set showmode
+		set showcmd
+		set shortmess=filnxtToOFAIc
+	endif
 endfunction
 
 function! ToggleConcealLevel()

@@ -11,8 +11,7 @@ set fileencoding=UTF-8                  " The encoding written to file
 set visualbell                          " Nop?
 set colorcolumn=80                      " Highlight column
 set pumheight=10                        " Makes popup menu smaller
-set ruler              			            " Show the cursor position all the time
-set cmdheight=1                         " More space for displaying messages
+set noruler              			          " Hide the cursor position
 set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
@@ -24,11 +23,12 @@ set smarttab                            " Makes tabbing smarter will realize you
 set expandtab                           " Converts tabs to spaces
 set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
-set laststatus=2                        " Always display the status line
 set number relativenumber               " Line numbers
 set scrolloff=999                       " Center cursor on screen
 set cursorline                          " Enable highlighting of the current line
+set laststatus=2                        " Always display the status line
 set showtabline=2                       " Always show tabs
+set cmdheight=1                         " More space for displaying messages
 set incsearch                           " search as characters are entered
 set hlsearch                            " highlight search result
 set smartcase                           " smartcase when search

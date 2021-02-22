@@ -16,9 +16,9 @@ let g:which_key_use_floating_win = 0
 let g:which_key_max_size = 0
 
 " Hide status line
-autocmd! FileType which_key
-autocmd  FileType which_key set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
+" autocmd! FileType which_key
+" autocmd  FileType which_key set laststatus=0 noshowmode noruler
+"   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
 
 " Single mappings
@@ -143,10 +143,10 @@ let g:which_key_map.t = {
       \ 'name' : '+toggle' ,
       \ 'w' : [':set nowrap!'                 , 'word wrap'],
       \ 'g' : [':Goyo'                        , 'Goyo'],
-      \ 't' : [':CocCommand cSpell.toggleEnableSpellChecker' , 'cSpell'],
+      \ 's' : [':CocCommand cSpell.toggleEnableSpellChecker' , 'cSpell'],
       \ 'b' : [':call ToggleBackground()' , 'background'],
-      \ 's' : [':call ToggleStatusline()' , 'statusline'],
-      \ 'c' : [':call ConcealLevel()' , 'statusline'],
+      \ 't' : [':call ToggleClutter()' , 'clutter'],
+      \ 'c' : [':call ConcealLevel()' , 'conceal'],
       \ }
 
 " g is for git
