@@ -144,7 +144,9 @@ let g:which_key_map.t = {
       \ 'name' : '+toggle' ,
       \ 'w' : [':set nowrap!'                 , 'word wrap'],
       \ 'g' : [':Goyo'                        , 'Goyo'],
-      \ 's' : [':CocCommand cSpell.toggleEnableSpellChecker' , 'cSpell'],
+      \ 't' : [':CocCommand cSpell.toggleEnableSpellChecker' , 'cSpell'],
+      \ 'b' : [':call ToggleBackground()' , 'background'],
+      \ 'b' : [':call ToggleStatusline()' , 'statusline'],
       \ }
 
 " g is for git
