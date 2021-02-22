@@ -39,7 +39,7 @@ let g:startify_bookmarks = [
             \ { 'k': '~/.config/nvim/keys/mappings.vim' },
             \ { 'w': '~/.config/nvim/keys/which-key.vim' },
             \ { 'c': '~/.config/nvim/coc-settings.json' },
-            \ { 'r': '~/.config/ranger/ranger.rc' },
+            \ { 'r': '~/.config/ranger/rc.conf' },
             \ { 't': '~/notes/todo.md' },
             \ { 'z': '~/.zshrc' },
             \ { 'a':  '~/.oh-my-zsh/custom/aliases.zsh'},

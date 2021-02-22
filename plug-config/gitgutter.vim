@@ -1,6 +1,7 @@
 " A Vim plugin which shows a git diff in the sign column.
 " https://github.com/airblade/vim-gitgutter
 let g:gitgutter_enabled = 1
+let g:gitgutter_map_keys = 0
 let g:gitgutter_highlight_lines = 0
 let g:gitgutter_highlight_linenrs = 1
 let g:gitgutter_preview_win_floating = 1

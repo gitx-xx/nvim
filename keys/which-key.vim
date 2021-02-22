@@ -78,7 +78,6 @@ let g:which_key_map.b = {
       " \ }
 
 " u is for update
-
 let g:which_key_map.u = {
       \ 'name': '+update',
       \ 's' : [':source $MYVIMRC', 'source init.vim'],
@@ -146,7 +145,7 @@ let g:which_key_map.t = {
       \ 'g' : [':Goyo'                        , 'Goyo'],
       \ 't' : [':CocCommand cSpell.toggleEnableSpellChecker' , 'cSpell'],
       \ 'b' : [':call ToggleBackground()' , 'background'],
-      \ 'b' : [':call ToggleStatusline()' , 'statusline'],
+      \ 's' : [':call ToggleStatusline()' , 'statusline'],
       \ }
 
 " g is for git
