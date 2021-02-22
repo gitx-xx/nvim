@@ -17,7 +17,8 @@ let g:startify_lists = [
           \ ]
           " \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
 
-let g:startify_session_autoload = 1
+let g:startify_files_number = 5
+" let g:startify_session_autoload = 1
 let g:startify_session_delete_buffers = 1
 let g:startify_change_to_vcs_root = 1
 let g:startify_fortune_use_unicode = 1
@@ -34,7 +35,7 @@ let g:startify_bookmarks = [
             \ { 's': '~/.config/nvim/general/settings.vim' },
             \ { 'S': '~/.config/nvim/snips/' },
             \ { 'p': '~/.config/nvim/vim-plug/plugins.vim' },
-            \ { 'r': '~/.config/nvim/plug-config/start-screen.vim' },
+            \ { 'h': '~/.config/nvim/plug-config/start-screen.vim' },
             \ { 'k': '~/.config/nvim/keys/mappings.vim' },
             \ { 'w': '~/.config/nvim/keys/which-key.vim' },
             \ { 'c': '~/.config/nvim/coc-settings.json' },
