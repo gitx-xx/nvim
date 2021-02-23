@@ -13,7 +13,7 @@ function! ToggleBackground()
 	let &background = ( &background == "dark"? "light" : "dark" )
 endfunction
 
-let s:hidden = 0
+let s:hidden = 1
 function! ToggleClutter()
 	if s:hidden == 0
 		let s:hidden = 1

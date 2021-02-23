@@ -26,7 +26,7 @@ set autoindent                          " Good auto indent
 set number relativenumber               " Line numbers
 set scrolloff=999                       " Center cursor on screen
 set cursorline                          " Enable highlighting of the current line
-set laststatus=2                        " Always display the status line
+set laststatus=0                        " Hide statusline by default
 set showtabline=2                       " Always show tabs
 set cmdheight=1                         " More space for displaying messages
 set incsearch                           " search as characters are entered
