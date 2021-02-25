@@ -21,12 +21,14 @@ function! ToggleClutter()
     set noshowmode
 		set noshowcmd
     set shortmess+=F
+		set nonumber
 	else
 		let s:hidden = 0
 		set laststatus=2
     set showmode
 		set showcmd
 		set shortmess=filnxtToOFAIc
+		set number relativenumber
 	endif
 endfunction
 

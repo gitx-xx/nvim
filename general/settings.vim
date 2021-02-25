@@ -23,7 +23,7 @@ set smarttab                            " Makes tabbing smarter will realize you
 set expandtab                           " Converts tabs to spaces
 set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
-set number relativenumber               " Line numbers
+set nonumber                            " Line numbers
 set scrolloff=999                       " Center cursor on screen
 set cursorline                          " Enable highlighting of the current line
 set laststatus=0                        " Hide statusline by default
@@ -54,6 +54,9 @@ set hidden                              " enable unsaved changes
 " https://github.com/neovim/neovim/issues/12967
 set inccommand=split                    " realtime search and replace command
 
+" remove split border
+hi VertSplit guifg=bg guibg=NONE gui=NONE
+
 autocmd FocusGained,BufEnter * checktime     " auto reload
 autocmd! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -70,6 +73,8 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 
 " set default filetype to markdown (disabled for now)
 " autocmd BufEnter * if &filetype == "" | setlocal ft=vimwiki.markdown | endif
+
+autocmd BufEnter *.{vim} :set syntax=vim
 
 " force sync syntax highlight
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart

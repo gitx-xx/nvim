@@ -148,6 +148,8 @@ let g:which_key_map.t = {
       \ 'b' : [':call ToggleBackground()' , 'background'],
       \ 't' : [':call ToggleClutter()' , 'clutter'],
       \ 'c' : [':call ConcealLevel()' , 'conceal'],
+      \ 'h' : [':set hlsearch!' , 'highlight'],
+      \ 'u' : [":execute 'topleft' ((&columns - &textwidth) / 2 - 1) . 'vsplit _paddding_' | wincmd p", 'centered split'],
       \ }
 
 " g is for git
