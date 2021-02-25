@@ -54,6 +54,7 @@ else
   source $HOME/.config/nvim/plug-config/ctrlsf.vim
   source $HOME/.config/nvim/plug-config/clever-f.vim
   source $HOME/.config/nvim/plug-config/emmet-vim.vim
+  source $HOME/.config/nvim/plug-config/vim-yankstack.vim
 
 
 
