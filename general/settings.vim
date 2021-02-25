@@ -3,7 +3,7 @@ set nospell                             " Disable built-in spellchecker"
 filetype plugin on
 syntax on                               " Enables syntax highlighing
 set formatoptions-=cro                  " Stop newline continution of comments
-set nowrap                                " Display long lines as just one line
+set nowrap                              " Display long lines as just one line
 set linebreak
 set whichwrap+=<,>,[,],h,l
 set encoding=UTF-8                      " The encoding displayed
