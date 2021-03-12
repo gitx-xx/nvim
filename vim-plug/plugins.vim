@@ -58,6 +58,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mengelbrecht/lightline-bufferline' " Bufferline
     Plug 'mattn/emmet-vim' " html expanding abbreviations 
     Plug 'moll/vim-bbye' " Intuitive buffer closing
+    Plug 'kshenoy/vim-signature' " add marks to gutter
 
     " Evalute these:
     Plug 'maxbrunsfeld/vim-yankstack' " paste and cycle yanks with <M-p>
