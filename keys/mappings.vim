@@ -33,6 +33,7 @@ vnoremap < <gv|                           " Better indenting
 vnoremap > >gv
 nnoremap Q @q|                            " replay macro on register q
 inoremap <C-b> <C-w>| " delete word backwards in INSERT
+nnoremap M `| " goto marks
 
 if exists('g:vscode')
   " Simulate same TAB behavior in VSCode
