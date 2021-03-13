@@ -7,10 +7,6 @@ map <silent> <C-p> :FZF<CR>|              " Fuzzy find files
 map <silent> <A-w> :Goyo<CR>|             " Zenmode
 
 
-nmap <M-j> mz:m+<cr>`z|                   " Move lines around with Alt
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " Use "q<leader>q to edit a macro on register q.
 " nnoremap <leader>q  :<c-u><c-r><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
@@ -21,8 +17,6 @@ nnoremap J 10j|                           " Faster vertical movement
 nnoremap K 10k
 vnoremap K 10k
 vnoremap J 10j
-noremap <M-l> zo|                         " open fold
-noremap <M-h> zc|                         " close fold
 noremap H b|                              " Goto previous word
 noremap L e|                              " Goto next word
 noremap B ^|                              " Goto beginning/end of the line
@@ -40,6 +34,17 @@ if exists('g:vscode')
   nmap <Tab> :Tabnext<CR>
   nmap <S-Tab> :Tabprev<CR>
 else
+
+  " fold and find with Meta
+  noremap <M-l> zo|                         " open fold
+  noremap <M-h> zc|                         " close fold
+  nmap <M-j> *|                   " find next
+  nmap <M-k> #|                   " find prev
+  " nmap <M-j> mz:m+<cr>`z|                   " Move lines around with Alt
+  " nmap <M-k> mz:m-2<cr>`z
+  " vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+  " vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
   " Better nav for omnicomplete
   inoremap <expr> <c-j> ("\<C-n>")
   inoremap <expr> <c-k> ("\<C-p>")
