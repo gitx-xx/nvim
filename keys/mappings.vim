@@ -74,22 +74,21 @@ else
   nnoremap <C-l> <C-w>l
 
   " Terminal window navigation (bugged with floating windows)
-  " tnoremap <C-h> <C-\><C-N><C-w>h
-  " tnoremap <C-k> <C-\><C-N><C-w>k
-  " tnoremap <C-j> <C-\><C-N><C-w>j
-  " tnoremap <C-l> <C-\><C-N><C-w>l
-
+  tnoremap <C-h> <C-\><C-N><C-w>h
+  tnoremap <C-k> <C-\><C-N><C-w>k
+  tnoremap <C-j> <C-\><C-N><C-w>j
+  tnoremap <C-l> <C-\><C-N><C-w>l
   inoremap <C-h> <C-\><C-N><C-w>h
   inoremap <C-j> <C-\><C-N><C-w>j
   inoremap <C-k> <C-\><C-N><C-w>k
   inoremap <C-l> <C-\><C-N><C-w>l
-  " tnoremap <Esc> <C-\><C-n>
+  tnoremap <Esc> <C-\><C-n>| " Goto normal mode
 
   " Use alt + hjkl to resize windows
-  " nnoremap <silent> <M-h>    :vertical resize -2<CR>
-  " nnoremap <silent> <M-j>    :resize -2<CR>
-  " nnoremap <silent> <M-k>    :resize +2<CR>
-  " nnoremap <silent> <M-l>    :vertical resize +2<CR>
+  nnoremap <silent> <C-M-h>    :vertical resize -2<CR>
+  nnoremap <silent> <C-M-j>    :resize -2<CR>
+  nnoremap <silent> <C-M-k>    :resize +2<CR>
+  nnoremap <silent> <C-M-l>    :vertical resize +2<CR>
 
   nnoremap <silent> <C-Up>    :resize -2<CR>
   nnoremap <silent> <C-Down>  :resize +2<CR>
