@@ -13,10 +13,10 @@ map <silent> <A-w> :Goyo<CR>|             " Zenmode
 
 nnoremap j gj|                            " Move by visual lines
 nnoremap k gk
-nnoremap J 10j|                           " Faster vertical movement
-nnoremap K 10k
-vnoremap K 10k
-vnoremap J 10j
+nnoremap J 12j|                           " Faster vertical movement
+nnoremap K 12k
+vnoremap K 12k
+vnoremap J 12j
 noremap H b|                              " Goto previous word
 noremap L e|                              " Goto next word
 noremap B ^|                              " Goto beginning/end of the line
@@ -87,7 +87,7 @@ else
   inoremap <C-j> <C-\><C-N><C-w>j
   inoremap <C-k> <C-\><C-N><C-w>k
   inoremap <C-l> <C-\><C-N><C-w>l
-  tnoremap <Esc> <C-\><C-n>| " Goto normal mode
+  " tnoremap <Esc> <C-\><C-n>| " Goto normal mode (buggy)
 
   " Use alt + hjkl to resize windows
   nnoremap <silent> <C-M-h>    :vertical resize -2<CR>

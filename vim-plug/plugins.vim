@@ -26,7 +26,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Default plugins
     Plug 'liuchengxu/vim-which-key' " See what keys do like in emacs
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " FZF
-    Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
+    Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
     Plug 'junegunn/fzf.vim'
     Plug 'vimwiki/vimwiki' " Vim Wiki
     Plug 'tools-life/taskwiki' " Taskwiki
