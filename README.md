@@ -1,218 +1,181 @@
-# NVCode
+![NVCode Logo](./utils/media/nvcode_logo.png)
 
-![NVCode pic](./utils/images/nvim.png)
+![NVCode Demo](./utils/media/demo.png)
 
-## Install in one command
+If you are looking for my old configs checkout the two snapshot branches
+on this repo, there is one for CoC and one for Native LSP
 
-The following will install this config if you have an existing config it will move it to `~/.config/nvim.old`
+## Install In One Command!
 
-This script only supports Mac, Ubuntu and Arch
+Make sure you have the newest version of Neovim
 
+``` bash
+bash <(curl -s https://raw.githubusercontent.com/ChristianChiarulli/nvim/master/utils/installer/install.sh)
 ```
-bash <(curl -s https://raw.githubusercontent.com/ChristianChiarulli/nvim/master/utils/install.sh)
+
+After installation run `nvim` and then `:PackerInstall`
+
+## Get the latest version of Neovim
+
+``` bash
+cd ~
+sudo rm -r neovim
+git clone https://github.com/neovim/neovim
+cd neovim
+sudo make CMAKE_BUILD_TYPE=Release install
+cd ~
+sudo rm -r neovim
 ```
 
-## Install Neovim
+## VSCode support
 
-- Mac
+After installing the [Neovim
+extension](https://github.com/asvetliakov/vscode-neovim) in VSCode
 
-  ```
-  brew install --HEAD neovim # Nightly version
+I recommend using this alongside the VSCode
+[which-key](https://github.com/VSpaceCode/vscode-which-key) extension
 
-  brew upgrade neovim --fetch-HEAD # Sometimes you need to update
-  ```
+You will also need `settings.json` and `keybindings.json` which can be
+found in utils/vscode\_config
+
+Point the nvim path to your `nvim` binary
+
+Point your `init.vim` path to:
+
+``` vim
+$HOME/.config/nvim/vimscript/nv-vscode/init.vim
+```
+
+## Clipboard Support
+
+- On Mac `pbcopy` should be built-in
 
 - Ubuntu
 
-  ```
-  curl -l https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage > /tmp/nvim.appimage
-
-  sudo mv /tmp/nvim.appimage /usr/local/bin/nvim
-
-  chmod +x /usr/local/bin/nvim
-  ```
+    ```bash
+    sudo apt install xsel
+    ```
 
 - Arch
 
-  ```
-  yay -S neovim-git # Latest
-  ```
+    ```bash
+    sudo pacman -S xsel
+    ```
 
-## Clone this repo into your config
+## LSP
 
-```
-git clone https://github.com/ChristianChiarulli/nvim.git ~/.config/nvim
-```
+To install a supported language server:
 
-## Install python & node support
-
-```
-pip install pynvim
+``` bash
+  :LspInstall <your_language_server>
 ```
 
-```
-npm i -g neovim
-```
+The only Language servers supported this way currently are `Python`,
+`Javascript` and `Lua` the rest you will need to globally install and
+configure under `lua/lsp/<your_lang.lua>`
 
-## Install Neovim remote
+For a more in depth LSP support:
+[link](https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md)
 
-```
-pip install neovim-remote
-```
+## efm server is slow on close
 
-This will install `nvr` to `~/.local/bin` so you will need to add the following to your `bashrc` or `zshrc`
+Install the latest with:
 
-```
-export PATH=$HOME/.local/bin:$PATH
-```
-
-## Install clipboard support
-
-- On Mac pbcopy should be builtin
-
-- Ubuntu
-
-  ```
-  sudo apt install xsel
-  ```
-
-- Arch
-
-  ```
-  sudo pacman -S xsel
-  ```
-
-## (Optional) Install python & node support using virtual environments
-
-Make sure to add these paths somewhere in your config
-
-```
-let g:python3_host_prog = expand("<path to python with pynvim installed>")
-let g:python3_host_prog = expand("~/.miniconda/envs/neovim/bin/python3.8") " <- example
-
-let g:node_host_prog = expand("<path to node with neovim installed>")
-let g:node_host_prog = expand("~/.nvm/versions/node/v12.16.1/bin/neovim-node-host") " <- example
+``` bash
+go get github.com/mattn/efm-langserver@HEAD
 ```
 
-## List of programs you should install
+## Useful Programs
 
-- ranger
-- ueberzug
-- ripgrep
-- silver_searcher
-- fd
-- universal-ctags
-- lazy git
-- lazy docker
-
-Explanations and installation instruction can be found on my blog
-
-## Language Servers
-
-Since CoC doesn't support all languages in there extensions
-I recommend installing some language servers from scratch
-and adding them to your `coc-settings.json` file
-
-Example:
-
-- bash
-
-  `npm i -g bash-language-server`
-
-  ```
-  "languageserver": {
-  "bash": {
-    "command": "bash-language-server",
-    "args": ["start"],
-    "filetypes": ["sh"],
-    "ignoredRootPaths": ["~"]
-    }
-  }
-  ```
-
-## For FAR to work
-
-```
-:UpdateRemotePlugins
+``` bash
+ranger
+ueberzug
+fd
+ripgrep
+jq
+fzf
+lazygit
+lazydocker
+ncdu
+pynvim
+neovim-remote
 ```
 
-## TabNine
+## Formatters and Linters
 
-To use TabNine enter the following in a buffer:
+**Python**
 
+``` bash
+pip3 install --user flake8
+pip3 install --user yapf
 ```
-TabNine::config
+
+**Lua**
+
+``` bash
+luarocks install --server=https://luarocks.org/dev luaformatter
 ```
 
-**NOTE** This extension can take up a ton of memory
+**Yaml, Json, Javascript, HTML, CSS**
+
+``` bash
+npm install -g prettier
+```
+
+**Markdown**
+
+``` bash
+pandoc
+```
 
 ## Vim Gists
 
-To use **vim-gists** you will need to configure the following:
+To use vim-gists you will need to configure the following:
 
-```
+``` bash
 git config --global github.user <username>
 ```
 
-## VSCodium & Neo Vim Extension
+## Snippets
 
-[VSCodium](https://github.com/VSCodium/vscodium) contains build files to generate free release binaries of Microsoft's VS Code.
+If you are looking for snippets checkout this github topic: [Snippet
+Topic](https://github.com/topics/vscode-snippets)
 
-You can install it on multiple platforms:
+## De-bugging
 
-- Mac
-
-  ```
-  brew cask install vscodium
-  ```
-
-- Arch
-
-  ```
-  yay -s vscodium-bin
-  ```
-
-- Snap
-
-  ```
-  snap install codium
-  ```
-
-[The Neo Vim Extension](https://github.com/asvetliakov/vscode-neovim) is available in the VSCode marketplace
-
-I recommend using this alongside the VSCode `which-key` extension
-
-Along with some of my config files you can find in `utils/vscode_config`
+To set up your particular debugger, look here:
+[link](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation)
 
 ## TODO
 
-- Better Documentation
+**HIGH PRIORITY**
 
-## CoC extensions to check out
+From here I will update for bug fixes and implement low priority
+features when I have time
 
-- coc-fzf-preview
-  - https://github.com/yuki-ycino/fzf-preview.vim/
-- coc-floaterm
+**LOW PRIORITY**
 
-## 0.5
+- list all binaries needed for formatters and linters
+- add badges to readme
+- json config file (luajson)
+- Implement what I can from this java config:
+  [link](https://github.com/mfussenegger/nvim-jdtls/wiki/Sample-Configurations)
+  - better ui for code actions - formatting
+  - setup junit tests for java
+- look into emmet-ls
+- toggle virtual text diagnostics
+- configure neogit
+- configure kshenoy/vim-signature
+- vim ult test
+- what is `fzy`
+- https://github.com/pwntester/octo.nvim
+- configure surround
+- move to ultisnips
 
-- native lsp
-- treesitter
+**PLUGIN BUGS**
 
-## LOW PRIORITY TODO
-
-If anyone reading this has any suggestions about implementing any of the following I will accept a PR, but these are not priority.
-
-- ale
-- multiple cursors
-- markdown table
-- galaxyline automatically grab colors from colorscheme
-- tpope/vim-dadbod
-- neovide
-- People asked about vimwiki I kinda hate it but maybe I'll add it
-- vimspector this is included but I don't plan on using it much
-  - can be used with jdb, pdb, gdb, etc...
-- nvim-dap and nvim-dap-virtual-text (ALL DEBUGGING IN NEOVIM IS CONFUSING AND HARD TO GET WORKING OR I'M JUST DUMB)
-- later manually link pylance
-- resize with arrows in addition to meta
-- how to support meta key on for macOS?
+- html snippets are broken with vsnip
+- finding files from dashboard sometimes number not set (using startify
+  for now)
+- keep and eye on indent guides plugin for thin lines
+- better auto-import (jsx)
