@@ -1,5 +1,3 @@
--- vim.cmd [[packadd packer.nvim]]
-local execute = vim.api.nvim_command
 local fn = vim.fn
 
 local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
@@ -102,7 +100,7 @@ return require('packer').startup(function(use)
     use 'airblade/vim-rooter'
     -- use 'ChristianChiarulli/dashboard-nvim'
     use 'metakirby5/codi.vim'
-    use 'psliwka/vim-smoothie'
+    -- use 'psliwka/vim-smoothie'
     use 'moll/vim-bbye'
     use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
     use 'voldikss/vim-floaterm'
@@ -133,12 +131,15 @@ return require('packer').startup(function(use)
     -- use 'norcalli/snippets.nvim'
     -- use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
 
-    -- Other
+    -- Other major
     use 'tpope/vim-commentary' -- Better comments
     use 'vimwiki/vimwiki' -- Vim Wiki (not tested)
     use 'tools-life/taskwiki' -- Taskwiki (not tested)
     use 'mhinz/vim-startify' -- fancy start screen
     use 'tpope/vim-surround' -- real surround
+    -- Other minor
+    use 'rbgrouleff/bclose.vim' -- ranger.vim dependency
+    -- Other missing
     -- missing 'easymotion/vim-easymotion'
     -- missing 'airblade/vim-gitgutter'
     -- missing 'kshenoy/vim-signature'
