@@ -35,6 +35,11 @@ require('nv-nvim-dap')
 require('nv-lightbulb')
 -- require('nv-lspinstall')
 
+-- Other
+require('nv-taskwiki')
+require('nv-vimwiki')
+
+
 -- Which Key (Hope to replace with Lua plugin someday)
 vim.cmd('source ~/.config/nvim/vimscript/nv-whichkey/init.vim')
 vim.cmd('source ~/.config/nvim/vimscript/functions.vim')

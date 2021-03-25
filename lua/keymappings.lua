@@ -1,6 +1,28 @@
 vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
 vim.g.mapleader = ' '
 
+-- Global
+vim.api.nvim_set_keymap('n', '<A-q>', ':Commentary<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<A-w>', ':Goyo<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '<C-s>', '<ESC>:w<CR>', {noremap = true, silent = true})
+
+-- Move by visual lines
+vim.api.nvim_set_keymap('n', 'j', 'gj', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'k', 'gk', {noremap = true, silent = true})
+
+-- Faster vertical movement
+vim.api.nvim_set_keymap('n', 'K', '12k', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'J', '12j', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', 'K', '12k', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', 'J', '12j', {noremap = true, silent = true})
+
+-- Custom navigation bindings
+vim.api.nvim_set_keymap('n', 'H', 'b', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'L', 'e', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'B', '^', {noremap = false, silent = true}) -- doesn't work with verb
+vim.api.nvim_set_keymap('n', 'E', '$', {noremap = false, silent = true}) -- doesn't work with verb
+
 -- no hl
 vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})
 
@@ -15,17 +37,17 @@ vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {silent = true})
 
 -- TODO fix this
 -- Terminal window navigation
-vim.cmd([[
-  tnoremap <C-h> <C-\><C-N><C-w>h
-  tnoremap <C-j> <C-\><C-N><C-w>j
-  tnoremap <C-k> <C-\><C-N><C-w>k
-  tnoremap <C-l> <C-\><C-N><C-w>l
-  inoremap <C-h> <C-\><C-N><C-w>h
-  inoremap <C-j> <C-\><C-N><C-w>j
-  inoremap <C-k> <C-\><C-N><C-w>k
-  inoremap <C-l> <C-\><C-N><C-w>l
-  tnoremap <Esc> <C-\><C-n>
-]])
+--vim.cmd([[
+  --tnoremap <C-h> <C-\><C-N><C-w>h
+  --tnoremap <C-j> <C-\><C-N><C-w>j
+  --tnoremap <C-k> <C-\><C-N><C-w>k
+  --tnoremap <C-l> <C-\><C-N><C-w>l
+  --inoremap <C-h> <C-\><C-N><C-w>h
+  --inoremap <C-j> <C-\><C-N><C-w>j
+  --inoremap <C-k> <C-\><C-N><C-w>k
+  --inoremap <C-l> <C-\><C-N><C-w>l
+  --tnoremap <Esc> <C-\><C-n>
+--]])
 
 -- TODO fix this
 -- resize with arrows

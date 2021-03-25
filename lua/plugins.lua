@@ -138,5 +138,14 @@ return require('packer').startup(function(use)
     --     end
     -- }
     -- use 'tpope/vim-sleuth'
+
     use 'mhinz/vim-startify'
+    -- Other
+    use 'tpope/vim-commentary' -- Better comments
+    use 'vimwiki/vimwiki' -- Vim Wiki (not tested)
+    use 'tools-life/taskwiki' -- Taskwiki (not tested)
+    -- missing 'easymotion/vim-easymotion'
+    -- missing 'airblade/vim-gitgutter'
+    -- missing 'kshenoy/vim-signature'
+    -- missing 'rhysd/clever-f.vim'
 end)

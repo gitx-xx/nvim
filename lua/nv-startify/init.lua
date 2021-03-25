@@ -22,7 +22,7 @@ vim.api.nvim_exec(
     true)
 
 vim.api.nvim_exec(
-    'let startify_bookmarks = [ { \'b\': \'~/Blog\' }, { \'i\': \'~/.config/nvim/init.lua\' }, { \'z\': \'~/.zshrc\' }, { \'r\': \'.config/nvim/README.md\' }]',
+    'let startify_bookmarks = [ { \'l\': \'~/notes/linux-setup.md\' }, { \'i\': \'~/.config/nvim/init.lua\' }, { \'s\': \'~/.config/nvim/lua/settings.lua\' }, { \'p\': \'~/.config/nvim/lua/plugins.lua\' }, { \'h\': \'~/.config/nvim/lua/nv-startify/init.lua\' }, { \'k\': \'~/.config/nvim/lua/keymappings.lua\' }, { \'w\': \'~/.config/nvim/vimscript/nv-whichkey/init.vim\' }, { \'r\': \'~/.config/ranger/rc.conf\' }, { \'t\': \'~/notes/todo.md\' }, { \'z\': \'~/.zshrc\' }, { \'a\':  \'~/.oh-my-zsh/custom/aliases.zsh\'}, { \'d\':  \'~/dev\'}, { \'n\': \'~/notes/\' }]',
     true)
 
 vim.cmd([[

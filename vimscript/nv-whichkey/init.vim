@@ -21,21 +21,20 @@ autocmd! FileType which_key
 autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
-let g:which_key_map[';'] = [ ':Dashboard'                                      , 'home screen' ]
-let g:which_key_map[','] = [ '<Plug>(emmet-expand-abbr)'                       , 'expand tags' ]
+" Single mappings
+let g:which_key_map['c'] = [ ':Commands'                                       , 'commands' ]
+let g:which_key_map['C'] = [ ':CocList commands'                               , 'commands ...' ]
+" let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'explorer' ]
+let g:which_key_map['h'] = [ ':Startify'                                       , 'startify']
+" let g:which_key_map['d'] = [ ':CocList diagnostics'   , 'diagnostics' ]
+" let g:which_key_map['o'] = [ ':CocList outline'   , 'outline' ]
+let g:which_key_map['r'] = [ ':RnvimrToggle'                                   , 'open' ]
+let g:which_key_map['p'] = [ ':Files'                                          , 'search files' ]
+let g:which_key_map['v'] = [ '<C-W>v'                                          , 'vsplit']
+let g:which_key_map['s'] = [ '<C-W>s'                                          , 'hsplit']
+" let g:which_key_map['W'] = [ ':call WindowSwap#EasyWindowSwap()'               , 'move window' ]
+" let g:which_key_map['a'] = [ '<Plug>(coc-codeaction-selected)', 'actions' ]
 let g:which_key_map['"'] = [ '<Plug>PeekupOpen'                                , 'registers' ]
-let g:which_key_map['?'] = [ ':NvimTreeFindFile'                               , 'find current file' ]
-let g:which_key_map['e'] = [ ':NvimTreeToggle'                                 , 'explorer' ]
-let g:which_key_map['f'] = [ ':Telescope find_files'                           , 'find files' ]
-let g:which_key_map['h'] = [ '<C-W>s'                                          , 'split below']
-let g:which_key_map['m'] = [ ':MarkdownPreviewToggle'                          , 'markdown preview']
-let g:which_key_map['h'] = [ ':let @/ = ""'                                    , 'no highlight' ]
-let g:which_key_map['r'] = [ ':RnvimrToggle'                                   , 'ranger' ]
-" TODO create entire treesitter section
-let g:which_key_map['T'] = [ ':TSHighlightCapturesUnderCursor'                 , 'treesitter highlight' ]
-let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
-" TODO play nice with status line
-let g:which_key_map['z'] = [ 'Goyo'                                            , 'zen' ]
 
 " Group mappings
 
@@ -60,17 +59,12 @@ let g:which_key_map['.'] = {
       \ }
 
 " a is for actions
-let g:which_key_map.a = {
+let g:which_key_map.A = {
       \ 'name' : '+actions' ,
-      \ 'c' : [':ColorizerToggle'        , 'colorizer'],
-      \ 'h' : [':let @/ = ""'            , 'remove search highlight'],
       \ 'l' : [':Bracey'                 , 'start live server'],
       \ 'L' : [':BraceyStop'             , 'stop live server'],
-      \ 'n' : [':set nonumber!'          , 'line-numbers'],
-      \ 's' : [':s/\%V\(.*\)\%V/"\1"/'   , 'surround'],
-      \ 'r' : [':set norelativenumber!'  , 'relative line nums'],
-      \ 'v' : [':Codi'                   , 'virtual repl on'],
-      \ 'V' : [':Codi!'                  , 'virtual repl off'],
+      \ 'm' : [':MarkdownPreview'        , 'markdown preview'],
+      \ 'M' : [':MarkdownPreviewStop'    , 'markdown preview stop'],
       \ }
 
 " b is for buffer
@@ -78,26 +72,23 @@ let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
       \ '>' : [':BufferMoveNext'        , 'move next'],
       \ '<' : [':BufferMovePrevious'    , 'move prev'],
-      \ 'b' : [':BufferPick'            , 'pick buffer'],
       \ 'd' : [':Bdelete'               , 'delete-buffer'],
+      \ 'D' : [':Bdelete!'              , 'delete-buffer!'],
+      \ 'o' : [':Bonly'                 , 'delete-other'],
       \ 'n' : ['bnext'                  , 'next-buffer'],
+      \ 'N' : [':enew'                  , 'new-buffer'],
       \ 'p' : ['bprevious'              , 'previous-buffer'],
-      \ '?' : ['Buffers'                , 'fzf-buffer'],
+      \ 'b' : ['Buffers'                , 'fzf-buffer'],
       \ }
 
-" d is for debug
-let g:which_key_map.d = {
-      \ 'name' : '+debug' ,
-      \ 'b' : ['DebugToggleBreakpoint '        , 'toggle breakpoint'],
-      \ 'c' : ['DebugContinue'                 , 'continue'],
-      \ 'i' : ['DebugStepInto'                 , 'step into'],
-      \ 'o' : ['DebugStepOver'                 , 'step over'],
-      \ 'r' : ['DebugToggleRepl'               , 'toggle repl'],
-      \ 's' : ['DebugStart'                    , 'start'],
+" u is for update
+let g:which_key_map.u = {
+      \ 'name': '+update',
+      \ 's' : [':luafile $MYVIMRC', 'source init.lua'],
+      \ 't' : [':TSUpdate', 'treesitter'],
+      \ 'c' : [':CocUpdate', 'coc'],
+      \ 'p' : [':PlugUpdate', 'plug'],
       \ }
-      " \ 'O' : ['DebugStepOut'                  , 'next-buffer'],
-      " \ 'S' : ['DebugGetSession '              , 'fzf-buffer'],
-
 
 " F is for fold
 let g:which_key_map.F = {
@@ -114,8 +105,8 @@ let g:which_key_map.F = {
     \ '6' : [':set foldlevel=6'   , 'level6']
     \ }
 
-" s is for search powered by telescope
-let g:which_key_map.s = {
+" f is for find with telescope
+let g:which_key_map.f = {
       \ 'name' : '+search' ,
       \ '.' : [':Telescope filetypes'                   , 'filetypes'],
       \ 'B' : [':Telescope git_branches'                , 'git branches'],
@@ -133,10 +124,45 @@ let g:which_key_map.s = {
       \ 'u' : [':Telescope colorscheme'                 , 'colorschemes'],
       \ }
 
+" w is for wiki
+let g:which_key_map.w = {
+      \ 'name' : '+wiki' ,
+      \ 'w' : ['<Plug>VimwikiIndex'                   , 'index wiki'],
+      \ 'r' : ['<Plug>VimwikiRenameFile'              , 'rename wiki'],
+      \ 'a' : [':TaskWikiAnnotate'              , 'annotate task'],
+      \ 'd' : [':TaskWikiDone'              , 'done task'],
+      \ 'e' : [':TaskWikiEdit'              , 'edit task'],
+      \ 'x' : [':TaskWikiDelete'              , 'delete task'],
+      \ 'l' : [':TaskWikiLink'              , 'link task'],
+      \ 'm' : [':TaskWikiMod'              , 'mod task'],
+      \ 's' : [':TaskWikiStart'              , 'start task'],
+      \ 'S' : [':TaskWikiStop'              , 'stop task'],
+      \ 'p' : [':TaskWikiChooseProject'              , 'change project'],
+      \ }
+
+" S is for Session
 let g:which_key_map.S = {
       \ 'name' : '+Session' ,
-      \ 's' : [':SessionSave'           , 'save session'],
-      \ 'l' : [':SessionLoad'           , 'load Session'],
+      \ 'c' : [':SClose'          , 'Close Session']  ,
+      \ 'd' : [':SDelete'         , 'Delete Session'] ,
+      \ 'l' : [':SLoad default'           , 'Load Default']     ,
+      \ 'L' : [':SLoad'           , 'Load Session']     ,
+      \ 's' : [':SSave! default'           , 'Save Default']   ,
+      \ 'S' : [':SSave'           , 'Save Session']   ,
+      \ 'H' : [':Startify'        , 'Start Page']     ,
+      \ }
+
+" t is for toggle
+let g:which_key_map.t = {
+      \ 'name' : '+toggle' ,
+      \ 'w' : [':set nowrap!'                 , 'word wrap'],
+      \ 'g' : [':Goyo'                        , 'Goyo'],
+      \ 's' : [':CocCommand cSpell.toggleEnableSpellChecker' , 'cSpell'],
+      \ 'b' : [':call ToggleBackground()' , 'background'],
+      \ 't' : [':call ToggleClutter()' , 'clutter'],
+      \ 'c' : [':call ConcealLevel()' , 'conceal'],
+      \ 'h' : [':set hlsearch!' , 'highlight'],
+      \ 'u' : [":execute 'topleft' ((&columns - &textwidth) / 2 - 1) . 'vsplit _paddding_' | wincmd p", 'centered split'],
       \ }
 
 " g is for git
@@ -147,7 +173,8 @@ let g:which_key_map.g = {
       \ 'd' : [':Git diff'                         , 'diff'],
       \ 'j' : [':NextHunk'                         , 'next hunk'],
       \ 'k' : [':PrevHunk'                         , 'prev hunk'],
-      \ 'l' : [':Git log'                          , 'log'],
+      \ 'L' : [':Git log'                          , 'log'],
+      \ 'l' : [':FloatermNew lazygit'              , 'lazygit'],
       \ 'n' : [':Neogit'                           , 'neogit'],
       \ 'p' : [':PreviewHunk'                      , 'preview hunk'],
       \ 'r' : [':ResetHunk'                        , 'reset hunk'],
@@ -193,23 +220,6 @@ let g:which_key_map.l = {
       \ 'S' : [':Telescope lsp_workspace_symbols'    , 'workspace symbols'],
       \ }
       " \ 'H' : [':Lspsaga signature_help'             , 'signature_help'],
-
-" t is for terminal
-let g:which_key_map.t = {
-      \ 'name' : '+terminal' ,
-      \ ';' : [':FloatermNew --wintype=normal --height=6'       , 'terminal'],
-      \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
-      \ 'g' : [':FloatermNew lazygit'                           , 'git'],
-      \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
-      \ 'n' : [':FloatermNew node'                              , 'node'],
-      \ 'N' : [':FloatermNew nnn'                               , 'nnn'],
-      \ 'p' : [':FloatermNew python'                            , 'python'],
-      \ 'm' : [':FloatermNew lazynpm'                           , 'npm'],
-      \ 't' : [':FloatermToggle'                                , 'toggle'],
-      \ 'y' : [':FloatermNew ytop'                              , 'ytop'],
-      \ 'u' : [':FloatermNew ncdu'                              , 'ncdu'],
-      \ }
-      " \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
 
 let g:which_key_map.R = {
       \ 'name' : '+Find_Replace' ,
