@@ -43,10 +43,6 @@ return require('packer').startup(function(use)
     use 'ChristianChiarulli/html-snippets'
     use 'ChristianChiarulli/java-snippets'
     use 'ChristianChiarulli/python-snippets'
-    -- use 'cstrap/python-snippets'
-    -- use 'ylcnfrht/vscode-python-snippet-pack'
-    -- use 'SirVer/ultisnips'
-    -- use 'norcalli/snippets.nvim'
 
     -- Treesitter
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -60,7 +56,6 @@ return require('packer').startup(function(use)
 
     -- Status Line and Bufferline
     use 'glepnir/galaxyline.nvim'
-    -- use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
     use 'romgrk/barbar.nvim'
 
     -- Telescope
@@ -105,7 +100,7 @@ return require('packer').startup(function(use)
     use 'liuchengxu/vim-which-key'
     use 'kevinhwang91/nvim-bqf'
     use 'airblade/vim-rooter'
-    -- use 'glepnir/dashboard-nvim'
+    use 'ChristianChiarulli/dashboard-nvim'
     use 'metakirby5/codi.vim'
     use 'psliwka/vim-smoothie'
     use 'moll/vim-bbye'
@@ -121,15 +116,8 @@ return require('packer').startup(function(use)
     use 'blackcauldron7/surround.nvim'
 
     -- TODO put this back when stable for indent lines
-    -- 	use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua'}
-    -- 	vim.g.indent_blankline_space_char = ' '
-    -- 	vim.g.indent_blankline_buftype_exclude = {'terminal'}
-    -- 	vim.g.indent_blankline_filetype_exclude = {'help', 'startify'}
-    -- 	vim.g.indent_blankline_char = '▏'
-    -- 	vim.g.indent_blankline_use_treesitter=true
-    -- use 'AndrewRadev/tagalong.vim'
-    -- use 'alvan/vim-closetag'
-    -- use 'RRethy/vim-illuminate'
+    	use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua'}
+    	-- vim.g.indent_blankline_space_char = ''
     -- use 'b3nj5m1n/kommentary'
     -- use {
     --     'glacambre/firenvim',
@@ -137,9 +125,14 @@ return require('packer').startup(function(use)
     --         vim.fn['firenvim#install'](1)
     --     end
     -- }
-    -- use 'tpope/vim-sleuth'
+    -- use 'glepnir/dashboard-nvim'
+    -- use 'mhinz/vim-startify'
+    -- use 'cstrap/python-snippets'
+    -- use 'ylcnfrht/vscode-python-snippet-pack'
+    -- use 'SirVer/ultisnips'
+    -- use 'norcalli/snippets.nvim'
+    -- use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
 
-    use 'mhinz/vim-startify'
     -- Other
     use 'tpope/vim-commentary' -- Better comments
     use 'vimwiki/vimwiki' -- Vim Wiki (not tested)
