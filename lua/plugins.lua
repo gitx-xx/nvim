@@ -100,7 +100,7 @@ return require('packer').startup(function(use)
     use 'liuchengxu/vim-which-key'
     use 'kevinhwang91/nvim-bqf'
     use 'airblade/vim-rooter'
-    use 'ChristianChiarulli/dashboard-nvim'
+    -- use 'ChristianChiarulli/dashboard-nvim'
     use 'metakirby5/codi.vim'
     use 'psliwka/vim-smoothie'
     use 'moll/vim-bbye'
@@ -137,6 +137,7 @@ return require('packer').startup(function(use)
     use 'tpope/vim-commentary' -- Better comments
     use 'vimwiki/vimwiki' -- Vim Wiki (not tested)
     use 'tools-life/taskwiki' -- Taskwiki (not tested)
+    use 'mhinz/vim-startify'
     -- missing 'easymotion/vim-easymotion'
     -- missing 'airblade/vim-gitgutter'
     -- missing 'kshenoy/vim-signature'

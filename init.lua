@@ -30,6 +30,7 @@ require('nv-hop')
 require('nv-gitblame')
 require('nv-nvim-peekup')
 require('nv-dashboard')
+
 require('nv-dial')
 require('nv-nvim-dap')
 require('nv-lightbulb')
@@ -39,6 +40,7 @@ require('nv-indentline')
 -- Other
 require('nv-taskwiki')
 require('nv-vimwiki')
+require('nv-startify')
 
 
 -- Which Key (Hope to replace with Lua plugin someday)
