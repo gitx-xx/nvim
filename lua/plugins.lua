@@ -137,7 +137,8 @@ return require('packer').startup(function(use)
     use 'tpope/vim-commentary' -- Better comments
     use 'vimwiki/vimwiki' -- Vim Wiki (not tested)
     use 'tools-life/taskwiki' -- Taskwiki (not tested)
-    use 'mhinz/vim-startify'
+    use 'mhinz/vim-startify' -- fancy start screen
+    use 'tpope/vim-surround' -- real surround
     -- missing 'easymotion/vim-easymotion'
     -- missing 'airblade/vim-gitgutter'
     -- missing 'kshenoy/vim-signature'

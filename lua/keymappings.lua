@@ -3,6 +3,7 @@ vim.g.mapleader = ' '
 
 -- Global
 vim.api.nvim_set_keymap('n', '<A-q>', ':Commentary<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', '<A-q>', ':Commentary<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<A-w>', ':Goyo<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', '<C-s>', '<ESC>:w<CR>', {noremap = true, silent = true})
