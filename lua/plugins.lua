@@ -9,6 +9,9 @@ end
 
 vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when there are changes in plugins.lua
 
+-- require('packer').init({display = {non_interactive = true}})
+require('packer').init({display = {auto_clean = false}})
+
 return require('packer').startup(function(use)
     -- Packer can manage itself as an optional plugin
     use 'wbthomason/packer.nvim'
@@ -47,6 +50,7 @@ return require('packer').startup(function(use)
     use 'nvim-treesitter/nvim-treesitter-refactor'
     use 'nvim-treesitter/playground'
     use 'p00f/nvim-ts-rainbow'
+    use {'lukas-reineke/indent-blankline.nvim', branch = 'lua'}
 
     -- Icons
     use 'kyazdani42/nvim-web-devicons'
@@ -111,11 +115,9 @@ return require('packer').startup(function(use)
     use 'junegunn/goyo.vim'
     use 'andymass/vim-matchup'
     use 'windwp/nvim-autopairs'
-    use 'blackcauldron7/surround.nvim'
 
     -- TODO put this back when stable for indent lines
-    	use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua'}
-    	-- vim.g.indent_blankline_space_char = ''
+    -- vim.g.indent_blankline_space_char = ''
     -- use 'b3nj5m1n/kommentary'
     -- use {
     --     'glacambre/firenvim',
@@ -127,7 +129,6 @@ return require('packer').startup(function(use)
     -- use 'mhinz/vim-startify'
     -- use 'cstrap/python-snippets'
     -- use 'ylcnfrht/vscode-python-snippet-pack'
-    -- use 'SirVer/ultisnips'
     -- use 'norcalli/snippets.nvim'
     -- use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
 
@@ -144,4 +145,10 @@ return require('packer').startup(function(use)
     -- missing 'airblade/vim-gitgutter'
     -- missing 'kshenoy/vim-signature'
     -- missing 'rhysd/clever-f.vim'
+    -- use 'SirVer/ultisnips'
+    -- use 'honza/vim-snippets'
+    -- vim.g.UltiSnipsExpandTrigger="<CR>"
+    -- vim.g.UltiSnipsJumpForwardTrigger="<Tab>"
+    -- vim.g.UltiSnipsJumpBackwardTrigger="<S-Tab>"
+    -- use 'blackcauldron7/surround.nvim'
 end)
