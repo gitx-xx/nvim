@@ -140,6 +140,7 @@ return require('packer').startup(function(use)
     use 'tpope/vim-surround' -- real surround
     -- Other minor
     use 'rbgrouleff/bclose.vim' -- ranger.vim dependency
+	use 'schickling/vim-bufonly' -- delete other buffers
     -- Other missing
     -- missing 'easymotion/vim-easymotion'
     -- missing 'airblade/vim-gitgutter'
