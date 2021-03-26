@@ -50,17 +50,17 @@ require"lspconfig".efm.setup {
     settings = {
         rootMarkers = {".git/"},
         languages = {
-            lua = {luaFormat},
-            python = {isort, yapf},
-            -- javascriptreact = {prettier, eslint},
-            -- javascript = {prettier, eslint},
-            javascriptreact = {prettier},
-            javascript = {prettier_global},
-            sh = {shellcheck, shfmt},
+            -- lua = {luaFormat},
+            -- python = {isort, yapf},
+            javascriptreact = {prettier_global, eslint},
+            javascript = {prettier_global, eslint},
+            -- javascriptreact = {prettier_global},
+            -- javascript = {prettier_global},
+            -- sh = {shellcheck, shfmt},
             html = {prettier_global},
             css = {prettier_global},
             json = {prettier_global},
-            yaml = {prettier_global},
+            -- yaml = {prettier_global},
             -- markdown = {markdownPandocFormat, markdownlint},
             markdown = {markdownPandocFormat}
         }
