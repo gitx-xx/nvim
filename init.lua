@@ -69,3 +69,6 @@ require('lsp.virtual_text')
 -- Source config last
 -- vim.lsp.callbacks["textDocument/publishDiagnostics"] = function() end
 -- vim.lsp.handlers["textDocument/publishDiagnostics"] = nil
+
+-- colorscheme
+vim.cmd('colorscheme ThemerVim')
