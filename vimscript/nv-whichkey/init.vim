@@ -58,6 +58,9 @@ let g:which_key_map['.'] = {
 " a is for actions
 let g:which_key_map.A = {
       \ 'name' : '+actions' ,
+      \ 'c' : [':ColorizerToggle'        , 'colorizer'],
+      \ 'h' : [':let @/ = ""'            , 'remove search highlight'],
+      \ 'i' : [':IndentBlanklineToggle'  , 'toggle indent lines'],
       \ 'l' : [':Bracey'                 , 'start live server'],
       \ 'L' : [':BraceyStop'             , 'stop live server'],
       \ 'm' : [':MarkdownPreview'        , 'markdown preview'],
@@ -101,8 +104,17 @@ let g:which_key_map.F = {
     \ '6' : [':set foldlevel=6'   , 'level6']
     \ }
 
-" f is for find with telescope
-let g:which_key_map.f = {
+" m is for mark
+" I'd rather use regular marks but they never clear
+let g:which_key_map.m = {
+    \ 'name': '+fold',
+    \ 't' : [':BookmarkToggle'   , 'toggle'],
+    \ 'j' : [':BookmarkNext'   , 'next mark'],
+    \ 'k' : [':BookmarkPrev'   , 'prev mark']
+    \ }
+
+" s is for search powered by telescope
+let g:which_key_map.s = {
       \ 'name' : '+search' ,
       \ '.' : [':Telescope filetypes'                   , 'filetypes'],
       \ 'B' : [':Telescope git_branches'                , 'git branches'],

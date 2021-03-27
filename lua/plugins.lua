@@ -51,6 +51,7 @@ return require('packer').startup(function(use)
     use 'nvim-treesitter/playground'
     use 'p00f/nvim-ts-rainbow'
     use {'lukas-reineke/indent-blankline.nvim', branch = 'lua'}
+	use 'JoosepAlviste/nvim-ts-context-commentstring'
 
     -- Icons
     use 'kyazdani42/nvim-web-devicons'
@@ -114,7 +115,12 @@ return require('packer').startup(function(use)
     use 'monaqa/dial.nvim'
     use 'junegunn/goyo.vim'
     use 'andymass/vim-matchup'
-    use 'windwp/nvim-autopairs'
+    use 'cohama/lexima.vim'
+    use 'MattesGroeger/vim-bookmarks'
+    -- use 'kshenoy/vim-signature'
+    -- use 'nelstrom/vim-visual-star-search'
+	-- TODO switch back when config support snips
+    -- use 'windwp/nvim-autopairs'
 
     -- TODO put this back when stable for indent lines
     -- vim.g.indent_blankline_space_char = ''

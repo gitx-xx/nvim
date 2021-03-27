@@ -24,15 +24,14 @@ end
 
 nv_utils.define_augroups({
     _general_settings = {
-        -- {'TextYankPost', '*', 'lua require(\'vim.highlight\').on_yank({higroup = \'Search\', timeout = 200})'},
-        -- {'BufWinEnter', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
-        -- {'BufRead', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
-        -- {'BufNewFile', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
-        -- {'FileType', 'java', 'luafile ~/.config/nvim/lua/lsp/java-ls.lua'},
-        -- {'FileType', 'java', 'nnoremap ca <Cmd>lua require(\'jdtls\').code_action()<CR>'},
-        -- {'FileType', 'java', 'nnoremap ca <Cmd>lua require(\'jdtls\').code_action()<CR>'},
-        -- {'FileType', 'markdown', 'setlocal wrap'}, {'FileType', 'markdown', 'setlocal spell'},
-        -- {'BufWinEnter', '.sol', 'setlocal filetype=solidity'},
+        {'TextYankPost', '*', 'lua require(\'vim.highlight\').on_yank({higroup = \'Search\', timeout = 200})'},
+        {'BufWinEnter', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
+        {'BufRead', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
+        {'BufNewFile', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
+        {'FileType', 'java', 'luafile ~/.config/nvim/lua/lsp/java-ls.lua'},
+        {'FileType', 'java', 'nnoremap ca <Cmd>lua require(\'jdtls\').code_action()<CR>'},
+        {'FileType', 'markdown', 'setlocal wrap'}, {'FileType', 'markdown', 'setlocal spell'},
+        {'BufWinEnter', '.sol', 'setlocal filetype=solidity'},
 
         -- seems to be nobuflisted that makes my stuff disapear will do more testing
         -- {'FileType', 'dashboard', 'setlocal nocursorline noswapfile synmaxcol& signcolumn=no norelativenumber nocursorcolumn nospell  nolist  nonumber bufhidden=wipe colorcolumn= foldcolumn=0 matchpairs= '},
