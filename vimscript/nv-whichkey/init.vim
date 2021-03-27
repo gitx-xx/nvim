@@ -83,8 +83,7 @@ let g:which_key_map.u = {
       \ 'name': '+update',
       \ 's' : [':luafile $MYVIMRC', 'source init.lua'],
       \ 't' : [':TSUpdate', 'treesitter'],
-      \ 'c' : [':CocUpdate', 'coc'],
-      \ 'p' : [':PlugUpdate', 'plug'],
+      \ 'p' : [':PackerUpdate', 'plugins'],
       \ }
 
 " F is for fold
