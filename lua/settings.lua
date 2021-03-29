@@ -1,6 +1,7 @@
-vim.cmd('set iskeyword+=-') -- treat dash separated words as a word text object" 
-vim.cmd('set shortmess+=c') -- Don't pass messages to |ins-completion-menu|.  
-vim.o.hidden = true -- Required to keep multiple buffers open multiple buffers 
+vim.cmd('set iskeyword+=-') -- treat dash separated words as a word text object"
+vim.cmd('set shortmess+=c') -- Don't pass messages to |ins-completion-menu|
+vim.o.hidden = true -- Required to keep multiple buffers open multiple buffers
+vim.o.spell = false -- Disable spell checker
 vim.wo.wrap = false -- Display long lines as just one line
 vim.cmd('set whichwrap+=<,>,[,],h,l') -- move to next line with theses keys
 vim.cmd('syntax on') -- move to next line with theses keys
@@ -32,3 +33,6 @@ vim.o.updatetime = 300 -- Faster completion
 vim.o.timeoutlen = 250 -- By default timeoutlen is 1000 ms
 vim.o.clipboard = "unnamedplus" -- Copy paste between vim and everything else
 vim.o.guifont = "FiraCode Nerd Font"
+vim.o.incsearch = true
+vim.o.smartcase = true
+ 

@@ -113,8 +113,8 @@ let g:which_key_map.m = {
     \ 'k' : [':BookmarkPrev'   , 'prev mark']
     \ }
 
-" s is for search powered by telescope
-let g:which_key_map.s = {
+" f is for find powered by telescope
+let g:which_key_map.f = {
       \ 'name' : '+search' ,
       \ '.' : [':Telescope filetypes'                   , 'filetypes'],
       \ 'B' : [':Telescope git_branches'                , 'git branches'],

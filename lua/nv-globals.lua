@@ -1,7 +1,7 @@
 O = {
 
     auto_complete = true,
-    colorscheme = 'nvcode',
+    colorscheme = '',
     python = {
         linter = '',
         formatter = '',
