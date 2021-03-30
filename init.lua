@@ -37,6 +37,7 @@ require('nv-nvim-dap')
 require('nv-lightbulb')
 require('nv-indentline')
 require('nv-bookmark')
+require('nv-dadbod')
 -- require('nv-lspinstall')
 
 -- Other
