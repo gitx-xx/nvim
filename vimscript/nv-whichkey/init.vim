@@ -77,12 +77,10 @@ let g:which_key_map.b = {
       \ 'd' : [':Bdelete'               , 'delete-buffer'],
       \ 'D' : [':Bdelete!'              , 'delete-buffer!'],
       \ 'o' : [':Bonly'                 , 'delete-other'],
-      \ 'b' : [':BufferPick'            , 'pick buffer'],
-      \ 'd' : [':BufferClose'               , 'delete-buffer'],
       \ 'n' : ['bnext'                  , 'next-buffer'],
       \ 'N' : [':enew'                  , 'new-buffer'],
       \ 'p' : ['bprevious'              , 'previous-buffer'],
-      \ 'b' : ['Buffers'                , 'fzf-buffer'],
+      \ 'b' : [':BufferPick'            , 'pick buffer'],
       \ }
 
 " u is for update
