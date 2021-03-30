@@ -66,6 +66,8 @@ let g:which_key_map.A = {
       \ 'm' : [':MarkdownPreview'        , 'markdown preview'],
       \ 'M' : [':MarkdownPreviewStop'    , 'markdown preview stop'],
       \ }
+      " \ 'l' : [':Bracey'                 , 'start live server'],
+      " \ 'L' : [':BraceyStop'             , 'stop live server'],
 
 " b is for buffer
 let g:which_key_map.b = {
@@ -75,6 +77,8 @@ let g:which_key_map.b = {
       \ 'd' : [':Bdelete'               , 'delete-buffer'],
       \ 'D' : [':Bdelete!'              , 'delete-buffer!'],
       \ 'o' : [':Bonly'                 , 'delete-other'],
+      \ 'b' : [':BufferPick'            , 'pick buffer'],
+      \ 'd' : [':BufferClose'               , 'delete-buffer'],
       \ 'n' : ['bnext'                  , 'next-buffer'],
       \ 'N' : [':enew'                  , 'new-buffer'],
       \ 'p' : ['bprevious'              , 'previous-buffer'],
@@ -191,6 +195,7 @@ let g:which_key_map.g = {
       \ 'S' : [':Gstatus'                          , 'status'],
       \ 'u' : [':UndoStageHunk'                    , 'undo stage hunk'],
       \ }
+      " \ 'n' : [':Neogit'                           , 'neogit'],
 
 " G is for gist
 let g:which_key_map.G = {
@@ -218,7 +223,6 @@ let g:which_key_map.l = {
       \ 'v' : [':LspVirtualTextToggle'               , 'lsp toggle virtual text'],
       \ 'l' : [':Lspsaga lsp_finder'                 , 'lsp finder'],
       \ 'L' : [':Lspsaga show_line_diagnostics'      , 'line_diagnostics'],
-      \ 'o' : [':Vista!!'                            , 'outline'],
       \ 'p' : [':Lspsaga preview_definition'         , 'preview definition'],
       \ 'q' : [':Telescope quickfix'                 , 'quickfix'],
       \ 'r' : [':Lspsaga rename'                     , 'rename'],
@@ -228,6 +232,7 @@ let g:which_key_map.l = {
       \ 'S' : [':Telescope lsp_workspace_symbols'    , 'workspace symbols'],
       \ }
       " \ 'H' : [':Lspsaga signature_help'             , 'signature_help'],
+      " \ 'o' : [':Vista!!'                            , 'outline'],
 
 let g:which_key_map.R = {
       \ 'name' : '+Find_Replace' ,
