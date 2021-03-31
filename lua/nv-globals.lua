@@ -3,8 +3,11 @@ O = {
     auto_complete = true,
     colorscheme = 'nvcode',
     relative_number = true,
-    shell = 'zsh',
-    db_ui_save_location = '~/.config/nvcode_db',
+    shell = 'bash',
+    database = {
+        save_location = '~/.config/nvcode_db',
+        auto_execute = 1
+    },
     python = {
         linter = '',
         -- @usage can be 'yapf', 'black'

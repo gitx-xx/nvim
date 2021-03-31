@@ -38,6 +38,7 @@ require('nv-lightbulb')
 require('nv-indentline')
 require('nv-bookmark')
 require('nv-dadbod')
+require('nv-doge')
 -- require('nv-lspinstall')
 
 -- Other
@@ -71,6 +72,7 @@ require('lsp.html-ls')
 require('lsp.efm-general-ls')
 require('lsp.virtual_text')
 require('lsp.latex-ls')
+require('lsp.svelte-ls')
 
 -- vim.lsp.callbacks["textDocument/publishDiagnostics"] = function() end
 -- vim.lsp.handlers["textDocument/publishDiagnostics"] = nil

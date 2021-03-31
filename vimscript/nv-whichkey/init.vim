@@ -32,6 +32,19 @@ let g:which_key_map['s'] = [ '<C-W>s'                                          ,
 " let g:which_key_map['W'] = [ ':call WindowSwap#EasyWindowSwap()'               , 'move window' ]
 " let g:which_key_map['a'] = [ '<Plug>(coc-codeaction-selected)', 'actions' ]
 let g:which_key_map['"'] = [ '<Plug>PeekupOpen'                                , 'registers' ]
+let g:which_key_map['?'] = [ ':NvimTreeFindFile'                               , 'find current file' ]
+let g:which_key_map['e'] = [ ':NvimTreeToggle'                                 , 'explorer' ]
+let g:which_key_map['f'] = [ ':Telescope find_files'                           , 'find files' ]
+let g:which_key_map['h'] = [ '<C-W>s'                                          , 'split below']
+let g:which_key_map['M'] = [ ':MarkdownPreviewToggle'                          , 'markdown preview']
+let g:which_key_map['h'] = [ ':let @/ = ""'                                    , 'no highlight' ]
+let g:which_key_map['r'] = [ ':RnvimrToggle'                                   , 'ranger' ]
+let g:which_key_map['*'] = [ ':DogeGenerate'                                   , 'documentation generator' ]
+" TODO create entire treesitter section
+let g:which_key_map['T'] = [ ':TSHighlightCapturesUnderCursor'                 , 'treesitter highlight' ]
+let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
+" TODO play nice with status line
+let g:which_key_map['z'] = [ 'Goyo'                                            , 'zen' ]
 
 " Group mappings
 
