@@ -39,7 +39,7 @@ require('nv-indentline')
 require('nv-bookmark')
 require('nv-dadbod')
 require('nv-doge')
-require('nv-dependency')
+-- require('nv-dependency')
 -- require('nv-lspinstall')
 
 -- Other
