@@ -21,11 +21,18 @@ vim.api.nvim_set_keymap('v', 'J', '12j', {noremap = true, silent = true})
 -- Custom navigation bindings
 vim.api.nvim_set_keymap('n', 'H', 'b', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', 'L', 'e', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', 'B', '^', {noremap = false, silent = true}) -- doesn't work with verb
-vim.api.nvim_set_keymap('n', 'E', '$', {noremap = false, silent = true}) -- doesn't work with verb
+vim.api.nvim_set_keymap('n', 'B', '^', {noremap = true, silent = true}) -- doesn't work with verb
+vim.api.nvim_set_keymap('n', 'E', '$', {noremap = true, silent = true}) -- doesn't work with verb
+vim.api.nvim_set_keymap('v', 'H', 'b', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', 'L', 'e', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', 'B', '^', {noremap = true, silent = true}) -- doesn't work with verb
+vim.api.nvim_set_keymap('v', 'E', '$', {noremap = true, silent = true}) -- doesn't work with verb
+
+vim.api.nvim_set_keymap('n', 'M', '`', {noremap = true, silent = true}) -- doesn't work with verb
 
 -- no hl
-vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})
+-- conflicts with which-key
+-- vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})
 
 -- explorer
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
