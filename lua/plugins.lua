@@ -152,9 +152,9 @@ return require('packer').startup(function(use)
     -- Other minor
     use 'rbgrouleff/bclose.vim' -- ranger.vim dependency
 	use 'schickling/vim-bufonly' -- delete other buffers
+    use 'airblade/vim-gitgutter' -- show git edits in gutter
     -- Other missing
-    -- missing 'easymotion/vim-easymotion'
-    -- missing 'airblade/vim-gitgutter'
+    -- missing 'easymotion/vim-easymotion' -- replaced with hop
     -- missing 'kshenoy/vim-signature'
     -- missing 'rhysd/clever-f.vim'
     -- use 'SirVer/ultisnips'
