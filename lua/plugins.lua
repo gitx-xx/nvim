@@ -66,7 +66,7 @@ return require('packer').startup(function(use)
     use 'nvim-telescope/telescope-media-files.nvim'
 
     -- Explorer
-    use 'kyazdani42/nvim-tree.lua'
+    -- use 'kyazdani42/nvim-tree.lua'
 
     -- Color
     -- use 'christianchiarulli/nvcode-color-schemes.vim'
@@ -76,13 +76,13 @@ return require('packer').startup(function(use)
     -- Git
     -- use 'TimUntersberger/neogit'
     use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
-    use 'f-person/git-blame.nvim'
+    -- use 'f-person/git-blame.nvim'
     use 'tpope/vim-fugitive'
-    use 'tpope/vim-rhubarb'
+    -- use 'tpope/vim-rhubarb'
 
     -- Easily Create Gists
-    use 'mattn/vim-gist'
-    use 'mattn/webapi-vim'
+    -- use 'mattn/vim-gist'
+    -- use 'mattn/webapi-vim'
 
     -- Webdev
     -- TODO add back when I learn it better 
@@ -90,13 +90,13 @@ return require('packer').startup(function(use)
     -- use 'turbio/bracey.vim'
 
     -- Php
-    use 'phpactor/phpactor'
+    -- use 'phpactor/phpactor'
 
     -- Flutter
-    use 'thosakwe/vim-flutter'
+    -- use 'thosakwe/vim-flutter'
 
     -- Dependency assistent
-    use 'akinsho/dependency-assist.nvim'
+    -- use 'akinsho/dependency-assist.nvim'
 
     -- Registers
     -- use 'gennaro-tedesco/nvim-peekup'
@@ -111,25 +111,25 @@ return require('packer').startup(function(use)
     use 'kevinhwang91/nvim-bqf'
     use 'airblade/vim-rooter'
     -- use 'ChristianChiarulli/dashboard-nvim'
-    use 'metakirby5/codi.vim'
+    -- use 'metakirby5/codi.vim'
     use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
     use 'voldikss/vim-floaterm'
-    use 'terrortylor/nvim-comment'
-    use 'monaqa/dial.nvim'
+    -- use 'terrortylor/nvim-comment'
+    -- use 'monaqa/dial.nvim'
     use 'junegunn/goyo.vim'
-    use 'andymass/vim-matchup'
-    use 'MattesGroeger/vim-bookmarks'
+    -- use 'andymass/vim-matchup'
+    -- use 'MattesGroeger/vim-bookmarks'
     use 'windwp/nvim-autopairs'
-    use 'mbbill/undotree'
-	use 'nacro90/numb.nvim'
+    -- use 'mbbill/undotree'
+	-- use 'nacro90/numb.nvim'
 
     -- Database
-    use 'tpope/vim-dadbod'
-    use 'kristijanhusak/vim-dadbod-ui'
-    use 'kristijanhusak/vim-dadbod-completion'
+    -- use 'tpope/vim-dadbod'
+    -- use 'kristijanhusak/vim-dadbod-ui'
+    -- use 'kristijanhusak/vim-dadbod-completion'
 
     -- Documentation Generator 
-    use {'kkoomen/vim-doge', run = ':call doge#install()'}
+    -- use {'kkoomen/vim-doge', run = ':call doge#install()'}
 
     -- TODO put this back when stable for indent lines
     -- vim.g.indent_blankline_space_char = ''
@@ -156,7 +156,7 @@ return require('packer').startup(function(use)
     -- Other minor
     use 'rbgrouleff/bclose.vim' -- ranger.vim dependency
 	use 'schickling/vim-bufonly' -- delete other buffers
-    use 'airblade/vim-gitgutter' -- show git edits in gutter
+    -- use 'airblade/vim-gitgutter' -- show git edits in gutter
     use 'kshenoy/vim-signature'
     -- Other missing
     -- missing 'easymotion/vim-easymotion' -- replaced with hop
