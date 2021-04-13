@@ -55,7 +55,7 @@ return require('packer').startup(function(use)
     use 'ryanoasis/vim-devicons'
 
     -- Status Line and Bufferline
-    use { 'glepnir/galaxyline.nvim', config = my('nv-galaxyline') }
+    use { 'glepnir/galaxyline.nvim' }
     -- use { 'glepnir/galaxyline.nvim', config = function() require'nv-galaxyline' end } -- inline fn alternative
     use 'romgrk/barbar.nvim'
 
@@ -120,16 +120,17 @@ return require('packer').startup(function(use)
     -- use 'andymass/vim-matchup'
     -- use 'MattesGroeger/vim-bookmarks'
     use 'windwp/nvim-autopairs'
-    -- use 'mbbill/undotree'
-	-- use 'nacro90/numb.nvim'
+    use 'mbbill/undotree'
+	use 'nacro90/numb.nvim'
+	use 'turbio/bracey.vim'
 
     -- Database
     -- use 'tpope/vim-dadbod'
     -- use 'kristijanhusak/vim-dadbod-ui'
     -- use 'kristijanhusak/vim-dadbod-completion'
 
-    -- Documentation Generator 
-    -- use {'kkoomen/vim-doge', run = ':call doge#install()'}
+    -- Documentation Generator
+    use {'kkoomen/vim-doge', run = ':call doge#install()'}
 
     -- TODO put this back when stable for indent lines
     -- vim.g.indent_blankline_space_char = ''
