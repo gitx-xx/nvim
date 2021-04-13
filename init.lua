@@ -82,4 +82,6 @@ require('lsp.tailwindcss-ls')
 -- vim.lsp.handlers["textDocument/publishDiagnostics"] = nil
 
 -- colorscheme
-vim.cmd('colorscheme ThemerVim')
+-- vim.cmd('colorscheme ThemerVim')
+
+vim.cmd('colorscheme nord')
