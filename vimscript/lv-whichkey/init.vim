@@ -17,7 +17,6 @@ autocmd! FileType which_key
 autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
-<<<<<<< HEAD:vimscript/nv-whichkey/init.vim
 " Single mappings
 let g:which_key_map['h'] = [ ':Startify'                                       , 'startify']
 let g:which_key_map['d'] = [ ':Telescope lsp_workspace_diagnostics'   , 'diagnostics' ]
@@ -79,7 +78,6 @@ let g:which_key_map.b = {
       \ 'b' : [':BufferPick'            , 'pick buffer'],
       \ }
 
-<<<<<<< HEAD:vimscript/nv-whichkey/init.vim
 " u is for update
 let g:which_key_map.u = {
       \ 'name': '+update',
@@ -103,7 +101,6 @@ let g:which_key_map.F = {
     \ '6' : [':set foldlevel=6'   , 'level6']
     \ }
 
-<<<<<<< HEAD:vimscript/nv-whichkey/init.vim
 " m is for mark
 " I'd rather use regular marks but they never clear
 let g:which_key_map.m = {
@@ -212,7 +209,6 @@ let g:which_key_map.l = {
       \ 's' : [':Telescope lsp_document_symbols'     , 'document symbols'],
       \ 'S' : [':Telescope lsp_workspace_symbols'    , 'workspace symbols'],
       \ }
-<<<<<<< HEAD:vimscript/nv-whichkey/init.vim
       " \ 'H' : [':Lspsaga signature_help'             , 'signature_help'],
       " \ 'o' : [':Vista!!'                            , 'outline'],
 
