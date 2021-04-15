@@ -11,7 +11,7 @@ require('lv-comment')
 require('lv-lspkind')
 require('lv-compe')
 require('lv-barbar')
-require('lv-dashboard')
+-- require('lv-dashboard')
 require('lv-telescope')
 require('lv-gitsigns')
 require('lv-nvimtree')
@@ -19,11 +19,6 @@ require('lv-treesitter')
 require('lv-autopairs')
 require('lv-barbar')
 require('lv-rnvimr')
-
--- Other
-require('nv-taskwiki')
-require('nv-vimwiki')
-require('nv-startify')
 
 
 -- Which Key (Hope to replace with Lua plugin someday)
@@ -54,3 +49,14 @@ require('lsp.efm-general-ls')
 require('lsp.latex-ls')
 require('lsp.svelte-ls')
 require('lsp.tailwindcss-ls')
+
+
+-- Custom plugin settings
+require('nv-taskwiki')
+require('nv-vimwiki')
+require('nv-startify')
+require('nv-floaterm')
+require('nv-surround')
+require('nv-vim-rooter')
+require('nv-hop')
+

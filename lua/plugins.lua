@@ -63,7 +63,7 @@ return require('packer').startup(function(use)
 -- use {'lukas-reineke/indent-blankline.nvim', opt=true, branch = 'lua'}
     use {'lewis6991/gitsigns.nvim', opt = true}
     use {'liuchengxu/vim-which-key', opt = true}
-    use {'ChristianChiarulli/dashboard-nvim', opt = true}
+    -- use {'ChristianChiarulli/dashboard-nvim', opt = true}
     use {'windwp/nvim-autopairs', opt = true}
     use {'terrortylor/nvim-comment', opt = true}
     use {'kevinhwang91/nvim-bqf', opt = true}
@@ -93,7 +93,7 @@ return require('packer').startup(function(use)
     require_plugin('nvim-tree.lua')
     require_plugin('gitsigns.nvim')
     require_plugin('vim-which-key')
-    require_plugin('dashboard-nvim')
+    -- require_plugin('dashboard-nvim')
     require_plugin('nvim-autopairs')
     require_plugin('nvim-comment')
     require_plugin('nvim-bqf')
@@ -101,5 +101,27 @@ return require('packer').startup(function(use)
     require_plugin('nvim-web-devicons')
     require_plugin('galaxyline.nvim')
     require_plugin('barbar.nvim')
+
+    -- Custom
+    -- Put custom plugins here
+
+    use 'tpope/vim-commentary' -- Better comments
+    use 'vimwiki/vimwiki' -- Vim Wiki (not tested)
+    use 'tools-life/taskwiki' -- Taskwiki (not tested)
+    use 'mhinz/vim-startify' -- fancy start screen
+    use 'tpope/vim-surround' -- real surround
+    use 'rbgrouleff/bclose.vim' -- ranger.vim dependency
+	use 'schickling/vim-bufonly' -- delete other buffers
+    use 'kshenoy/vim-signature' -- gutter symbols ?
+    use 'phaazon/hop.nvim' -- east motion alternative
+    use 'airblade/vim-rooter' -- auto change root folder
+    use 'voldikss/vim-floaterm' -- floating terminals
+    -- use 'kevinhwang91/rnvimr' -- already intalled
+    -- use 'liuchengxu/vim-which-key' -- already installed
+    -- use 'kevinhwang91/nvim-bqf' -- already installed
+
+
+
+
 end)
 

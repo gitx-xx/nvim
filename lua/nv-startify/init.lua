@@ -15,18 +15,22 @@ vim.g.startify_change_to_vcs_root = 1
 vim.g.startify_fortune_use_unicode = 1
 vim.g.startify_session_persistence = 1
 vim.g.startify_session_dir = '~/.config/nvim/session'
+vim.g.startify_lists = {
+  { type = 'dir', header = { "   Current Directory "..vim.fn.getcwd()..":" } },
+  { type = 'bookmarks', header = { '   Bookmarks' } }
+}
 
-vim.api.nvim_exec(
-    'let startify_lists = [ { \'type\': \'files\',     \'header\': [\'   Files\'] }, { \'type\': \'sessions\',  \'header\': [\'   Sessions\'] },    { \'type\': \'bookmarks\', \'header\': [\'   Bookmarks\'] },                                                                   ]',
-    true)
-
-vim.api.nvim_exec(
-    'let startify_bookmarks = [ { \'l\': \'~/notes/linux-setup.md\' }, { \'i\': \'~/.config/nvim/init.lua\' }, { \'s\': \'~/.config/nvim/lua/settings.lua\' }, { \'p\': \'~/.config/nvim/lua/plugins.lua\' }, { \'h\': \'~/.config/nvim/lua/nv-startify/init.lua\' }, { \'k\': \'~/.config/nvim/lua/keymappings.lua\' }, { \'w\': \'~/.config/nvim/vimscript/nv-whichkey/init.vim\' }, { \'r\': \'~/.config/ranger/rc.conf\' }, { \'t\': \'~/notes/todo.md\' }, { \'z\': \'~/.zshrc\' }, { \'a\':  \'~/.oh-my-zsh/custom/aliases.zsh\'}, { \'d\':  \'~/dev\'}, { \'n\': \'~/notes/\' }]',
-    true)
-
-vim.cmd([[
-function! StartifyEntryFormat()
-        return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
-endfunction
-]])
-
+vim.g.startify_bookmarks = {
+  { i = '~/.config/nvim/init.lua'},
+  { s = '~/.config/nvim/lua/settings.lua'},
+  { p = '~/.config/nvim/lua/plugins.lua'},
+  { h = '~/.config/nvim/lua/nv-startify/init.lua'},
+  { k = '~/.config/nvim/lua/keymappings.lua'},
+  { w = '~/.config/nvim/vimscript/lv-whichkey/init.vim'},
+  { r = '~/.config/ranger/rc.conf'},
+  { t = '~/notes/todo.md'},
+  { a = '~/oh-my-zsh/custom/aliases.zsh'},
+  { z = '~/.zshrc'},
+  { d = '~/dev/'},
+  { n = '~/notes/'},
+}
