@@ -37,7 +37,7 @@ vim.wo.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shif
 vim.o.updatetime = 300 -- Faster completion
 vim.o.timeoutlen = 250 -- By default timeoutlen is 1000 ms
 vim.o.clipboard = "unnamedplus" -- Copy paste between vim and everything else
-vim.o.guifont = "FiraCode Nerd Font"
+vim.o.guifont = "FiraCode Nerd Font:h18"
 vim.o.incsearch = true
 vim.o.smartcase = true
  
