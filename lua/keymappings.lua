@@ -1,3 +1,4 @@
+-- guide https://github.com/nanotee/nvim-lua-guide#defining-mappings
 vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
 vim.g.mapleader = ' '
 
@@ -13,22 +14,21 @@ vim.api.nvim_set_keymap('n', 'j', 'gj', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', 'k', 'gk', {noremap = true, silent = true})
 
 -- Faster vertical movement
-vim.api.nvim_set_keymap('n', 'K', '12k', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', 'J', '12j', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('v', 'K', '12k', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('v', 'J', '12j', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('' , 'K', '12k', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('' , 'J', '12j', {noremap = true, silent = true})
+
+vim.api.nvim_set_keymap('' , '<M-j>', ':HopLine', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('' , 'J', '12j', {noremap = true, silent = true})
 
 -- Custom navigation bindings
-vim.api.nvim_set_keymap('n', 'H', 'b', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', 'L', 'e', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', 'B', '^', {noremap = true, silent = true}) -- doesn't work with verb
-vim.api.nvim_set_keymap('n', 'E', '$', {noremap = true, silent = true}) -- doesn't work with verb
-vim.api.nvim_set_keymap('v', 'H', 'b', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('v', 'L', 'e', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('v', 'B', '^', {noremap = true, silent = true}) -- doesn't work with verb
-vim.api.nvim_set_keymap('v', 'E', '$', {noremap = true, silent = true}) -- doesn't work with verb
+vim.api.nvim_set_keymap('' , 'H', 'b', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('' , 'L', 'e', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('' , 'B', '^', {noremap = true, silent = true}) -- doesn't work with verb
+vim.api.nvim_set_keymap('' , 'E', '$', {noremap = true, silent = true}) -- doesn't work with verb
+-- vim.api.nvim_set_keymap('v', 'B', '^', {noremap = true, silent = true}) -- doesn't work with verb
+-- vim.api.nvim_set_keymap('v', 'E', '$', {noremap = true, silent = true}) -- doesn't work with verb
 
-vim.api.nvim_set_keymap('n', 'M', '`', {noremap = true, silent = true}) -- doesn't work with verb
+vim.api.nvim_set_keymap('n', 'M', '`', {noremap = true, silent = true}) -- Goto bookmark
 
 -- no hl
 -- conflicts with which-key

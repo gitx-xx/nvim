@@ -59,4 +59,5 @@ require('nv-floaterm')
 require('nv-surround')
 require('nv-vim-rooter')
 require('nv-hop')
+require('nv-neovide')
 
