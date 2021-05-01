@@ -8,7 +8,7 @@ vim.cmd('let &titleold="'..TERMINAL..'"')
 vim.o.titlestring="%<%F%=%l/%L - nvim"
 vim.wo.wrap = O.wrap_lines -- Display long lines as just one line
 vim.cmd('set whichwrap+=<,>,[,],h,l') -- move to next line with theses keys
-vim.cmd('syntax on') -- move to next line with theses keys
+vim.cmd('syntax on') -- syntax highlighting
 vim.o.scrolloff = 999
 vim.o.pumheight = 10 -- Makes popup menu smaller
 vim.o.fileencoding = "utf-8" -- The encoding written to file
@@ -16,7 +16,7 @@ vim.o.cmdheight = 1 -- More space for displaying messages
 vim.o.colorcolumn = "80"  -- highdark column
 vim.o.mouse = "a" -- Enable your mouse
 vim.o.splitbelow = true -- Horizontal splits will automatically be below
-vim.o.termguicolors = true -- set term giu colors most terminals support this
+vim.o.termguicolors = true -- set term gui colors most terminals support this
 vim.o.splitright = true -- Vertical splits will automatically be to the right
 vim.o.t_Co = "256" -- Support 256 colors
 vim.o.conceallevel = 2 -- So that I can see `` in markdown files
