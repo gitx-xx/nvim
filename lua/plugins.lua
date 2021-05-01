@@ -66,7 +66,7 @@ return require("packer").startup(
         use {"lewis6991/gitsigns.nvim", opt = true}
         -- use {"liuchengxu/vim-which-key", opt = true}
         use {"folke/which-key.nvim", opt = true}
-        use {"ChristianChiarulli/dashboard-nvim", opt = true}
+        -- use {"ChristianChiarulli/dashboard-nvim", opt = true}
         use {"windwp/nvim-autopairs", opt = true}
         use {"terrortylor/nvim-comment", opt = true}
         use {"kevinhwang91/nvim-bqf", opt = true}
@@ -120,6 +120,7 @@ return require("packer").startup(
 		use 'phaazon/hop.nvim' -- east motion alternative
 		use 'airblade/vim-rooter' -- auto change root folder
 		use 'voldikss/vim-floaterm' -- floating terminals
+		use 'kdheepak/lazygit.nvim' -- Lazygit
 		-- use 'kevinhwang91/rnvimr' -- already intalled
 		-- use 'liuchengxu/vim-which-key' -- already installed
 		-- use 'kevinhwang91/nvim-bqf' -- already installed

@@ -47,41 +47,42 @@ local opts = {
 vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
 vim.g.mapleader = ' '
 
--- no hl
-vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})
 
--- explorer
-vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
-
--- telescope
-vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files<CR>', {noremap = true, silent = true})
-
--- dashboard
-vim.api.nvim_set_keymap('n', '<Leader>;', ':Dashboard<CR>', {noremap = true, silent = true})
-
--- Comments
-vim.api.nvim_set_keymap("n", "<leader>/", ":CommentToggle<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("v", "<leader>/", ":CommentToggle<CR>", {noremap = true, silent = true})
-
--- close buffer
-vim.api.nvim_set_keymap("n", "<leader>c", ":BufferClose<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>h", ":Startify<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>d", ":Telescope lsp_workspace_diagnostics<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>r", ":RnvimrToggle<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>v", "<C-W>v", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>s", "<C-W>s", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>x", ":BufferClose<CR>", {noremap = true, silent = true})
 
 -- TODO create entire treesitter section
 
 local mappings = {
-    ["/"] = "Comment",
-    ["c"] = "Close Buffer",
-    ["e"] = "Explorer",
-    ["f"] = "Find File",
-    ["h"] = "No Highlight",
-    d = {
-        name = "+Debug",
-        b = {"<cmd>DebugToggleBreakpoint<cr>", "Toggle Breakpoint"},
-        c = {"<cmd>DebugContinue<cr>", "Continue"},
-        i = {"<cmd>DebugStepInto<cr>", "Step Into"},
-        o = {"<cmd>DebugStepOver<cr>", "Step Over"},
-        r = {"<cmd>DebugToggleRepl<cr>", "Toggle Repl"},
-        s = {"<cmd>DebugStart<cr>", "Start"}
+    ["x"] = "Close Buffer",
+    ["r"] = "Ranger",
+    ["d"] = "Diagnostics",
+	b = {
+		name = "+buffer",
+		d = {"<cmd>bdelete<cr>", "delete"},
+		D = {"<cmd>bdelete!<cr>", "delete!"},
+		o = {"<cmd>Bonly<cr>", "delete-other!"},
+		n = {"<cmd>bnext<cr>", "next-buffer"},
+		N = {"<cmd>enew<cr>", "new-buffer"},
+		p = {"<cmd>bprevious<cr>", "prev-buffer"},
+		b = {"<cmd>BufferPick<cr>", "pick-buffer"},
+	},
+    f = {
+        name = "+Find",
+        b = {"<cmd>Telescope git_branches<cr>", "File"},
+        c = {"<cmd>Telescope colorscheme<cr>", "Colorscheme"},
+        d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
+        D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
+        f = {"<cmd>Telescope find_files<cr>", "Find File"},
+        m = {"<cmd>Telescope marks<cr>", "Marks"},
+        M = {"<cmd>Telescope man_pages<cr>", "Man Pages"},
+        r = {"<cmd>Telescope oldfiles<cr>", "Open Recent File"},
+        R = {"<cmd>Telescope registers<cr>", "Registers"},
+        t = {"<cmd>Telescope live_grep<cr>", "Text"}
     },
     g = {
         name = "+Git",
@@ -91,7 +92,8 @@ local mappings = {
         r = {"<cmd>ResetHunk<cr>", "Reset Hunk"},
         R = {"<cmd>ResetBuffer<cr>", "Reset Buffer"},
         s = {"<cmd>StageHunk<cr>", "Stage Hunk"},
-        u = {"<cmd>UndoStageHunk<cr>", "Undo Stage Hunk"}
+        u = {"<cmd>UndoStageHunk<cr>", "Undo Stage Hunk"},
+        l = {"<cmd>LazyGit<cr>", "LazyGit"},
     },
     l = {
         name = "+LSP",
@@ -111,21 +113,46 @@ local mappings = {
         s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"},
         S = {"<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols"}
     },
-
-    s = {
-        name = "+Search",
-        b = {"<cmd>Telescope git_branches<cr>", "File"},
-        c = {"<cmd>Telescope colorscheme<cr>", "Colorscheme"},
-        d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
-        D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
-        f = {"<cmd>Telescope find_files<cr>", "Find File"},
-        m = {"<cmd>Telescope marks<cr>", "Marks"},
-        M = {"<cmd>Telescope man_pages<cr>", "Man Pages"},
-        r = {"<cmd>Telescope oldfiles<cr>", "Open Recent File"},
-        R = {"<cmd>Telescope registers<cr>", "Registers"},
-        t = {"<cmd>Telescope live_grep<cr>", "Text"}
+    m = {
+        name = "+Mark",
+        t = {"<cmd>BookmarkToggle<cr>", "Toggle"},
+        n = {"<cmd>BookmarkNext<cr>", "Next"},
+        p = {"<cmd>BookmarkPrev<cr>", "Prev"},
     },
-    S = {name = "+Session", s = {"<cmd>SessionSave<cr>", "Save Session"}, l = {"<cmd>SessionLoad<cr>", "Load Session"}}
+    u = {
+        name = "+Update",
+        t = {"<cmd>TSUpdate<cr>", "Treesitter"},
+        p = {"<cmd>PackerUpdate<cr>", "Plugins"},
+        s = {"<cmd>luafile $MYVIMRC<cr>", "Source"},
+    },
+    R = {
+        name = "+Find_Replace",
+        f = {"<cmd>Farr --source=vimgrep<cr>", "file"},
+        p = {"<cmd>Farr --source=rgnvim<cr>", "project"},
+    },
+    S = {name = "+Session",
+        s = {"<cmd>SessionSave<cr>", "Save Session"},
+        l = {"<cmd>SessionLoad<cr>", "Load Session"}},
+    t = {
+        name = "+Toggle",
+        w = {"<cmd>set nowrap!<cr>", "wrap"},
+        g = {"<cmd>Goyo<cr>", "Goyo"},
+        h = {"<cmd>set hlsearch!<cr>", "search highlight"},
+    },
+    w = {
+        name = "+Wiki",
+        w = {"<cmd>VimwikiIndex<cr>", "index"},
+        r = {"<cmd>VimwikiRenameFile<cr>", "rename"},
+        a = {"<cmd>TaskWikiAnnotate<cr>", "annotate-task"},
+        d = {"<cmd>TaskWikiDone<cr>", "done-task"},
+        e = {"<cmd>TaskWikiEdit<cr>", "edit-task"},
+        x = {"<cmd>TaskWikiDelete<cr>", "delete-task"},
+        l = {"<cmd>TaskWikiLink<cr>", "link-task"},
+        m = {"<cmd>TaskWikiMod<cr>", "mod-task"},
+        s = {"<cmd>TaskWikiStart<cr>", "start-task"},
+        S = {"<cmd>TaskWikiStop<cr>", "stop-task"},
+        p = {"<cmd>TaskWikiChooseProject<cr>", "project-task"},
+    },
 }
 
 local wk = require("which-key")
