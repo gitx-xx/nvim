@@ -61,8 +61,11 @@ local mappings = {
     ["x"] = "Close Buffer",
     ["r"] = "Ranger",
     ["d"] = "Diagnostics",
+    ["\""] = "Registers",
+    ["\'"] = "Marks",
+
 	b = {
-		name = "+buffer",
+		name = "+Buffer",
 		d = {"<cmd>bdelete<cr>", "delete"},
 		D = {"<cmd>bdelete!<cr>", "delete!"},
 		o = {"<cmd>Bonly<cr>", "delete-other!"},
