@@ -122,9 +122,7 @@ return require("packer").startup(
 		use 'airblade/vim-rooter' -- auto change root folder
 		use 'voldikss/vim-floaterm' -- floating terminals
 		use 'kdheepak/lazygit.nvim' -- Lazygit
-		-- use 'kevinhwang91/rnvimr' -- already intalled
-		-- use 'liuchengxu/vim-which-key' -- already installed
-		-- use 'kevinhwang91/nvim-bqf' -- already installed
+		use 'arcticicestudio/nord-vim' -- Nord theme
 
     end
 )
