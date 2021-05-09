@@ -7,7 +7,7 @@ O = {
     number = true,
     relative_number = true,
     shell = 'zsh',
-	timeoutlen = 100,
+	timeoutlen = 200,
 
     -- @usage pass a table with your desired languages
     treesitter = {

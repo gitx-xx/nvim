@@ -1,9 +1,8 @@
 -- VimWiki
 
--- fails
--- vim.g.vimwiki_key_mappings = {{ all_maps= 1, global= 0, headers= 1, text_objs= 1, table_format= 0, table_mappings= 0, lists= 1, links= 0, html= 0, mouse= 1 }}
+-- fails due to list instead of dictionary
+-- vim.g.vimwiki_key_mappings = {{all_maps= 1, global= 0, headers= 1, text_objs= 1, table_format= 0, table_mappings= 0, lists= 1, links= 0, html= 0, mouse= 1 }}
 
--- Filetypes enabled for
 vim.g.vimwiki_global_ext = 1
 vim.g.vimwiki_filetypes = {'markdown'}
 
