@@ -123,8 +123,13 @@ return require("packer").startup(
 		use 'voldikss/vim-floaterm' -- floating terminals
 		use 'kdheepak/lazygit.nvim' -- Lazygit
 		use 'arcticicestudio/nord-vim' -- Nord theme
-    use 'junegunn/goyo.vim' -- distraction-free
-    use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
+        use 'junegunn/goyo.vim' -- distraction-free
+        use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
+        use 'rhysd/clever-f.vim' -- better f
+
+
+
+
 
     end
 )
