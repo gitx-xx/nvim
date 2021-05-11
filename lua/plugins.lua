@@ -125,11 +125,6 @@ return require("packer").startup(
 		use 'arcticicestudio/nord-vim' -- Nord theme
         use 'junegunn/goyo.vim' -- distraction-free
         use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
-        use 'rhysd/clever-f.vim' -- better f
-
-
-
-
-
+        use 'rhysd/clever-f.vim' -- better-f
     end
 )

@@ -60,5 +60,6 @@ require('nv-surround')
 require('nv-vim-rooter')
 require('nv-hop')
 require('nv-neovide')
+require('lv-clever-f')
 
 
