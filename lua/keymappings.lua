@@ -25,8 +25,6 @@ vim.api.nvim_set_keymap('' , 'H', 'b', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('' , 'L', 'e', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('' , 'B', '^', {noremap = true, silent = true}) -- doesn't work with verb
 vim.api.nvim_set_keymap('' , 'E', '$', {noremap = true, silent = true}) -- doesn't work with verb
--- vim.api.nvim_set_keymap('v', 'B', '^', {noremap = true, silent = true}) -- doesn't work with verb
--- vim.api.nvim_set_keymap('v', 'E', '$', {noremap = true, silent = true}) -- doesn't work with verb
 
 vim.api.nvim_set_keymap('n', 'M', '`', {noremap = true, silent = true}) -- Goto bookmark
 
