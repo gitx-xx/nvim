@@ -20,6 +20,9 @@ vim.api.nvim_set_keymap('' , 'J', '12j', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('' , '<M-j>', ':HopLine', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('' , 'J', '12j', {noremap = true, silent = true})
 
+-- <C-q> exits insert mode in terminal
+vim.api.nvim_set_keymap('t' , '', '', {noremap = true, silent = true})
+
 -- Custom navigation bindings
 vim.api.nvim_set_keymap('' , 'H', 'b', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('' , 'L', 'e', {noremap = true, silent = true})
@@ -36,7 +39,7 @@ vim.api.nvim_set_keymap('n', 'M', '`', {noremap = true, silent = true}) -- Goto 
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '-', ':RnvimrToggle<CR>', {noremap = true, silent = true})
 
--- better window movement
+-- better window movement file
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {silent = true})
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {silent = true})
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', {silent = true})
