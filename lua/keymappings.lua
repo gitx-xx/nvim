@@ -6,8 +6,9 @@ vim.g.mapleader = ' '
 vim.api.nvim_set_keymap('n', '<A-q>', ':Commentary<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('v', '<A-q>', ':Commentary<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<A-w>', ':Goyo<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('i', '<C-s>', '<ESC>:w<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('', '<C-s>', ':w<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'Q', ':q<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', ',', ':', {noremap = true, silent = true})
 
 -- Move by visual lines
 vim.api.nvim_set_keymap('n', 'j', 'gj', {noremap = true, silent = true})
@@ -16,9 +17,8 @@ vim.api.nvim_set_keymap('n', 'k', 'gk', {noremap = true, silent = true})
 -- Faster vertical movement
 vim.api.nvim_set_keymap('' , 'K', '12k', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('' , 'J', '12j', {noremap = true, silent = true})
-
-vim.api.nvim_set_keymap('' , '<M-j>', ':HopLine', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('' , 'J', '12j', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('' , '<M-j>', '}', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('' , '<M-k>', '{', {noremap = true, silent = true})
 
 -- <C-q> exits insert mode in terminal
 vim.api.nvim_set_keymap('t' , '', '', {noremap = true, silent = true})
@@ -80,8 +80,9 @@ vim.api.nvim_set_keymap('i', 'jk', '<ESC>', {noremap = true, silent = true})
 -- Tab switch buffer
 vim.api.nvim_set_keymap('n', '<TAB>', ':bnext!<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprevious!<CR>', {noremap = true, silent = true})
--- Switch between 2 buffers
+-- Buffer switching
 vim.api.nvim_set_keymap('n', '<C-b>', ':e #<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<M-b>', '<cmd>BufferPick<cr>', {noremap = true, silent = true})
 
 -- Disabled from nv-barbar
 -- vim.api.nvim_set_keymap('n', '<TAB>', ':BufferNext<CR>', { noremap = true, silent = true })
