@@ -31,6 +31,9 @@ utils.define_augroups({
         {'BufWinEnter', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
         {'BufRead', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
         {'BufNewFile', '*', 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o'},
+        {'TermOpen', '*', 'setlocal nonumber norelativenumber'},
+        {'TermOpen', '*', 'startinsert'},
+
         -- {'VimLeavePre', '*', 'set title set titleold='}
 
         -- {'User', 'GoyoLeave', 'lua require(\'galaxyline\').disable_galaxyline()'},
