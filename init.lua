@@ -51,6 +51,7 @@ require('lsp.terraform-ls')
 require('lsp.vim-ls')
 require('lsp.vue-ls')
 require('lsp.yaml-ls')
+require('lsp.elixir-ls')
 
 -- Custom plugin settings
 require('nv-taskwiki')
