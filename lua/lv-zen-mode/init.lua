@@ -24,6 +24,11 @@ require("zen-mode").setup
   },
   plugins = {
     gitsigns = true, -- disables git signs
+    options = {
+        enabled = true,
+        ruler = false, -- disables the ruler text in the cmd line area
+        showcmd = false, -- disables the command in the last line of the screen
+    }
   },
   -- callback where you can add custom code when the Zen window opens
   on_open = function(win)
