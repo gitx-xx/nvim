@@ -149,8 +149,8 @@ local mappings = {
     t = {
         name = "+Toggle",
         w = {"<cmd>set nowrap!<cr>", "wrap"},
-        g = {"<cmd>Goyo<cr>", "Goyo"},
         h = {"<cmd>set hlsearch!<cr>", "search highlight"},
+        z = {"<cmd>ZenMode<cr>", "ZenMode"},
     },
     w = {
         name = "+Wiki",

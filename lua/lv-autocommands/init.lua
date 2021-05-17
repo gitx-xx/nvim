@@ -35,9 +35,6 @@ utils.define_augroups({
         {'TermOpen', '*', 'startinsert'},
 
         -- {'VimLeavePre', '*', 'set title set titleold='}
-
-        -- {'User', 'GoyoLeave', 'lua require(\'galaxyline\').disable_galaxyline()'},
-        -- {'User', 'GoyoEnter', 'lua require(\'galaxyline\').galaxyline_augroup()'},
     },
     _java = {
         {'FileType', 'java', 'luafile ~/.config/nvim/lua/lsp/java-ls.lua'},

@@ -62,4 +62,5 @@ require('nv-vim-rooter')
 require('nv-hop')
 require('nv-neovide')
 require('lv-clever-f')
+require('lv-zen-mode')
 
