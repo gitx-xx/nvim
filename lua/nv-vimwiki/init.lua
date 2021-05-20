@@ -3,6 +3,22 @@
 -- fails due to list instead of dictionary
 -- vim.g.vimwiki_key_mappings = {{all_maps= 1, global= 0, headers= 1, text_objs= 1, table_format= 0, table_mappings= 0, lists= 1, links= 0, html= 0, mouse= 1 }}
 
+
+mytable = {}
+mytable['all_maps'] = 1
+mytable['global'] = 0
+mytable['headers'] = 1
+mytable['text_objs'] = 1
+mytable['table_format'] = 0
+mytable['table_mappings'] = 0
+mytable['lists'] = 1
+mytable['links'] = 0
+mytable['html'] = 0
+mytable['mouse'] = 1 
+
+
+vim.g.vimwiki_key_mappings = mytable
+
 vim.g.vimwiki_global_ext = 1
 vim.g.vimwiki_filetypes = {'markdown'}
 
