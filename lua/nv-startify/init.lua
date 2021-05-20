@@ -32,6 +32,7 @@ vim.g.startify_bookmarks = {
   { c = '~/.config/nvim/lua/lv-autocommands/init.lua'},
   { r = '~/.config/ranger/rc.conf'},
   { t = '~/notes/todo.md'},
+  { l = '~/notes/linux-setup.md'},
   { a = '~/.oh-my-zsh/custom/aliases.zsh'},
   { z = '~/.zshrc'},
   { d = '~/dev/'},

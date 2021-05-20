@@ -164,6 +164,7 @@ local mappings = {
         m = {"<cmd>TaskWikiMod<cr>", "mod-task"},
         s = {"<cmd>TaskWikiStart<cr>", "start-task"},
         S = {"<cmd>TaskWikiStop<cr>", "stop-task"},
+        t = {"<cmd>e ~/notes/todo.md<cr>", "todo"},
         p = {"<cmd>TaskWikiChooseProject<cr>", "project-task"},
     },
 }
