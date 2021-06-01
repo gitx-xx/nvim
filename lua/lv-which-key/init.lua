@@ -7,7 +7,7 @@ require("which-key").setup {
         presets = {
             operators = false, -- adds help for operators like d, y, ...
             motions = false, -- adds help for motions
-            text_objects = true, -- help for text objects triggered after entering an operator
+            text_objects = false, -- help for text objects triggered after entering an operator
             windows = true, -- default bindings on <c-w>
             nav = true, -- misc bindings to work with windows
             z = true, -- bindings for folds, spelling and others prefixed with z
@@ -55,43 +55,35 @@ vim.api.nvim_set_keymap("n", "<leader>v", "<C-W>v", {noremap = true, silent = tr
 vim.api.nvim_set_keymap("n", "<leader>s", "<C-W>s", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>x", ":BufferClose<CR>", {noremap = true, silent = true})
 
+-- open projects
+vim.api.nvim_set_keymap('n', '<leader>p', ":lua require'telescope'.extensions.project.project{}<CR>",
+                        {noremap = true, silent = true})
 -- TODO create entire treesitter section
 
 local mappings = {
-    ["x"] = "Close Buffer",
-    ["r"] = "Ranger",
-    ["d"] = "Diagnostics",
-    ["\""] = "Registers",
-    ["\'"] = "Marks",
-
-	b = {
-		name = "+Buffer",
-		d = {"<cmd>bdelete<cr>", "delete"},
-		D = {"<cmd>bdelete!<cr>", "delete!"},
-		o = {"<cmd>Bonly<cr>", "delete-other!"},
-		n = {"<cmd>bnext<cr>", "next-buffer"},
-		N = {"<cmd>enew<cr>", "new-buffer"},
-		p = {"<cmd>bprevious<cr>", "prev-buffer"},
-		b = {"<cmd>BufferPick<cr>", "pick-buffer"},
-	},
-    f = {
-        name = "+Find",
-        a = {"<cmd>Telescope lsp_code_actions<cr>", "Actions"},
-        b = {"<cmd>Telescope buffers<cr>", "Buffers"},
-        c = {"<cmd>Telescope commands<cr>", "Commands"},
-        C = {"<cmd>Telescope colorscheme<cr>", "Colorscheme"},
-        d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
-        D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
-        f = {"<cmd>Telescope find_files<cr>", "Find File"},
-        g = {"<cmd>Telescope git_files<cr>", "Find file (git)"},
-        m = {"<cmd>Telescope marks<cr>", "Marks"},
-        M = {"<cmd>Telescope man_pages<cr>", "Man Pages"},
-        o = {"<cmd>Telescope vim_options<cr>", "Options"},
-        r = {"<cmd>Telescope oldfiles<cr>", "Open Recent File"},
-        R = {"<cmd>Telescope registers<cr>", "Registers"},
-        s = {"<cmd>Telescope spell_suggest<cr>", "Spelling"},
-        t = {"<cmd>Telescope live_grep<cr>", "Text"},
-        w = {"<cmd>Telescope grep_string<cr>", "Find selected"}
+    ["/"] = "Comment",
+    ["c"] = "Close Buffer",
+    ["e"] = "Explorer",
+    ["f"] = "Find File",
+    ["h"] = "No Highlight",
+    ["p"] = "Projects",
+    d = {
+        name = "+Diagnostics",
+        t = {"<cmd>TroubleToggle<cr>", "trouble"},
+        w = {"<cmd>TroubleToggle lsp_workspace_diagnostics<cr>", "workspace"},
+        d = {"<cmd>TroubleToggle lsp_document_diagnostics<cr>", "document"},
+        q = {"<cmd>TroubleToggle quickfix<cr>", "quickfix"},
+        l = {"<cmd>TroubleToggle loclist<cr>", "loclist"},
+        r = {"<cmd>TroubleToggle lsp_references<cr>", "references"},
+    },
+    D = {
+        name = "+Debug",
+        b = {"<cmd>DebugToggleBreakpoint<cr>", "Toggle Breakpoint"},
+        c = {"<cmd>DebugContinue<cr>", "Continue"},
+        i = {"<cmd>DebugStepInto<cr>", "Step Into"},
+        o = {"<cmd>DebugStepOver<cr>", "Step Over"},
+        r = {"<cmd>DebugToggleRepl<cr>", "Toggle Repl"},
+        s = {"<cmd>DebugStart<cr>", "Start"}
     },
     g = {
         name = "+Git",
@@ -128,47 +120,28 @@ local mappings = {
         s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"},
         S = {"<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols"}
     },
-    m = {
-        name = "+Mark",
-        t = {"<cmd>BookmarkToggle<cr>", "Toggle"},
-        n = {"<cmd>BookmarkNext<cr>", "Next"},
-        p = {"<cmd>BookmarkPrev<cr>", "Prev"},
+    s = {
+        name = "+Search",
+        b = {"<cmd>Telescope git_branches<cr>", "Checkout branch"},
+        c = {"<cmd>Telescope colorscheme<cr>", "Colorscheme"},
+        d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
+        D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
+        f = {"<cmd>Telescope find_files<cr>", "Find File"},
+        m = {"<cmd>Telescope marks<cr>", "Marks"},
+        M = {"<cmd>Telescope man_pages<cr>", "Man Pages"},
+        r = {"<cmd>Telescope oldfiles<cr>", "Open Recent File"},
+        R = {"<cmd>Telescope registers<cr>", "Registers"},
+        t = {"<cmd>Telescope live_grep<cr>", "Text"}
     },
-    u = {
-        name = "+Update",
-        t = {"<cmd>TSUpdate<cr>", "Treesitter"},
-        p = {"<cmd>PackerUpdate<cr>", "Plugins"},
-        s = {"<cmd>luafile $MYVIMRC<cr>", "Source"},
-    },
-    R = {
-        name = "+Find_Replace",
-        f = {"<cmd>Farr --source=vimgrep<cr>", "file"},
-        p = {"<cmd>Farr --source=rgnvim<cr>", "project"},
-    },
-    S = {name = "+Session",
-        s = {"<cmd>SessionSave<cr>", "Save Session"},
-        l = {"<cmd>SessionLoad<cr>", "Load Session"}},
-    t = {
-        name = "+Toggle",
-        w = {"<cmd>set nowrap!<cr>", "wrap"},
-        h = {"<cmd>set hlsearch!<cr>", "search highlight"},
-        z = {"<cmd>ZenMode<cr>", "ZenMode"},
-    },
-    w = {
-        name = "+Wiki",
-        w = {"<cmd>VimwikiIndex<cr>", "index"},
-        r = {"<cmd>VimwikiRenameFile<cr>", "rename"},
-        a = {"<cmd>TaskWikiAnnotate<cr>", "annotate-task"},
-        d = {"<cmd>TaskWikiDone<cr>", "done-task"},
-        e = {"<cmd>TaskWikiEdit<cr>", "edit-task"},
-        x = {"<cmd>TaskWikiDelete<cr>", "delete-task"},
-        l = {"<cmd>TaskWikiLink<cr>", "link-task"},
-        m = {"<cmd>TaskWikiMod<cr>", "mod-task"},
-        s = {"<cmd>TaskWikiStart<cr>", "start-task"},
-        S = {"<cmd>TaskWikiStop<cr>", "stop-task"},
-        t = {"<cmd>e ~/notes/todo.md<cr>", "todo"},
-        p = {"<cmd>TaskWikiChooseProject<cr>", "project-task"},
-    },
+    S = {name = "+Session", s = {"<cmd>SessionSave<cr>", "Save Session"}, l = {"<cmd>SessionLoad<cr>", "Load Session"}},
+
+    -- extras
+    z = {
+        name = "+Zen",
+        s = {"<cmd>TZBottom<cr>", "toggle status line"},
+        t = {"<cmd>TZTop<cr>", "toggle tab bar"},
+        z = {"<cmd>TZAtaraxis<cr>", "toggle zen"},
+    }
 }
 
 local wk = require("which-key")
