@@ -73,7 +73,7 @@ return require("packer").startup(
         use {"kevinhwang91/nvim-bqf", opt = true}
 
         -- Color
-        use {"christianchiarulli/nvcode-color-schemes.vim", opt = true}
+        -- use {"christianchiarulli/nvcode-color-schemes.vim", opt = true}
 
         -- Icons
         use {"kyazdani42/nvim-web-devicons", opt = true}
@@ -101,7 +101,7 @@ return require("packer").startup(
         require_plugin("nvim-autopairs")
         require_plugin("nvim-comment")
         require_plugin("nvim-bqf")
-        require_plugin("nvcode-color-schemes.vim")
+        -- require_plugin("nvcode-color-schemes.vim")
         require_plugin("nvim-web-devicons")
         require_plugin("galaxyline.nvim")
         require_plugin("barbar.nvim")
@@ -122,9 +122,11 @@ return require("packer").startup(
 		use 'airblade/vim-rooter' -- auto change root folder
 		use 'voldikss/vim-floaterm' -- floating terminals
 		use 'kdheepak/lazygit.nvim' -- Lazygit
-		use 'arcticicestudio/nord-vim' -- Nord theme
         use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
         use 'rhysd/clever-f.vim' -- better-f
         use 'folke/zen-mode.nvim' -- distraction free
+        use 'shaunsingh/nord.nvim' -- dark theme
+        use 'shaunsingh/solarized.nvim' -- light theme
+
     end
 )
