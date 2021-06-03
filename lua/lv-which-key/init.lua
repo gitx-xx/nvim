@@ -61,12 +61,23 @@ vim.api.nvim_set_keymap('n', '<leader>p', ":lua require'telescope'.extensions.pr
 -- TODO create entire treesitter section
 
 local mappings = {
-    ["/"] = "Comment",
-    ["c"] = "Close Buffer",
-    ["e"] = "Explorer",
-    ["f"] = "Find File",
-    ["h"] = "No Highlight",
     ["p"] = "Projects",
+    ["x"] = "Close Buffer",
+    ["r"] = "Ranger",
+    ["\""] = "Registers",
+    ["\'"] = "Marks",
+
+	b = {
+		name = "+Buffer",
+		d = {"<cmd>bdelete<cr>", "delete"},
+		D = {"<cmd>bdelete!<cr>", "delete!"},
+		e = {"<cmd>enew<cr>", "new-buffer"},
+		o = {"<cmd>Bonly<cr>", "delete-other!"},
+		n = {"<cmd>bnext<cr>", "next-buffer"},
+		N = {"<cmd>enew<cr>", "new-buffer"},
+		p = {"<cmd>bprevious<cr>", "prev-buffer"},
+		b = {"<cmd>BufferPick<cr>", "pick-buffer"},
+	},
     d = {
         name = "+Diagnostics",
         t = {"<cmd>TroubleToggle<cr>", "trouble"},
@@ -84,6 +95,26 @@ local mappings = {
         o = {"<cmd>DebugStepOver<cr>", "Step Over"},
         r = {"<cmd>DebugToggleRepl<cr>", "Toggle Repl"},
         s = {"<cmd>DebugStart<cr>", "Start"}
+    },
+    f = {
+        name = "+Find",
+        a = {"<cmd>Telescope lsp_code_actions<cr>", "Actions"},
+        b = {"<cmd>Telescope buffers<cr>", "Buffers"},
+        c = {"<cmd>Telescope commands<cr>", "Commands"},
+        C = {"<cmd>Telescope colorscheme<cr>", "Colorscheme"},
+        d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
+        D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
+        f = {"<cmd>Telescope find_files<cr>", "Find File"},
+        g = {"<cmd>Telescope git_files<cr>", "Find file (git)"},
+        m = {"<cmd>Telescope marks<cr>", "Marks"},
+        M = {"<cmd>Telescope man_pages<cr>", "Man Pages"},
+        o = {"<cmd>Telescope vim_options<cr>", "Options"},
+        r = {"<cmd>Telescope oldfiles<cr>", "Open Recent File"},
+        p = {"<cmd>Telescope oldfiles<cr>", "Open Recent File"},
+
+        s = {"<cmd>Telescope spell_suggest<cr>", "Spelling"},
+        t = {"<cmd>Telescope live_grep<cr>", "Text"},
+        w = {"<cmd>Telescope grep_string<cr>", "Find selected"}
     },
     g = {
         name = "+Git",
@@ -120,6 +151,24 @@ local mappings = {
         s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"},
         S = {"<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols"}
     },
+
+    m = {
+        name = "+Mark",
+        t = {"<cmd>BookmarkToggle<cr>", "Toggle"},
+        n = {"<cmd>BookmarkNext<cr>", "Next"},
+        p = {"<cmd>BookmarkPrev<cr>", "Prev"},
+    },
+    u = {
+        name = "+Update",
+        t = {"<cmd>TSUpdate<cr>", "Treesitter"},
+        p = {"<cmd>PackerUpdate<cr>", "Plugins"},
+        s = {"<cmd>luafile $MYVIMRC<cr>", "Source"},
+    },
+    R = {
+        name = "+Find_Replace",
+        f = {"<cmd>Farr --source=vimgrep<cr>", "file"},
+        p = {"<cmd>Farr --source=rgnvim<cr>", "project"},
+    },
     s = {
         name = "+Search",
         b = {"<cmd>Telescope git_branches<cr>", "Checkout branch"},
@@ -135,6 +184,27 @@ local mappings = {
     },
     S = {name = "+Session", s = {"<cmd>SessionSave<cr>", "Save Session"}, l = {"<cmd>SessionLoad<cr>", "Load Session"}},
 
+    t = {
+        name = "+Toggle",
+        w = {"<cmd>set nowrap!<cr>", "wrap"},
+        h = {"<cmd>set hlsearch!<cr>", "search highlight"},
+        z = {"<cmd>ZenMode<cr>", "ZenMode"},
+    },
+    w = {
+        name = "+Wiki",
+        w = {"<cmd>VimwikiIndex<cr>", "index"},
+        r = {"<cmd>VimwikiRenameFile<cr>", "rename"},
+        a = {"<cmd>TaskWikiAnnotate<cr>", "annotate-task"},
+        d = {"<cmd>TaskWikiDone<cr>", "done-task"},
+        e = {"<cmd>TaskWikiEdit<cr>", "edit-task"},
+        x = {"<cmd>TaskWikiDelete<cr>", "delete-task"},
+        l = {"<cmd>TaskWikiLink<cr>", "link-task"},
+        m = {"<cmd>TaskWikiMod<cr>", "mod-task"},
+        s = {"<cmd>TaskWikiStart<cr>", "start-task"},
+        S = {"<cmd>TaskWikiStop<cr>", "stop-task"},
+        t = {"<cmd>e ~/notes/todo.md<cr>", "todo"},
+        p = {"<cmd>TaskWikiChooseProject<cr>", "project-task"},
+    },
     -- extras
     z = {
         name = "+Zen",

@@ -108,7 +108,7 @@ return require("packer").startup(function(use)
     require_plugin("gitsigns.nvim")
     require_plugin("git-blame.nvim")
     require_plugin("which-key.nvim")
-    require_plugin("dashboard-nvim")
+    -- require_plugin("dashboard-nvim")
     require_plugin("nvim-autopairs")
     require_plugin("nvim-comment")
     require_plugin("nvim-bqf")
@@ -155,5 +155,28 @@ return require("packer").startup(function(use)
         -- use {'mattn/vim-gist', opt = true}
         -- use {'mattn/webapi-vim', opt = true}
     end
+
+
+    -- Custom
+    -- Put custom plugins here
+
+    use 'tpope/vim-commentary' -- Better comments
+    use 'vimwiki/vimwiki' -- Vim Wiki (not tested)
+    use 'tools-life/taskwiki' -- Taskwiki (not tested)
+    use 'mhinz/vim-startify' -- fancy start screen
+    use 'tpope/vim-surround' -- real surround
+    use 'rbgrouleff/bclose.vim' -- ranger.vim dependency
+    use 'schickling/vim-bufonly' -- delete other buffers
+    use 'kshenoy/vim-signature' -- gutter symbols ?
+    use 'phaazon/hop.nvim' -- east motion alternative
+    use 'airblade/vim-rooter' -- auto change root folder
+    use 'voldikss/vim-floaterm' -- floating terminals
+    use 'kdheepak/lazygit.nvim' -- Lazygit
+    use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
+    use 'rhysd/clever-f.vim' -- better-f
+    use 'folke/zen-mode.nvim' -- distraction free
+    use 'shaunsingh/nord.nvim' -- dark theme
+    use 'shaunsingh/solarized.nvim' -- light theme
+    use 'sudormrfbin/cheatsheet.nvim' -- telescope cheatsheet
 
 end)

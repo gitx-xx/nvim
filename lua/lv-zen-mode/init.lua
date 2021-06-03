@@ -1,7 +1,7 @@
 -- Zen-mode
 -- https://github.com/folke/zen-mode.nvim
 
-require("zen-mode").setup 
+require("zen-mode").setup
 {
   window = {
     backdrop = 1.0, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
