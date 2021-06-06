@@ -192,18 +192,19 @@ local mappings = {
     },
     w = {
         name = "+Wiki",
-        w = {"<cmd>VimwikiIndex<cr>", "index"},
-        r = {"<cmd>VimwikiRenameFile<cr>", "rename"},
         a = {"<cmd>TaskWikiAnnotate<cr>", "annotate-task"},
+        b = {"<cmd>VimwikiBacklinks<cr>", "backlinks"},
         d = {"<cmd>TaskWikiDone<cr>", "done-task"},
         e = {"<cmd>TaskWikiEdit<cr>", "edit-task"},
-        x = {"<cmd>TaskWikiDelete<cr>", "delete-task"},
         l = {"<cmd>TaskWikiLink<cr>", "link-task"},
         m = {"<cmd>TaskWikiMod<cr>", "mod-task"},
+        p = {"<cmd>TaskWikiChooseProject<cr>", "project-task"},
+        r = {"<cmd>VimwikiRenameFile<cr>", "rename"},
         s = {"<cmd>TaskWikiStart<cr>", "start-task"},
         S = {"<cmd>TaskWikiStop<cr>", "stop-task"},
         t = {"<cmd>e ~/notes/todo.md<cr>", "todo"},
-        p = {"<cmd>TaskWikiChooseProject<cr>", "project-task"},
+        w = {"<cmd>VimwikiIndex<cr>", "index"},
+        x = {"<cmd>TaskWikiDelete<cr>", "delete-task"},
     },
     -- extras
     z = {
