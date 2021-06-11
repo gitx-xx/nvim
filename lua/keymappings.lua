@@ -81,6 +81,8 @@ vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprevious!<CR>', {noremap = true, sile
 -- Buffer switching
 vim.api.nvim_set_keymap('n', '<C-b>', ':e #<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<M-b>', '<cmd>BufferPick<cr>', {noremap = true, silent = true})
+-- Alternate buffer
+vim.api.nvim_set_keymap('n', '§', '<C-^>', {noremap = true, silent = true})
 
 -- Disabled from nv-barbar
 -- vim.api.nvim_set_keymap('n', '<TAB>', ':BufferNext<CR>', { noremap = true, silent = true })
