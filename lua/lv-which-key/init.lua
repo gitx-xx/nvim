@@ -55,6 +55,10 @@ vim.api.nvim_set_keymap("n", "<leader>v", "<C-W>v", {noremap = true, silent = tr
 vim.api.nvim_set_keymap("n", "<leader>s", "<C-W>s", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>x", ":BufferClose<CR>", {noremap = true, silent = true})
 
+-- F = {"<cmd>lua require'telescope.builtin'.find_files{search_dirs={'~/dev', '~/notes'}}<cr>", "Find File"},
+
+vim.api.nvim_set_keymap("n", "<leader>F", "<cmd>lua require'telescope.builtin'.find_files{search_dirs={'~/dev', '~/notes'}}<cr>", {noremap = true, silent = true})
+
 -- open projects
 vim.api.nvim_set_keymap('n', '<leader>p', ":lua require'telescope'.extensions.project.project{}<CR>",
                         {noremap = true, silent = true})
@@ -66,7 +70,6 @@ local mappings = {
     ["r"] = "Ranger",
     ["\""] = "Registers",
     ["\'"] = "Marks",
-
 	b = {
 		name = "+Buffer",
 		d = {"<cmd>bdelete<cr>", "delete"},
@@ -105,6 +108,7 @@ local mappings = {
         d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
         D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
         f = {"<cmd>Telescope find_files<cr>", "Find File"},
+        F = {"<cmd>lua require'telescope.builtin'.find_files{search_dirs={'~/dev', '~/notes'}}<cr>", "Find File"},
         g = {"<cmd>Telescope git_files<cr>", "Find file (git)"},
         m = {"<cmd>Telescope marks<cr>", "Marks"},
         M = {"<cmd>Telescope man_pages<cr>", "Man Pages"},
