@@ -86,9 +86,10 @@
   " Normal "
   """"""""""
 
-  exec "hi Normal guifg=".s:guishade6." guibg=".s:guishade0
-  exec "hi Normal ctermfg=".s:ctermshade6." ctermbg=".s:ctermshade0
-
+  " exec "hi Normal guifg=".s:guishade6." guibg=".s:guishade0
+  " exec "hi Normal ctermfg=".s:ctermshade6." ctermbg=".s:ctermshade0
+  exec "hi Normal guifg=none guibg=none"
+  exec "hi Normal ctermfg=none ctermbg=none"
   """""""""""""""""
   " Syntax groups "
   """""""""""""""""
@@ -222,8 +223,8 @@
   exec "hi SpellLocal ctermfg=".s:ctermaccent4
   exec "hi SpellRare guifg=".s:guiaccent1
   exec "hi SpellRare ctermfg=".s:ctermaccent1
-  exec "hi StatusLine guifg=".s:guishade4." guibg=".s:guishade1." gui=none"
-  exec "hi StatusLine ctermfg=".s:ctermshade4." ctermbg=".s:ctermshade1." cterm=none"
+  exec "hi StatusLine guifg=".s:guishade4." guibg=none gui=none"
+  exec "hi StatusLine ctermfg=".s:ctermshade4." ctermbg=none cterm=none"
   exec "hi TabLine guifg=".s:guishade5." guibg=".s:guishade1
   exec "hi TabLine ctermfg=".s:ctermshade5." ctermbg=".s:ctermshade1
   exec "hi TabLineFill guibg=".s:guishade1
