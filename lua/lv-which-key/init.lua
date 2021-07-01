@@ -192,7 +192,8 @@ local mappings = {
         name = "+Toggle",
         w = {"<cmd>set nowrap!<cr>", "wrap"},
         h = {"<cmd>set hlsearch!<cr>", "search highlight"},
-        z = {"<cmd>ZenMode<cr>", "ZenMode"},
+        z = {"<cmd>TZAtaraxis l25 r25<cr>", "zen"},
+        m = {"<cmd>TZMinimalist<cr>", "minimalist"},
     },
     w = {
         name = "+Wiki",

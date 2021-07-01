@@ -79,6 +79,5 @@ require('nv-surround')
 require('nv-vim-rooter')
 require('nv-neovide')
 require('lv-clever-f')
-require('lv-zen-mode')
 require('lv-hop')
 

@@ -181,7 +181,6 @@ return require("packer").startup(function(use)
     use 'kdheepak/lazygit.nvim' -- Lazygit
     use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
     use 'rhysd/clever-f.vim' -- better-f
-    use 'folke/zen-mode.nvim' -- distraction free
     use 'shaunsingh/nord.nvim' -- dark theme
     use 'shaunsingh/solarized.nvim' -- light theme
     use 'sudormrfbin/cheatsheet.nvim' -- telescope cheatsheet

@@ -1,4 +1,6 @@
 -- setup for TrueZen.nvim
+-- https://github.com/Pocco81/TrueZen.nvim
+
 require("true-zen").setup({
     true_false_commands = false,
 	cursor_by_mode = false,

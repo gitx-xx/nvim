@@ -37,6 +37,7 @@ utils.define_augroups({
         {'TermOpen', '*', 'setlocal nonumber norelativenumber'},
         {'TermOpen', '*', 'startinsert'},
         {'BufWritePre', '*.md', '%s/\\s\\+$//e|g/./s/$/  /|norm!``'}, -- add linebreaks
+        {'VimEnter', '*', 'TZMinimalist'}, -- Zen
         {'VimLeavePre', '*', 'set title set titleold='},
         {'FileType', 'qf', 'set nobuflisted'},
 
