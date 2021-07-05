@@ -68,6 +68,8 @@ local mappings = {
     ["p"] = "Projects",
     ["x"] = "Close Buffer",
     ["r"] = "Ranger",
+    ["F"] = "Find file",
+    ["v"] = "Split",
     ["\""] = "Registers",
     ["\'"] = "Marks",
 	b = {
@@ -193,6 +195,8 @@ local mappings = {
         w = {"<cmd>set nowrap!<cr>", "wrap"},
         h = {"<cmd>set hlsearch!<cr>", "search highlight"},
         z = {"<cmd>TZAtaraxis l25 r25<cr>", "zen"},
+        t = {"<cmd>TZTop<cr>", "bufferline"},
+        l = {"<cmd>TZLeft<cr>", "gutter"},
         m = {"<cmd>TZMinimalist<cr>", "minimalist"},
     },
     w = {

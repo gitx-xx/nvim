@@ -35,12 +35,19 @@ require("true-zen").setup({
 		shown_relativenumber = false,
 		shown_signcolumn = "no"
 	},
-	ataraxis = {
-		just_do_it_for_me = false,
-		left_padding = 5,
-		right_padding = 5,
-		top_padding = 1,
-		bottom_padding = 1
+    modes = {
+		ataraxis = {
+			left_padding = 32,
+			right_padding = 32,
+			top_padding = 1,
+			bottom_padding = 1,
+			ideal_writing_area_width = 0,
+			just_do_it_for_me = true,
+			keep_default_fold_fillchars = true,
+			custome_bg = "",
+			bg_configuration = true,
+			affected_higroups = {NonText = {}, FoldColumn = {}, ColorColumn = {}, VertSplit = {}, StatusLine = {}, StatusLineNC = {}, SignColumn = {}}
+		},
 	},
 	integrations = {
 		integration_galaxyline = true,
@@ -51,5 +58,10 @@ require("true-zen").setup({
 		integration_gitgutter = false,
 		integration_vim_signify = false,
 		integration_limelight = false
+	},
+    misc = {
+		on_off_commands = false,
+		ui_elements_commands = true,
+		cursor_by_mode = false,
 	}
 })
