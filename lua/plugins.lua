@@ -179,7 +179,7 @@ return require("packer").startup(function(use)
     use 'airblade/vim-rooter' -- auto change root folder
     use 'voldikss/vim-floaterm' -- floating terminals
     use 'kdheepak/lazygit.nvim' -- Lazygit
-    use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
+    -- use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
     use 'rhysd/clever-f.vim' -- better-f
     use 'shaunsingh/nord.nvim' -- dark theme
     use 'shaunsingh/solarized.nvim' -- light theme
