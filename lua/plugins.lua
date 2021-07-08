@@ -362,25 +362,6 @@ return require("packer").startup(function(use)
     packer.use(plugin)
   end
 
-    -- Custom
-    -- Put custom plugins here
-    use 'tpope/vim-commentary' -- Better comments
-    use 'vimwiki/vimwiki' -- Vim Wiki (not tested)
-    use 'tools-life/taskwiki' -- Taskwiki (not tested)
-    use 'mhinz/vim-startify' -- fancy start screen
-    use 'tpope/vim-surround' -- real surround
-    use 'rbgrouleff/bclose.vim' -- ranger.vim dependency
-    use 'schickling/vim-bufonly' -- delete other buffers
-    use 'kshenoy/vim-signature' -- gutter symbols ?
-    use 'phaazon/hop.nvim' -- east motion alternative
-    use 'airblade/vim-rooter' -- auto change root folder
-    use 'voldikss/vim-floaterm' -- floating terminals
-    use 'kdheepak/lazygit.nvim' -- Lazygit
-    -- use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
-    use 'rhysd/clever-f.vim' -- better-f
-    use 'shaunsingh/nord.nvim' -- dark theme
-    use 'shaunsingh/solarized.nvim' -- light theme
-    use 'sudormrfbin/cheatsheet.nvim' -- telescope cheatsheet
 
 
 end)

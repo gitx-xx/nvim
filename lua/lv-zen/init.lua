@@ -10,7 +10,6 @@ end
 M.config = function()
   zen_mode.setup {
     window = {
-      backdrop = 1,
       height = 0.85, -- height of the Zen window
       options = {
         signcolumn = "no", -- disable signcolumn

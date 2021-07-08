@@ -114,10 +114,6 @@ local mappings = {
         l = {"<cmd>TroubleToggle loclist<cr>", "loclist"},
         r = {"<cmd>TroubleToggle lsp_references<cr>", "references"},
     },
-    D = {
-      "<cmd>BufferOrderByDirectory<cr>",
-      "sort BufferLines automatically by directory",
-    },
     f = {
         name = "+Find",
         a = {"<cmd>Telescope lsp_code_actions<cr>", "Actions"},
@@ -134,7 +130,6 @@ local mappings = {
         o = {"<cmd>Telescope vim_options<cr>", "Options"},
         r = {"<cmd>Telescope oldfiles<cr>", "Open Recent File"},
         p = {"<cmd>Telescope oldfiles<cr>", "Open Recent File"},
-
         s = {"<cmd>Telescope spell_suggest<cr>", "Spelling"},
         t = {"<cmd>Telescope live_grep<cr>", "Text"},
         w = {"<cmd>Telescope grep_string<cr>", "Find selected"}
@@ -176,7 +171,6 @@ local mappings = {
         s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"},
         S = {"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols"}
     },
-
     m = {
         name = "+Mark",
         t = {"<cmd>BookmarkToggle<cr>", "Toggle"},

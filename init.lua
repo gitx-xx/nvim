@@ -19,6 +19,7 @@ end
 -- if O.lang.tailwindcss.active then
 --   require "lsp.tailwindcss-ls"
 -- end
+
 -- Custom plugin settings
 require('nv-taskwiki')
 require('nv-vimwiki')

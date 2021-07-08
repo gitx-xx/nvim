@@ -1,27 +1,4 @@
 
--- Global
-vim.api.nvim_set_keymap('n', '<A-q>', ':Commentary<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('v', '<A-q>', ':Commentary<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<A-w>', ':TZAtaraxis l25 r25<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('', '<C-s>', ':w<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', 'Q', ':q<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', ',', ':', {noremap = true, silent = true})
--- Move by visual lines
-vim.api.nvim_set_keymap('n', 'j', 'gj', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', 'k', 'gk', {noremap = true, silent = true})
--- Faster vertical movement
-vim.api.nvim_set_keymap('' , 'K', '12k', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('' , 'J', '12j', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('' , '<M-j>', '}', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('' , '<M-k>', '{', {noremap = true, silent = true})
--- <C-q> exits insert mode in terminal
-vim.api.nvim_set_keymap('t' , '', '', {noremap = true, silent = true})
--- Custom navigation bindings
-vim.api.nvim_set_keymap('' , 'H', 'b', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('' , 'L', 'e', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('' , 'B', '^', {noremap = true, silent = true}) -- doesn't work with verb
-vim.api.nvim_set_keymap('' , 'E', '$', {noremap = true, silent = true}) -- doesn't work with verb
-vim.api.nvim_set_keymap('n', 'M', '`', {noremap = true, silent = true}) -- Goto bookmark
 
 -- better window movement
 vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { silent = true })
@@ -61,20 +38,6 @@ end
 vim.api.nvim_set_keymap("v", "<", "<gv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", ">", ">gv", { noremap = true, silent = true })
 
--- I hate escape
-vim.api.nvim_set_keymap("i", "jk", "<ESC>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("i", "kj", "<ESC>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("i", "jj", "<ESC>", { noremap = true, silent = true })
-
--- Tab switch buffer
-vim.api.nvim_set_keymap("n", "<TAB>", ":bnext!<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<S-TAB>", ":bprevious!<CR>", { noremap = true, silent = true })
-
--- Buffer switching
-vim.api.nvim_set_keymap('n', '<C-b>', ':e #<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<M-b>', '<cmd>BufferPick<cr>', {noremap = true, silent = true})
--- Alternate buffer
-vim.api.nvim_set_keymap('n', '§', '<C-^>', {noremap = true, silent = true})
 
 -- Move selected line / block of text in visual mode
 -- vim.api.nvim_set_keymap("x", "K", ":move '<-2<CR>gv-gv", { noremap = true, silent = true })
