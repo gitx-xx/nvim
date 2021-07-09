@@ -1,5 +1,8 @@
 -- O is the global options object
 
+-- Window scope settings
+vim.wo.scrolloff = 999 -- center cursor
+
 -- General settings
 O.auto_complete = true
 O.clipboard = "unnamedplus" -- allows neovim to access clipboard
@@ -31,8 +34,8 @@ O.lang.python.autoformat = true
 O.lang.python.isort = true
 O.lang.python.diagnostics.virtual_text = true
 O.lang.python.analysis.use_library_code_types = true
-O.lang.python.formatter = 'prettier'
-O.lang.python.autoformat = true
+O.lang.json.formatter = 'prettier'
+O.lang.json.autoformat = true
 
 
 -- Builtins
