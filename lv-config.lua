@@ -1,46 +1,6 @@
 -- O is the global options object
 
-
--- From old settings.lua
--- opt.backup = false -- creates a backup file
--- opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
--- opt.cmdheight = 2 -- more space in the neovim command line for displaying messages
--- opt.colorcolumn = "99999" -- fix indentline for now
--- opt.completeopt = { "menuone", "noselect" }
--- opt.conceallevel = 0 -- so that `` is visible in markdown files
--- opt.fileencoding = "utf-8" -- the encoding written to a file
--- opt.guifont = "monospace:h17" -- the font used in graphical neovim applications
--- opt.hidden = O.hidden_files -- required to keep multiple buffers and open multiple buffers
--- opt.hlsearch = O.hl_search -- highlight all matches on previous search pattern
--- opt.ignorecase = O.ignore_case -- ignore case in search patterns
--- opt.mouse = "a" -- allow the mouse to be used in neovim
--- opt.pumheight = 10 -- pop up menu height
--- opt.showmode = false -- we don't need to see things like -- INSERT -- anymore
--- opt.showtabline = 2 -- always show tabs
--- opt.smartcase = O.smart_case -- smart case
--- opt.smartindent = true -- make indenting smarter again
--- opt.splitbelow = true -- force all horizontal splits to go below current window
--- opt.splitright = true -- force all vertical splits to go to the right of current window
--- opt.swapfile = false -- creates a swapfile
--- opt.termguicolors = true -- set term gui colors (most terminals support this)
--- opt.timeoutlen = O.timeoutlen -- time to wait for a mapped sequence to complete (in milliseconds)
--- opt.title = true -- set the title of window to the value of the titlestring
--- opt.titlestring = "%<%F%=%l/%L - nvim" -- what the title of the window will be set to
--- opt.undodir = CACHE_PATH .. "/undo" -- set an undo directory
--- opt.undofile = true -- enable persisten undo
--- opt.updatetime = 300 -- faster completion
--- opt.writebackup = false -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
--- opt.expandtab = true -- convert tabs to spaces
--- opt.shiftwidth = 4 -- the number of spaces inserted for each indentation
--- opt.shortmess:append "c"
--- opt.tabstop = 4 -- insert 4 spaces for a tab
--- opt.cursorline = O.cursorline -- highlight the current line
--- opt.number = O.number -- set numbered lines
--- opt.relativenumber = O.relative_number -- set relative numbered lines
--- opt.signcolumn = "yes" -- always show the sign column, otherwise it would shift the text each time
--- opt.wrap = O.wrap_lines -- display lines as one long line
-
--- general
+-- General settings
 O.auto_complete = true
 O.clipboard = "unnamedplus" -- allows neovim to access clipboard
 O.cmdheight = 2 -- more space in command line
@@ -55,55 +15,46 @@ O.relative_number = true
 O.shell = 'zsh'
 O.transparent_window = true
 
--- After changing plugin config it is recommended to run :PackerCompile
--- O.plugin.symbol_outline = true
-O.indent_line = true
-O.plugin.colorizer.active = true
-O.plugin.dashboard.active = true
-O.plugin.floatterm.active = true
-O.plugin.trouble.active = true
-O.plugin.zen.active = true
-O.symbol_outline = true
-O.telescope_fzy = true
-O.telescope_project = true
-O.ts_autotag = true
-O.ts_context_commentstring = true
-O.ts_hintobjects = true
-O.ts_playground = true
-O.ts_rainbow = true
-O.ts_textobjects = true
-O.ts_textsubjects = true
-
-
-
 -- if you don't want all the parsers change this to a table of the ones you want
 O.treesitter.ensure_installed = "all"
 O.treesitter.ignore_install = {"haskell"}
 O.treesitter.highlight.enabled = true
-
--- lua
+-- Language support
 O.lang.lua.autoformat = false
 O.lang.lua.formatter = 'lua-format'
-
--- javascript
 O.lang.tsserver.linter = 'eslint'
 O.lang.tsserver.formatter = 'prettier'
 O.lang.tsserver.autoformat = true
-
--- python
 -- O.python.linter = 'flake8'
 O.lang.python.formatter = 'black'
 O.lang.python.autoformat = true
 O.lang.python.isort = true
 O.lang.python.diagnostics.virtual_text = true
 O.lang.python.analysis.use_library_code_types = true
-
--- json
 O.lang.python.formatter = 'prettier'
 O.lang.python.autoformat = true
 
--- use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
 
+-- Builtins
+-- After changing plugin config it is recommended to run :PackerCompile
+O.plugin.colorizer.active = true
+O.plugin.dashboard.active = true
+O.plugin.floatterm.active = true
+O.plugin.trouble.active = true
+O.plugin.zen.active = true
+-- O.plugin.indent_line = true
+-- O.plugin.symbol_outline = true
+-- O.plugin.ts_autotag = true
+-- O.plugin.ts_context_commentstring = true
+-- O.plugin.ts_hintobjects = true
+-- O.plugin.ts_playground = true
+-- O.plugin.ts_rainbow = true
+-- O.plugin.ts_textobjects = true
+-- O.plugin.ts_textsubjects = true
+-- O.plugin.telescope_fzy = true
+-- O.plugin.telescope_project = true
+
+-- TODO: use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
 -- Additional Plugins
 O.user_plugins = {
     {'tpope/vim-commentary'},
@@ -134,8 +85,11 @@ O.user_plugins = {
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 O.user_autocommands = {
-  {'VimEnter', '*', 'TZMinimalist'}, -- Zen
   {'FileType', 'vimwiki.markdown', 'setlocal nowrap nospell'}, -- Markdown
+  {'TermOpen', '*', 'setlocal nonumber norelativenumber'},
+  {'TermOpen', '*', 'startinsert'},
+  {'BufWritePre', '*.md', '%s/\\s\\+$//e|g/./s/$/  /|norm!``'}, -- add linebreaks
+  {'VimEnter', '*', 'TZMinimalist'}, -- Zen
 }
 
 -- Bindings
@@ -206,6 +160,8 @@ O.user_which_key = {
 		N = {"<cmd>enew<cr>", "new-buffer"},
 		p = {"<cmd>bprevious<cr>", "prev-buffer"},
 		B = {"<cmd>BufferPick<cr>", "pick-buffer"},
+
+
         b = { "<cmd>Telescope buffers<cr>", "telescope-buffer" },
 
 	},

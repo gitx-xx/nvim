@@ -85,13 +85,6 @@ vim.api.nvim_set_keymap(
 )
 
 local mappings = {
-    ["p"] = "Projects",
-    ["x"] = "Close Buffer",
-    ["r"] = "Ranger",
-    ["F"] = "Find file",
-    ["v"] = "Split",
-    ["\""] = "Registers",
-    ["\'"] = "Marks",
 	b = {
 		name = "+Buffer",
 		d = {"<cmd>bdelete<cr>", "delete"},
