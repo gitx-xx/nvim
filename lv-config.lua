@@ -94,7 +94,8 @@ vim.api.nvim_set_keymap('v', '<A-q>', ':Commentary<CR>', {noremap = true, silent
 vim.api.nvim_set_keymap('n', '<A-w>', ':TZAtaraxis l25 r25<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<A-m>', ':TZMinimalist<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('', '<C-s>', ':w<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', 'Q', ':q<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'Q', 'q', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'q', '<NOP>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', ',', ':', {noremap = true, silent = true})
 -- Move by visual lines
 vim.api.nvim_set_keymap('n', 'j', 'gj', {noremap = true, silent = true})
