@@ -41,7 +41,7 @@ O.plugin.colorizer.active = true
 O.plugin.dashboard.active = true
 O.plugin.floatterm.active = true
 O.plugin.trouble.active = true
-O.plugin.zen.active = true
+O.plugin.zen.active = false -- replaced with TrueZen
 -- O.plugin.indent_line = true
 -- O.plugin.symbol_outline = true
 -- O.plugin.ts_autotag = true
@@ -74,13 +74,7 @@ O.user_plugins = {
     {'shaunsingh/nord.nvim'},
     {'shaunsingh/solarized.nvim'},
     {'sudormrfbin/cheatsheet.nvim'},
-    {
-      "Pocco81/TrueZen.nvim",
-      cmd = {"TZAtaraxis","TZMinimalist"},
-      config = function()
-          require("lv-zen").config()  -- ~/.config/nvim/lua/lv-zen/init.lua
-          end
-    },
+    {"Pocco81/TrueZen.nvim"},
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
@@ -89,7 +83,7 @@ O.user_autocommands = {
   {'TermOpen', '*', 'setlocal nonumber norelativenumber'},
   {'TermOpen', '*', 'startinsert'},
   {'BufWritePre', '*.md', '%s/\\s\\+$//e|g/./s/$/  /|norm!``'}, -- add linebreaks
-  {'VimEnter', '*', 'TZMinimalist'}, -- Zen
+  {'VimEnter', '*', 'TZMinimalist'}, -- TrueZen by default
 }
 
 -- Bindings
@@ -132,7 +126,7 @@ vim.api.nvim_set_keymap('n', '<M-b>', '<cmd>BufferPick<cr>', {noremap = true, si
 vim.api.nvim_set_keymap('n', '§', '<C-^>', {noremap = true, silent = true})
 
 
--- Additional Leader bindings for WhichKey
+-- Leader bindings for WhichKey
 vim.api.nvim_set_keymap("n", "<leader>h", ":Startify<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>d", ":Telescope lsp_workspace_diagnostics<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>r", ":RnvimrToggle<CR>", {noremap = true, silent = true})

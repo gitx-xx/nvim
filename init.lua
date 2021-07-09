@@ -21,13 +21,14 @@ end
 -- end
 
 -- Custom plugin settings
-require('nv-taskwiki')
-require('nv-vimwiki')
-require('nv-startify')
-require('nv-floaterm')
-require('nv-surround')
-require('nv-vim-rooter')
-require('nv-neovide')
 require('lv-clever-f')
 require('lv-hop')
+require('nv-truezen')
+require('nv-floaterm')
+require('nv-neovide')
+require('nv-startify')
+require('nv-surround')
+require('nv-taskwiki')
+require('nv-vim-rooter')
+require('nv-vimwiki')
 
