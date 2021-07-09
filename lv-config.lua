@@ -85,7 +85,7 @@ O.user_autocommands = {
   {'TermOpen', '*', 'setlocal nonumber norelativenumber'},
   {'TermOpen', '*', 'startinsert'},
   {'BufWritePre', 'vimwiki.markdown', '%s/\\s\\+$//e|g/./s/$/  /|norm!``'}, -- add linebreaks
-  {'VimEnter', '*', 'TZMinimalist'}, -- TrueZen by default
+  {'VimEnter', '*', 'TZMinimalistOn'}, -- TrueZen by default
 }
 
 -- Bindings
