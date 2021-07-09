@@ -16,6 +16,7 @@ end
 -- end
 -- if O.lang.tailwindcss.active then
 --   require "lsp.tailwind
+
 -- Custom plugin settings
 require('lv-clever-f')
 require('lv-hop')
