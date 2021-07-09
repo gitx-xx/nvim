@@ -1,9 +1,10 @@
 -- O is the global options object
 
--- Window scope settings
+-- Window settings
 vim.wo.scrolloff = 999 -- center cursor
 
 -- General settings
+O.leader_key = "space"
 O.auto_complete = true
 O.clipboard = "unnamedplus" -- allows neovim to access clipboard
 O.cmdheight = 2 -- more space in command line
@@ -17,7 +18,6 @@ O.number = true
 O.relative_number = true
 O.shell = 'zsh'
 O.transparent_window = true
-
 -- if you don't want all the parsers change this to a table of the ones you want
 O.treesitter.ensure_installed = "all"
 O.treesitter.ignore_install = {"haskell"}
@@ -37,11 +37,10 @@ O.lang.python.analysis.use_library_code_types = true
 O.lang.json.formatter = 'prettier'
 O.lang.json.autoformat = true
 
-
 -- Builtins
 -- After changing plugin config it is recommended to run :PackerCompile
 O.plugin.colorizer.active = true
-O.plugin.dashboard.active = true
+O.plugin.dashboard.active = false
 O.plugin.floatterm.active = true
 O.plugin.trouble.active = true
 O.plugin.zen.active = false -- replaced with TrueZen
@@ -85,7 +84,7 @@ O.user_autocommands = {
   {'FileType', 'vimwiki.markdown', 'setlocal nowrap nospell'}, -- Markdown
   {'TermOpen', '*', 'setlocal nonumber norelativenumber'},
   {'TermOpen', '*', 'startinsert'},
-  {'BufWritePre', '*.md', '%s/\\s\\+$//e|g/./s/$/  /|norm!``'}, -- add linebreaks
+  {'BufWritePre', 'vimwiki.markdown', '%s/\\s\\+$//e|g/./s/$/  /|norm!``'}, -- add linebreaks
   {'VimEnter', '*', 'TZMinimalist'}, -- TrueZen by default
 }
 
@@ -123,6 +122,9 @@ vim.api.nvim_set_keymap("i", "jj", "<ESC>", { noremap = true, silent = true })
 -- Tab switch buffer
 vim.api.nvim_set_keymap("n", "<TAB>", ":bnext!<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<S-TAB>", ":bprevious!<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<S-x>", ":BufferClose<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<S-l>", ":BufferNext<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<S-h>", ":BufferPrevious<CR>", { noremap = true, silent = true })
 -- Buffer switching
 vim.api.nvim_set_keymap('n', '<C-b>', ':e #<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<M-b>', '<cmd>BufferPick<cr>', {noremap = true, silent = true})
@@ -130,7 +132,7 @@ vim.api.nvim_set_keymap('n', '<M-b>', '<cmd>BufferPick<cr>', {noremap = true, si
 vim.api.nvim_set_keymap('n', '§', '<C-^>', {noremap = true, silent = true})
 
 
--- Leader bindings for WhichKey
+-- WhichKey
 vim.api.nvim_set_keymap("n", "<leader>h", ":Startify<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>d", ":Telescope lsp_workspace_diagnostics<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>r", ":RnvimrToggle<CR>", {noremap = true, silent = true})
@@ -138,7 +140,6 @@ vim.api.nvim_set_keymap("n", "<leader>v", "<C-W>v", {noremap = true, silent = tr
 vim.api.nvim_set_keymap("n", "<leader>s", "<C-W>s", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>x", ":BufferClose<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', "<leader>z", "<NOP>", {noremap = true, silent = true})
-
 O.user_which_key = {
   h = {":Startify<CR>", "Startify"},
   d = {":Telescope lsp_workspace_diagnostics<CR>", "Diagnostics"},
@@ -147,7 +148,6 @@ O.user_which_key = {
   s = {"<C-W>s", "SplitS"},
   x = {":BufferClose<CR>", "Close Buffer"},
   F = {"<cmd>lua require'telescope.builtin'.find_files{search_dirs={'~/dev', '~/notes'}}<cr>", "Find"},
-
 	b = {
 		name = "+Buffer",
 		d = {"<cmd>bdelete<cr>", "delete"},
@@ -158,10 +158,7 @@ O.user_which_key = {
 		N = {"<cmd>enew<cr>", "new-buffer"},
 		p = {"<cmd>bprevious<cr>", "prev-buffer"},
 		B = {"<cmd>BufferPick<cr>", "pick-buffer"},
-
-
         b = { "<cmd>Telescope buffers<cr>", "telescope-buffer" },
-
 	},
   D = {
         name = "+Diagnostics",
@@ -274,5 +271,4 @@ O.user_which_key = {
         w = {"<cmd>VimwikiIndex<cr>", "index"},
         x = {"<cmd>TaskWikiDelete<cr>", "delete-task"},
     },
-    z = {name = ""}
 }
