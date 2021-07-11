@@ -81,7 +81,8 @@ O.user_plugins = {
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 O.user_autocommands = {
-  {'FileType', 'vimwiki.markdown', 'setlocal nowrap nospell'}, -- Markdown
+  {'FileType', 'vimwiki.markdown', 'setlocal wrap nospell'}, -- Markdown
+  {'BufRead', '~/dev/rutrack/scrape.md', 'setlocal nowrap'}, -- Markdown
   {'TermOpen', '*', 'setlocal nonumber norelativenumber'},
   {'TermOpen', '*', 'startinsert'},
   {'BufWritePre', 'vimwiki.markdown', '%s/\\s\\+$//e|g/./s/$/  /|norm!``'}, -- add linebreaks
@@ -95,6 +96,7 @@ vim.api.nvim_set_keymap('n', '<A-q>', ':Commentary<CR>', {noremap = true, silent
 vim.api.nvim_set_keymap('v', '<A-q>', ':Commentary<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<A-w>', ':TZAtaraxis l25 r25<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<A-m>', ':TZMinimalist<CR>', {noremap = true, silent = true})
+-- TODO: bind <leader>jklh to something useful
 vim.api.nvim_set_keymap('', '<C-s>', ':w<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', 'Q', 'q', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', 'q', '<NOP>', {noremap = true, silent = true})
