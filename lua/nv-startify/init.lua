@@ -27,6 +27,7 @@ vim.g.startify_bookmarks = {
   { p = '~/.config/nvim/lua/plugins.lua'},
   { h = '~/.config/nvim/lua/nv-startify/init.lua'},
   { k = '~/.config/nvim/lua/keymappings.lua'},
+  { g = '~/.config/nvim/lua/default-config.lua'},
   { w = '~/.config/nvim/lua/lv-which-key/init.lua'},
   { c = '~/.config/nvim/lv-config.lua'},
   { r = '~/.config/ranger/rc.conf'},

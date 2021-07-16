@@ -9,15 +9,15 @@ O.auto_complete = true
 O.clipboard = "unnamedplus" -- allows neovim to access clipboard
 O.cmdheight = 2 -- more space in command line
 O.relative_number = false
-O.colorscheme = "nord"
-O.background = "dark"
+O.colorscheme = "github"
+O.background = "light"
 O.timeoutlen = 200
 O.hidden_files = true
 O.wrap_lines = false
 O.number = true
 O.relative_number = true
 O.shell = 'zsh'
-O.transparent_window = true
+O.transparent_window = false
 -- if you don't want all the parsers change this to a table of the ones you want
 O.treesitter.ensure_installed = "all"
 O.treesitter.ignore_install = {"haskell"}
@@ -40,7 +40,7 @@ O.lang.json.autoformat = true
 -- Builtins
 -- After changing plugin config it is recommended to run :PackerCompile
 O.plugin.colorizer.active = true
-O.plugin.dashboard.active = false
+O.plugin.dashboard.active = false -- replaced with Startify
 O.plugin.floatterm.active = true
 O.plugin.trouble.active = true
 O.plugin.zen.active = false -- replaced with TrueZen
@@ -56,25 +56,24 @@ O.plugin.zen.active = false -- replaced with TrueZen
 -- O.plugin.telescope_fzy = true
 -- O.plugin.telescope_project = true
 
--- TODO: use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
 -- Additional Plugins
+-- TODO: use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
 O.user_plugins = {
-    {'tpope/vim-commentary'},
+    {'tpope/vim-commentary', cmd = "Commentary"},
     {'vimwiki/vimwiki'},
     {'tools-life/taskwiki'},
     {'mhinz/vim-startify'},
     {'tpope/vim-surround'},
     {'rbgrouleff/bclose.vim'},
     {'schickling/vim-bufonly'},
-    {'kshenoy/vim-signature'},
+    {'kshenoy/vim-signature', event = 'VimEnter'},
     {'phaazon/hop.nvim'},
-    {'airblade/vim-rooter'},
+    {'airblade/vim-rooter', event = 'VimEnter'},
     {'voldikss/vim-floaterm'},
-    {'kdheepak/lazygit.nvim'},
+    {'kdheepak/lazygit.nvim', cmd = 'LazyGit'},
     {'kevinhwang91/rnvimr'},
     {'rhysd/clever-f.vim'},
-    {'shaunsingh/nord.nvim'},
-    {'shaunsingh/solarized.nvim'},
+    {'cormacrelf/vim-colors-github'},
     {'sudormrfbin/cheatsheet.nvim'},
     {"Pocco81/TrueZen.nvim"},
 }
@@ -240,6 +239,8 @@ O.user_which_key = {
         name = "+Update",
         t = {"<cmd>TSUpdate<cr>", "Treesitter"},
         p = {"<cmd>PackerUpdate<cr>", "Plugins"},
+        P = {"<cmd>PackerCompile profile=true<cr>", "Profile"},
+        
         r = {"<cmd>lua require('lv-utils').reload_lv_config()<cr>", "Reload" },
         s = {"<cmd>luafile $MYVIMRC<cr>", "Source"},
     },
