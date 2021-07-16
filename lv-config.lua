@@ -9,8 +9,8 @@ O.auto_complete = true
 O.clipboard = "unnamedplus" -- allows neovim to access clipboard
 O.cmdheight = 2 -- more space in command line
 O.relative_number = false
-O.colorscheme = "github"
-O.background = "light"
+O.colorscheme = "nord"
+O.background = "dark"
 O.timeoutlen = 200
 O.hidden_files = true
 O.wrap_lines = false
@@ -73,7 +73,7 @@ O.user_plugins = {
     {'kdheepak/lazygit.nvim', cmd = 'LazyGit'},
     {'kevinhwang91/rnvimr'},
     {'rhysd/clever-f.vim'},
-    {'cormacrelf/vim-colors-github'},
+    {'cormacrelf/vim-colors-nord'},
     {'sudormrfbin/cheatsheet.nvim'},
     {"Pocco81/TrueZen.nvim"},
 }
