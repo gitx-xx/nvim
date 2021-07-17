@@ -48,7 +48,7 @@ O.plugin.zen.active = false -- replaced with TrueZen
 
 -- Additional Plugins
 -- TODO: use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
--- TODO: add config to plugins
+-- TODO: add config to clearly see path
   -- use {
   --   "windwp/nvim-autopairs",
   --   -- event = "InsertEnter",
@@ -60,7 +60,7 @@ O.plugin.zen.active = false -- replaced with TrueZen
 
 O.user_plugins = {
     {'phaazon/hop.nvim'},
-    {"Pocco81/TrueZen.nvim"},
+    {'Pocco81/TrueZen.nvim'},
     {'vimwiki/vimwiki'},
     {'tools-life/taskwiki'},
     {'mhinz/vim-startify'},
@@ -68,14 +68,14 @@ O.user_plugins = {
     {'rbgrouleff/bclose.vim'},
     {'schickling/vim-bufonly'},
     {'kshenoy/vim-signature', event = 'VimEnter'},
-    -- {'airblade/vim-rooter', event = 'VimEnter'},
     {'voldikss/vim-floaterm'},
     {'endel/vim-github-colorscheme'},
+    {'arcticicestudio/nord-vim'},
     {'kdheepak/lazygit.nvim', cmd = 'LazyGit'},
     {'kevinhwang91/rnvimr'},
     {'rhysd/clever-f.vim'},
-    {'arcticicestudio/nord-vim'},
     {'sudormrfbin/cheatsheet.nvim'},
+    -- {'airblade/vim-rooter', event = 'VimEnter'}, -- already in core
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
