@@ -59,7 +59,6 @@ O.plugin.zen.active = false -- replaced with TrueZen
 -- Additional Plugins
 -- TODO: use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
 O.user_plugins = {
-    {'tpope/vim-commentary', cmd = "Commentary"},
     {'vimwiki/vimwiki'},
     {'tools-life/taskwiki'},
     {'mhinz/vim-startify'},
@@ -91,8 +90,8 @@ O.user_autocommands = {
 -- Bindings
 
 -- Global
-vim.api.nvim_set_keymap('n', '<A-q>', ':Commentary<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('v', '<A-q>', ':Commentary<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<A-q>', ':CommentToggle<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', '<A-q>', ':CommentToggle<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<A-w>', ':TZAtaraxis l25 r25<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<A-m>', ':TZMinimalist<CR>', {noremap = true, silent = true})
 -- TODO: bind <leader>jklh to something useful
