@@ -58,24 +58,25 @@ O.plugin.zen.active = false -- replaced with TrueZen
   --   end,
   -- }
 
+
 O.user_plugins = {
     {'phaazon/hop.nvim'},
-    {'Pocco81/TrueZen.nvim'},
-    {'vimwiki/vimwiki'},
-    {'tools-life/taskwiki'},
-    {'mhinz/vim-startify'},
-    {'tpope/vim-surround'},
+    {'Pocco81/TrueZen.nvim', config = function() require "nv-truezen" end},
+    {'vimwiki/vimwiki', config = function() require "nv-vimwiki" end},
+    {'tools-life/taskwiki', config = function() require "nv-taskwiki" end},
+    {'mhinz/vim-startify', config = function() require "nv-startify" end},
+    {'tpope/vim-surround', config = function() require "nv-surround" end},
     {'rbgrouleff/bclose.vim'},
     {'schickling/vim-bufonly'},
     {'kshenoy/vim-signature', event = 'VimEnter'},
-    {'voldikss/vim-floaterm'},
+    {'voldikss/vim-floaterm', config = function() require "nv-floaterm" end},
     {'endel/vim-github-colorscheme'},
     {'arcticicestudio/nord-vim'},
     {'kdheepak/lazygit.nvim', cmd = 'LazyGit'},
     {'kevinhwang91/rnvimr'},
-    {'rhysd/clever-f.vim'},
+    {'rhysd/clever-f.vim', config = function() require "lv-clever-f" end},
     {'sudormrfbin/cheatsheet.nvim'},
-    -- {'airblade/vim-rooter', event = 'VimEnter'}, -- already in core
+    -- {'airblade/vim-rooter', event = 'VimEnter', config = function() require "nv-vim-rooter" end}, -- already in core
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
@@ -83,8 +84,8 @@ O.user_autocommands = {
   {'FileType', 'vimwiki.markdown', 'setlocal wrap nospell'}, -- Markdown
   {'TermOpen', '*', 'setlocal nonumber norelativenumber'},
   {'TermOpen', '*', 'startinsert'},
-  {'BufWritePre', 'vimwiki.markdown', '%s/\\s\\+$//e|g/./s/$/  /|norm!``'}, -- add linebreaks
   {'VimEnter', '*', 'TZMinimalistOn'}, -- TrueZen by default
+  -- {'BufWritePre', 'vimwiki.markdown', '%s/\\s\\+$//e|g/./s/$/  /|norm!``'}, -- add linebreaks
 }
 
 -- Bindings
