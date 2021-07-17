@@ -5,31 +5,34 @@ vim.wo.scrolloff = 999 -- center cursor
 
 -- General settings
 O.leader_key = "space"
-O.auto_complete = true
-O.clipboard = "unnamedplus" -- allows neovim to access clipboard
-O.cmdheight = 2 -- more space in command line
-O.relative_number = false
+O.format_on_save = true
+O.lint_on_save = true
+O.completion.auto_complete = true
+O.hidden_files = true
 O.colorscheme = "nord"
 O.background = "dark"
-O.timeoutlen = 200
-O.hidden_files = true
-O.wrap_lines = false
-O.number = true
-O.relative_number = true
-O.shell = 'zsh'
-O.transparent_window = false
--- if you don't want all the parsers change this to a table of the ones you want
-O.treesitter.ensure_installed = "all"
+
+-- Default config
+O.default_options.timeoutlen = 200
+O.default_options.clipboard = "unnamedplus" -- allows neovim to access clipboard
+O.default_options.cmdheight = 2 -- more space in commandline
+O.default_options.relativenumber = true
+O.default_options.number = true
+O.default_options.wrap = false
+O.default_options.shell = 'zsh'
+
+-- -- -- if you don't want all the parsers change this to a table of the ones you want
+O.treesitter.ensure_installed = "maintained"
 O.treesitter.ignore_install = {"haskell"}
 O.treesitter.highlight.enabled = true
--- Language support
-O.lang.lua.autoformat = false
+
+-- -- -- Language support
+O.lang.lua.autoformat = true
 O.lang.lua.formatter = 'lua-format'
 O.lang.tsserver.linter = 'eslint'
 O.lang.tsserver.formatter = 'prettier'
 O.lang.tsserver.autoformat = true
--- O.python.linter = 'flake8'
-O.lang.python.formatter = 'black'
+O.lang.python.formatter = 'black' -- black or flake8
 O.lang.python.autoformat = true
 O.lang.python.isort = true
 O.lang.python.diagnostics.virtual_text = true
@@ -39,26 +42,25 @@ O.lang.json.autoformat = true
 
 -- Builtins
 -- After changing plugin config it is recommended to run :PackerCompile
-O.plugin.colorizer.active = true
+O.plugin.galaxyline.active = false -- does not start
 O.plugin.dashboard.active = false -- replaced with Startify
-O.plugin.floatterm.active = true
-O.plugin.trouble.active = true
 O.plugin.zen.active = false -- replaced with TrueZen
--- O.plugin.indent_line = true
--- O.plugin.symbol_outline = true
--- O.plugin.ts_autotag = true
--- O.plugin.ts_context_commentstring = true
--- O.plugin.ts_hintobjects = true
--- O.plugin.ts_playground = true
--- O.plugin.ts_rainbow = true
--- O.plugin.ts_textobjects = true
--- O.plugin.ts_textsubjects = true
--- O.plugin.telescope_fzy = true
--- O.plugin.telescope_project = true
 
 -- Additional Plugins
 -- TODO: use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
+-- TODO: add config to plugins
+  -- use {
+  --   "windwp/nvim-autopairs",
+  --   -- event = "InsertEnter",
+  --   after = { "telescope.nvim" },
+  --   config = function()
+  --     require "core.autopairs"
+  --   end,
+  -- }
+
 O.user_plugins = {
+    {'phaazon/hop.nvim'},
+    {"Pocco81/TrueZen.nvim"},
     {'vimwiki/vimwiki'},
     {'tools-life/taskwiki'},
     {'mhinz/vim-startify'},
@@ -66,21 +68,19 @@ O.user_plugins = {
     {'rbgrouleff/bclose.vim'},
     {'schickling/vim-bufonly'},
     {'kshenoy/vim-signature', event = 'VimEnter'},
-    {'phaazon/hop.nvim'},
-    {'airblade/vim-rooter', event = 'VimEnter'},
+    -- {'airblade/vim-rooter', event = 'VimEnter'},
     {'voldikss/vim-floaterm'},
+    {'endel/vim-github-colorscheme'},
     {'kdheepak/lazygit.nvim', cmd = 'LazyGit'},
     {'kevinhwang91/rnvimr'},
     {'rhysd/clever-f.vim'},
-    {'cormacrelf/vim-colors-nord'},
+    {'arcticicestudio/nord-vim'},
     {'sudormrfbin/cheatsheet.nvim'},
-    {"Pocco81/TrueZen.nvim"},
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 O.user_autocommands = {
   {'FileType', 'vimwiki.markdown', 'setlocal wrap nospell'}, -- Markdown
-  {'BufRead', '~/dev/rutrack/scrape.md', 'setlocal nowrap'}, -- Markdown
   {'TermOpen', '*', 'setlocal nonumber norelativenumber'},
   {'TermOpen', '*', 'startinsert'},
   {'BufWritePre', 'vimwiki.markdown', '%s/\\s\\+$//e|g/./s/$/  /|norm!``'}, -- add linebreaks
