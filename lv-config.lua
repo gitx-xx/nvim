@@ -91,6 +91,7 @@ O.user_autocommands = {
 -- Bindings
 
 -- Global
+vim.api.nvim_set_keymap('n', 'R', ':!python3 %<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<A-q>', ':CommentToggle<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('v', '<A-q>', ':CommentToggle<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<A-w>', ':TZAtaraxis l25 r25<CR>', {noremap = true, silent = true})
