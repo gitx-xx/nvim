@@ -1,8 +1,5 @@
 -- O is the global options object
 
--- Window settings
-vim.wo.scrolloff = 999 -- center cursor
-
 -- General settings
 O.leader_key = "space"
 O.format_on_save = true
@@ -17,6 +14,7 @@ O.default_options.timeoutlen = 200
 O.default_options.clipboard = "unnamedplus" -- allows neovim to access clipboard
 O.default_options.cmdheight = 2 -- more space in commandline
 O.default_options.relativenumber = true
+O.default_options.scrolloff = 999 -- center cursor
 O.default_options.number = true
 O.default_options.wrap = false
 O.default_options.shell = 'zsh'
@@ -92,6 +90,8 @@ O.user_autocommands = {
 
 -- Global
 vim.api.nvim_set_keymap('n', 'R', ':!python3 %<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', 'w', 'e', {noremap = true, silent = true}) -- don't include whitespace
+
 vim.api.nvim_set_keymap('n', '<A-q>', ':CommentToggle<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('v', '<A-q>', ':CommentToggle<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<A-w>', ':TZAtaraxis l25 r25<CR>', {noremap = true, silent = true})
