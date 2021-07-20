@@ -58,7 +58,7 @@ O.plugin.zen.active = false -- replaced with TrueZen
 
 
 O.user_plugins = {
-    {'phaazon/hop.nvim'},
+    {'phaazon/hop.nvim', config = function() require "lv-hop" end},
     {'Pocco81/TrueZen.nvim', config = function() require "nv-truezen" end},
     {'vimwiki/vimwiki', config = function() require "nv-vimwiki" end},
     {'tools-life/taskwiki', config = function() require "nv-taskwiki" end},
